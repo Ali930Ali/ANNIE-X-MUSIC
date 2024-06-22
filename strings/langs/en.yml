@@ -1,419 +1,395 @@
 name : 🇹🇷 Türkçe 
 
-HELP_1 = """<b><u>YÖNETİCİ KOMUTLARI:</b></u>
+general_1 : "Â» Bir kullanÄ±cÄ±nÄ±n mesajÄ±na cevap verin veya kullanÄ±cÄ± adÄ±/kullanÄ±cÄ± ID'sini belirtin."
+general_2 : "Â» Sorgunuzu iÅŸlerken bir ÅŸeyler ters gitti.\n\nÄ°stisna : <code>{0}</code>"
+general_3 : "Bu sohbette anonim bir yÃ¶neticisiniz, beni kullanmak iÃ§in kullanÄ±cÄ± hesabÄ±na geri dÃ¶nÃ¼n."
+general_4 : "Â» Video sohbetlerini yÃ¶netme izniniz yok.\n\nYÃ¶netici Ã¶nbelleÄŸini /reload komutuyla yeniden yÃ¼kleyin."
+general_5 : "Â» Bot video sohbette yayÄ±n yapmÄ±yor."
+
+tg_1 : "<u><b>{0} Ä°ndirici</b></u>\n\n<b>Dosya Boyutu :</b> {1}\n<b>TamamlandÄ± :</b> {2}\n<b>YÃ¼zde :</b> {3}%\n\n<b>HÄ±z :</b> {4}/s\n<b>Kalan SÃ¼re :</b> {5}"
+tg_2 : "BaÅŸarÄ±yla indirildi, dosya iÅŸleniyor...\n\n<b>GeÃ§en SÃ¼re :</b> {0}"
+tg_3 : "Telegram'dan medya indirilemedi, lÃ¼tfen tekrar deneyin..."
+tg_4 : "Â» Ä°ndirme zaten tamamlanmÄ±ÅŸ."
+tg_5 : "Â» Ä°ndirme zaten tamamlanmÄ±ÅŸ veya iptal edilmiÅŸ."
+tg_6 : "Â» Ä°ndirme iptal edildi."
+tg_7 : "Â» Ä°ndirme {0} tarafÄ±ndan iptal edildi."
+tg_8 : "Ä°ndirmeyi durdurma baÅŸarÄ±sÄ±z oldu."
+tg_9 : "Devam eden indirme gÃ¶revini alamadÄ±..."
+
+call_1 : "Â» Botun, asistanÄ± sohbetinize davet etmesi iÃ§in <b>kullanÄ±cÄ±larÄ± baÄŸlantÄ± ile davet et</b> izni gereklidir."
+call_2 : "<u>{0} asistan grubunuzda/kanalÄ±nÄ±zda yasaklanmÄ±ÅŸtÄ±r.</u>\n\n<b>ID :</b> <code>{1}</code>\n<b>Ä°sim :</b> {2}\n<b>KullanÄ±cÄ± AdÄ± :</b> @{3}\n\nLÃ¼tfen asistanÄ± yasaktan Ã§Ä±karÄ±n ve tekrar deneyin."
+call_3 : "{0} asistanÄ±nÄ± sohbetinize davet etme baÅŸarÄ±sÄ±z oldu.\n\nSebep : <code>{1}</code>"
+call_4 : "LÃ¼tfen bekleyin...\n\n{0} asistanÄ±nÄ± sohbetinize davet ediyor..."
+call_5 : "{0} asistan baÅŸarÄ±yla katÄ±ldÄ±.\n\nYayÄ±n baÅŸlatÄ±lÄ±yor..."
+call_6 : "Â» YayÄ±nÄ± deÄŸiÅŸtirme baÅŸarÄ±sÄ±z oldu, lÃ¼tfen /skip kullanarak ÅŸarkÄ±yÄ± tekrar deÄŸiÅŸtirin."
+call_7 : "Â» Kuyruktan bir sonraki ÅŸarkÄ± indiriliyor.\n\nLÃ¼tfen bekleyin..."
+call_8 : "<b>Aktif video sohbet bulunamadÄ±.</b>\n\nLÃ¼tfen grubunuzda/kanalÄ±nÄ±zda video sohbet baÅŸlatÄ±n ve tekrar deneyin."
+call_9 : "<b>Asistan zaten video sohbette.</b>\n\nEÄŸer asistan video sohbette deÄŸilse, lÃ¼tfen <code>/reboot</code> komutunu gÃ¶nderin ve tekrar oynatÄ±n."
+call_10 : "<b>Telegram sunucu hatasÄ±</b>\n\nTelegram bazÄ± iÃ§ sorunlar yaÅŸÄ±yor, lÃ¼tfen tekrar oynatmayÄ± deneyin veya grubunuzun video sohbetini yeniden baÅŸlatÄ±n."
+
+auth_1 : "Â» Grubunuzda yalnÄ±zca 25 yetkilendirilmiÅŸ kullanÄ±cÄ± bulunabilir."
+auth_2 : "Â» {0} yetkilendirilmiÅŸ kullanÄ±cÄ±lar listesine eklendi."
+auth_3 : "{0} zaten yetkilendirilmiÅŸ kullanÄ±cÄ±lar listesinde."
+auth_4 : "Â» {0} yetkilendirilmiÅŸ kullanÄ±cÄ±lar listesinden Ã§Ä±karÄ±ldÄ±."
+auth_5 : "{0} yetkilendirilmiÅŸ kullanÄ±cÄ±lar listesinde deÄŸil."
+auth_6 : "Â» YetkilendirilmiÅŸ kullanÄ±cÄ±lar listesi alÄ±nÄ±yor..."
+auth_7 : "Â» {0} iÃ§in yetkilendirilmiÅŸ kullanÄ±cÄ±larÄ±n listesi :\n\n"
+auth_8 : "<b>â†¬ Ekleyen :</b>"
+
+reload_1 : "Â» YÃ¶netici Ã¶nbelleÄŸini 3 dakikada bir kez yenileyebilirsiniz.\n\nLÃ¼tfen {0} sonra tekrar deneyin."
+reload_2 : "Â» YÃ¶netici Ã¶nbelleÄŸi baÅŸarÄ±yla yenilendi."
+reload_3 : "Â» YÃ¶netici Ã¶nbelleÄŸini yeniden yÃ¼kleme baÅŸarÄ±sÄ±z oldu, botun sohbetinizde yÃ¶netici olduÄŸundan emin olun."
+reload_4 : "Â» LÃ¼tfen bekleyin...\n\nSohbetiniz iÃ§in {0} yeniden baÅŸlatÄ±lÄ±yor."
+reload_5 : "{0} sohbetiniz iÃ§in baÅŸarÄ±yla yeniden baÅŸlatÄ±ldÄ±.\n\nTekrar oynatmaya baÅŸlayÄ±n..."
+
+admin_1 : "Â» YayÄ±na devam ettiÄŸinizi hatÄ±rladÄ±nÄ±z mÄ±?"
+admin_2 : "â» YayÄ±n duraklatÄ±ldÄ± ğŸ„\nâ”‚ \nâ””TarafÄ±ndan : {0} ğŸ¥€"
+admin_3 : "Â» YayÄ±nÄ± duraklattÄ±ÄŸÄ±nÄ±zÄ± hatÄ±rladÄ±nÄ±z mÄ±?"
+admin_4 : "â» YayÄ±n devam ettirildi ğŸ„\nâ”‚ \nâ””TarafÄ±ndan : {0} ğŸ¥€"
+admin_5 : "â» YayÄ±n sonlandÄ±rÄ±ldÄ±/durduruldu ğŸ„\nâ”‚ \nâ””TarafÄ±ndan : {0} ğŸ¥€"
+admin_6 : "â» YayÄ±n atlandÄ± ğŸ„\nâ”‚ \nâ””TarafÄ±ndan : {0} ğŸ¥€\n\n<b>Â» {1} iÃ§inde sÄ±rada baÅŸka parÃ§a yok, video sohbette ayrÄ±lÄ±yor.</b>"
+admin_7 : "{0} yayÄ±na geÃ§iÅŸte hata oluÅŸtu."
+admin_8 : "Â» LÃ¼tfen dÃ¶ngÃ¼ oynatmayÄ± <code>/loop disable</code> komutuyla devre dÄ±ÅŸÄ± bÄ±rakÄ±n ve ardÄ±ndan tekrar atlamayÄ± deneyin."
+admin_9 : "LÃ¼tfen atlamak iÃ§in belirli sayÄ±larÄ± kullanÄ±n, Ã¶rneÄŸin 1, 2, 4..."
+admin_10 : "Belirli atlama iÃ§in en az 2 parÃ§a sÄ±rada olmalÄ±dÄ±r.\n\nSÄ±rayÄ± kontrol et : /queue"
+admin_11 : "Â» Belirli atlama iÃ§in sÄ±rada yeterli parÃ§a yok.\n\nLÃ¼tfen 1 ile {0} arasÄ±nda atlayÄ±n"
+admin_12 : "Â» Belirli bir parÃ§aya atlama baÅŸarÄ±sÄ±z oldu.\n\nKalan sÄ±rayÄ± kontrol et : /queue"
+admin_13 : "Â» YÃ¶netici Ã¶nbelleÄŸini yeniden yÃ¼kle : /reload"
+admin_14 : "Â» Video sohbetlerini yÃ¶netme izniniz yok.\n\nYÃ¶netici Ã¶nbelleÄŸini yeniden yÃ¼kleyin : /reload"
+admin_15 : "Â» KarÄ±ÅŸtÄ±rma baÅŸarÄ±sÄ±z oldu.\n\n<b>SÄ±rayÄ± kontrol et :</b> /queue"
+admin_16 : "Â» SÄ±ra {0} tarafÄ±ndan karÄ±ÅŸtÄ±rÄ±ldÄ±.\n\n<b>KarÄ±ÅŸÄ±k sÄ±rayÄ± kontrol et :</b> /queue"
+admin_17 : "<b>Ã–rnek :</b>\n\n/loop <code>enable</code>/<code>disable</code>\n/loop <code>10</code>/<code>9</code>/<code>8</code>/<code>7</code>"
+admin_18 : "Â» DÃ¶ngÃ¼ {0} kez iÃ§in etkinleÅŸtirildi : {1}."
+admin_19 : "Â» DÃ¶ngÃ¼ oynatma {0} tarafÄ±ndan devre dÄ±ÅŸÄ± bÄ±rakÄ±ldÄ±."
+admin_20 : "<b>Ã–rnek :</b>\n\n/seek veya /seekback [saniye cinsinden sÃ¼re]"
+admin_21 : "Â» LÃ¼tfen arama yapmak iÃ§in saniye cinsinden sayÄ±sal deÄŸerler kullanÄ±n."
+admin_22 : "Â» CanlÄ± yayÄ±nlar ileri sarÄ±lamaz."
+admin_23 : "Â» Daha kÄ±sa bir sÃ¼reyle aramayÄ± deneyin.\n\n<b>{0}</b> dakikadan <b>{1}</b> dakika oynatÄ±ldÄ±."
+admin_24 : "<b>AranÄ±yor...</b>\n\nLÃ¼tfen bekleyin..."
+admin_25 : "Â» YayÄ±n baÅŸarÄ±yla ileri sarÄ±ldÄ±.\n\n<b>SÃ¼re:</b> {0} dakika\n<b>TarafÄ±ndan:</b> {1}"
+admin_26 : "Arama yapÄ±lamadÄ±."
+admin_27 : "Â» Åu anda sadece YouTube yayÄ±nlarÄ±nÄ±n hÄ±zÄ± kontrol edilebilir."
+admin_28 : "<b><u>{0} HÄ±z Kontrol Paneli</u></b>\n\nVideo sohbetinde oynatÄ±lan akÄ±mÄ±n hÄ±zÄ±nÄ± deÄŸiÅŸtirmek iÃ§in aÅŸaÄŸÄ±daki dÃ¼ÄŸmelere tÄ±klayÄ±n."
+admin_29 : "Â» Bot zaten normal hÄ±zda oynatÄ±lÄ±yor."
+admin_30 : "Â» LÃ¼tfen bekleyin...\n\nBaÅŸka biri yayÄ±nÄ±n hÄ±zÄ±nÄ± deÄŸiÅŸtirmeye Ã§alÄ±ÅŸÄ±yor."
+admin_31 : "HÄ±z deÄŸiÅŸtiriliyor..."
+admin_32 : "Â» Devam eden yayÄ±nÄ±n hÄ±zÄ±nÄ± deÄŸiÅŸtirmeye Ã§alÄ±ÅŸÄ±lÄ±yor...\n\n<b>Talep eden:</b> {0}"
+admin_33 : "Â» Devam eden yayÄ±nÄ±n hÄ±zÄ± deÄŸiÅŸtirilemedi."
+admin_34 : "Â» Devam eden yayÄ±nÄ±n hÄ±zÄ± {0}x olarak deÄŸiÅŸtirildi\n\n<b>Talep eden:</b> {1}"
+admin_35 : "Oylama, oy kullanÄ±lan parÃ§a sona erdiÄŸi iÃ§in sona erdi."
+admin_36 : "Bu eylem gerÃ§ekleÅŸtirilemedi Ã§Ã¼nkÃ¼ oylama yapÄ±lan parÃ§a ya sona erdi ya da durduruldu."
+admin_37 : "BaÅŸarÄ±yla <code>{0}</code> oy alÄ±ndÄ±."
+admin_38 : "Â» 1 oy eklendi."
+admin_39 : "Â» 1 oy Ã§Ä±karÄ±ldÄ±."
+admin_40 : "Oylama yapÄ±ldÄ±."
+admin_41 : "{0} tarafÄ±ndan **{1}** kez dÃ¶ngÃ¼ etkinleÅŸtirildi. Bot ÅŸimdi sesli sohbette Ã§alÄ±nan mÃ¼ziÄŸi **{1}** kez tekrarlayacak."
+admin_42 : "KarÄ±ÅŸtÄ±rÄ±lacak sÄ±rada hiÃ§bir ÅŸey yok."
+admin_43 : "KarÄ±ÅŸtÄ±rma baÅŸarÄ±sÄ±z oldu.\n\nSÄ±rayÄ± kontrol edin: /queue"
+admin_44 : "**{0} tarafÄ±ndan sÄ±ra karÄ±ÅŸtÄ±rÄ±ldÄ±**\n\nKarÄ±ÅŸtÄ±rÄ±lan sÄ±rayÄ± kontrol edin: /queue"
+admin_45 : "MÃ¼zik zaten sessize alÄ±nmÄ±ÅŸ."
+admin_46 : "ğŸ§ Sesli sohbet {0} tarafÄ±ndan sessize alÄ±ndÄ±!"
+admin_47 : "MÃ¼zik zaten sesli."
+admin_48 : "ğŸ§ Sesli sohbet {0} tarafÄ±ndan sesli hale getirildi!"
+
+start_1 : "{0} aktif durumda.\n\n<b>âœ« Ã‡alÄ±ÅŸma sÃ¼resi:</b> {1}"
+start_2 : "Merhaba, {0}\nBen {1},\n\nâ”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â§«\nâ”  â—† Ã–zel Ã¶zelliklerim var.\nâ”  â—† Hepsi bir arada bot.\nâ”—â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â§«\nâ”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â§«\nâ”  â—† Sesli sohbette ÅŸarkÄ±lar Ã§alabilirsiniz.\nâ”  â—† GÃ¶rseller oluÅŸturabilirsiniz.\nâ”  â—† Birden fazla dilde Ã§eviri yapabilirsiniz.\nâ”  â—† Sessize alabilir, sessize almayÄ± kaldÄ±rabilir, yasaklayabilir, yasaklamayÄ± kaldÄ±rabilir, atabilirsiniz...\nâ”  â—† Ã–zel karÅŸÄ±lama\nâ”  â—† Daha fazla Ã¶zellik iÃ§in komutlar dÃ¼ÄŸmesine tÄ±klayÄ±n...\nâ”—â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â§«\nà¹ ModÃ¼llerim ve komutlarÄ±m hakkÄ±nda bilgi almak iÃ§in yardÄ±m dÃ¼ÄŸmesine tÄ±klayÄ±n.\n\nğŸ«§ GeliÅŸtirici ğŸª½ âª [ğŸ‡¯ğ—”ğ—¥ğ—©ğ—œğ—¦ğŸ’—](https://t.me/JARVIS_V2)"
+start_3 : "Merhaba {0},\nBu {1}\n\n{2} iÃ§in beni eklediÄŸiniz iÃ§in teÅŸekkÃ¼rler, {3} artÄ±k bu sohbet iÃ§erisinde ÅŸarkÄ±lar Ã§alabilir."
+start_4 : "ğŸ„ <b>SÃ¼pergrup Gerekli</b> ğŸ„\n\nLÃ¼tfen <b>grubunuzu</b> <b>sÃ¼pergrup</b> olarak deÄŸiÅŸtirin ve ardÄ±ndan beni yeniden ekleyin.\n\n<b>SÃ¼pergrup NasÄ±l YapÄ±lÄ±r?</b>\n- Grubunuzun sohbet geÃ§miÅŸini bir kere <b>gÃ¶rÃ¼nÃ¼r</b> yapÄ±n."
+start_5 : "<b>â† Kara Listeye AlÄ±nmÄ±ÅŸ Sohbet â†œ</b>\n\nBu sohbet {0} veri tabanÄ±nda kara listeye alÄ±nmÄ±ÅŸ.\nSohbetinizi kara listeden Ã§Ä±karmasÄ± iÃ§in bir <a href={1}>sudo kullanÄ±cÄ±</a>dan talepte bulunun veya <a href={2}>destek sohbetini</a> ziyaret edin."
+start_6 : "ğŸ˜² <b>ParÃ§a Bilgisi</b> ğŸ˜²\n\nğŸ“Œ <b>BaÅŸlÄ±k:</b> {0}\n\nâ³ <b>SÃ¼re:</b> {1} dakika\nğŸ‘€ <b>GÃ¶rÃ¼ntÃ¼leme:</b> <code>{2}</code>\nâ° <b>YayÄ±nlanma Tarihi:</b> {3}\nğŸ“ <b>Kanal:</b> <a href={4}>{5}</a>\n\n<u><b>ğŸ¥€ Arama gÃ¼cÃ¼ saÄŸlanmÄ±ÅŸtÄ±r {6}</b></u>"
+
+help_1 : "YardÄ±m almak istediÄŸiniz kategoriyi seÃ§in.\nSorularÄ±nÄ±zÄ± <a href={0}>destek sohbetine</a> sorun.\n\nTÃ¼m komutlar ÅŸu ÅŸekilde kullanÄ±labilir: <code>/</code>"
+help_2 : "YardÄ±m menÃ¼mÃ¼ Ã¶zel mesajÄ±nÄ±za almak iÃ§in aÅŸaÄŸÄ±daki dÃ¼ÄŸmeye tÄ±klayÄ±n."
+
+lang_1 : "Â» LÃ¼tfen bu grubun varsayÄ±lan dili olarak ayarlamak istediÄŸiniz dili seÃ§in:"
+lang_2 : "Dil baÅŸarÄ±yla deÄŸiÅŸtirildi."
+lang_3 : "Dil deÄŸiÅŸtirilemedi."
+lang_4 : "Zaten aynÄ± dilde bulunuyorsunuz."
+
+setting_1 : "<u><b>{0} Ayar Paneli</b></u>\n\n<b>Sohbet KimliÄŸi:</b> <code>{1}</code>\n<b>Sohbet BaÅŸlÄ±ÄŸÄ±:</b> {2}\n\nAyarlarÄ± deÄŸiÅŸtirmek iÃ§in aÅŸaÄŸÄ±daki dÃ¼ÄŸmelere tÄ±klayÄ±n."
+setting_2 : "Â» DoÄŸrudan: Arama sorgularÄ±nÄ± doÄŸrudan Ã§alar.\n\nÂ» SatÄ±r Ä°Ã§i: Video ve ses arasÄ±nda seÃ§im yapmanÄ±za olanak tanÄ±yan satÄ±r iÃ§i dÃ¼ÄŸmeler dÃ¶ndÃ¼rÃ¼r."
+setting_3 : "Â» Herkes: Bu gruptaki herkes yÃ¶netici komutlarÄ±nÄ± [atla, duraklat, devam et vb.] kullanabilir.\n\nÂ» YalnÄ±zca YÃ¶netici: Sadece yÃ¶neticiler ve yetkili kullanÄ±cÄ±lar yÃ¶netici komutlarÄ±nÄ± kullanabilir."
+setting_4 : "Â» Yetkili kullanÄ±cÄ± bulunamadÄ±."
+setting_5 : "Â» Grup: Komutun verildiÄŸi grupta mÃ¼zik Ã§alar.\n\nÂ» Kanal: Ä°stediÄŸiniz kanalda mÃ¼zik Ã§alar. Kanal kimliÄŸini /channelplay ile ayarlayÄ±n."
+setting_6 : "Â» Herkes: Bu grupta bulunan herkes burada mÃ¼zik Ã§alabilir.\n\nÂ» YalnÄ±zca YÃ¶netici: Bu grupta sadece yÃ¶neticiler mÃ¼zik Ã§alabilir."
+setting_7 : "Â» LÃ¼tfen /channelplay ile kanal kimliÄŸi tanÄ±mlayÄ±n."
+setting_8 : "Bu ayar etkinleÅŸtirildiÄŸinde..."
+setting_9 : "Admin komutlarÄ±nÄ± kullanmak iÃ§in gerekli mevcut oy sayÄ±sÄ±: {0}"
+setting_10 : "Oylama modu devre dÄ±ÅŸÄ±."
+setting_11 : "En dÃ¼ÅŸÃ¼k oy sayÄ±sÄ± 2 olabilir. 2'nin altÄ±na ayarlayamazsÄ±nÄ±z."
+setting_12 : "En yÃ¼ksek oy sayÄ±sÄ± 15 olabilir. 15'in Ã¼stÃ¼ne ayarlayamazsÄ±nÄ±z."
+
+set_cb_1 : "Yetkili kullanÄ±cÄ± paneli alÄ±nÄ±yor..."
+set_cb_2 : "Oynatma modu paneli alÄ±nÄ±yor..."
+set_cb_3 : "DeÄŸiÅŸiklikler ayarlanÄ±yor..."
+set_cb_4 : "Â» Yetkili kullanÄ±cÄ± listesi alÄ±nÄ±yor..."
+set_cb_5 : "Â» Geri dÃ¶nÃ¼lÃ¼yor..."
+
+gstats_1 : "{0} istatistikleri ve bilgileri alÄ±nÄ±yor...\n\nBiraz zaman alabilir, lÃ¼tfen bekleyin..."
+gstats_2 : "{0} istatistiklerini kontrol etmek iÃ§in aÅŸaÄŸÄ±daki butonlara tÄ±klayÄ±n."
+gstats_3 : "<b><u>{0} istatistikleri ve bilgileri:</u></b>\n\n<b>YardÄ±mcÄ±lar:</b> <code>{1}</code>\n<b>Engellenenler:</b> <code>{2}</code>\n<b>KonuÅŸmalar:</b> <code>{3}</code>\n<b>KullanÄ±cÄ±lar:</b> <code>{4}</code>\n<b>ModÃ¼ller:</b> <code>{5}</code>\n<b>Sudoerlar:</b> <code>{6}</code>\n\n<b>Otomatik AyrÄ±lan YardÄ±mcÄ±:</b> {7}\n<b>Oynatma SÃ¼re SÄ±nÄ±rÄ±:</b> {8} dakika"
+gstats_4 : "Bu buton sadece sudoerlar iÃ§indir."
+gstats_5 : "<b><u>{0} istatistikleri ve bilgileri:</u></b>\n\n<b>ModÃ¼ller:</b> <code>{1}</code>\n<b>Platform:</b> <code>{2}</code>\n<b>RAM:</b> <code>{3}</code>\n<b>Fiziksel Ã‡ekirdekler:</b> <code>{4}</code>\n<b>Toplam Ã‡ekirdekler:</b> <code>{5}</code>\n<b>CPU FrekansÄ±:</b> <code>{6}</code>\n\n<b>Python:</b> <code>{7}</code>\n<b>Pyrogram:</b> <code>{8}</code>\n<b>Py-TgCalls:</b> <code>{9}</code>\n\n<b>KullanÄ±labilir Depolama:</b> <code>{10} GiB</code>\n<b>KullanÄ±lan Depolama:</b> <code>{11} GiB</code>\n<b>Kalan Depolama:</b> <code>{12} GiB</code>\n\n<b>Hizmet Verilen KonuÅŸmalar:</b> <code>{13}</code>\n<b>Hizmet Verilen KullanÄ±cÄ±lar:</b> <code>{14}</code>\n<b>Engellenen KullanÄ±cÄ±lar:</b> <code>{15}</code>\n<b>Sudo KullanÄ±cÄ±larÄ±:</b> <code>{16}</code>\n\n<b>Toplam DB Boyutu:</b> <code>{17} MB</code>\n<b>Toplam DB Depolama:</b> <code>{18} MB</code>\n<b>Toplam DB KoleksiyonlarÄ±:</b> <code>{19}</code>\n<b>Toplam DB AnahtarlarÄ±:</b> <code>{20}</code>"
+
+playcb_1 : "Â» Aww, bu sana gÃ¶re deÄŸil tatlÄ±m."
+playcb_2 : "Â» Sonraki sonuÃ§ alÄ±nÄ±yor,\n\nlÃ¼tfen bekleyin..."
+
+cplay_1 : "Â» {0} ile kanallarda veya sohbetinizin baÄŸlÄ± olduÄŸu kanalda mÃ¼zik Ã§alabilirsiniz.\n\n<b>BaÄŸlÄ± Kanal Ä°Ã§in:</b>\n<code>/channelplay linked</code>\n\n<b>BaÅŸka Bir Kanal Ä°Ã§in:</b>\n<code>/channelplay [kanal id]</code>"
+cplay_2 : "Â» Bu sohbetin baÄŸlÄ± bir kanalÄ± yok."
+cplay_3 : "Â» Kanal {0} olarak tanÄ±mlandÄ±.\nKanal ID: <code>{1}</code>"
+cplay_4 : "Â» Kanal alÄ±namadÄ±.\n\nBotu kanalÄ±nÄ±za eklediÄŸinizden ve yÃ¶netici olarak terfi ettirdiÄŸinizden emin olun."
+cplay_5 : "Sadece kanallar desteklenir."
+cplay_6 : "Â» Bu kanalÄ± bu grupla baÄŸlamak iÃ§in {0} kanalÄ±nÄ±n <b>sahibi</b> olmanÄ±z gerekiyor.\n<b>Kanal Sahibi:</b> @{1}\n\nAlternatif olarak, grubunuzu o kanala baÄŸlayabilir ve ardÄ±ndan <code>/channelplay linked</code> ile baÄŸlamayÄ± deneyebilirsiniz."
+cplay_7 : "Â» Kanal oynatma devre dÄ±ÅŸÄ± bÄ±rakÄ±ldÄ±."
+
+play_1 : "ğŸ¦‹"
+play_2 : "<b>â» Kanal Oynatma Modu</b>\n\nÄ°ÅŸleniyor, lÃ¼tfen bekleyin...\n\n<b>BaÄŸlÄ± Kanal:</b> {0}"
+play_3 : "Â» Sorgu iÅŸlenemedi."
+play_4 : "<b>YalnÄ±zca YÃ¶netici OynatÄ±mÄ±</b>\nBu sohbetin yalnÄ±zca yÃ¶neticileri oynatma yapabilir\n\nOynatma modunu /playmode ile deÄŸiÅŸtirin"
+play_5 : "Â» Ses dosyasÄ± iÅŸlenemedi.\n\nSes dosyasÄ± boyutu tanÄ±mlÄ± sÄ±nÄ±rdan bÃ¼yÃ¼k."
+play_6 : "Â» {0} Ã¼zerindeki yayÄ±nlar {1} Ã¼zerinde oynatÄ±lmasÄ±na izin verilmez"
+play_7 : "Â» GeÃ§ersiz video dosyasÄ± uzantÄ±sÄ±.\n\n<b>Desteklenen UzantÄ±lar:</b> {0}"
+play_8 : "Â» Video dosyasÄ± boyutu 1 GiB'den kÃ¼Ã§Ã¼k olmalÄ±dÄ±r."
+play_9 : "<b><u>YouTube Ã‡alma Listesi Ã–zelliÄŸi</b></u>\n\nYouTube Ã§alma listesinin tamamÄ±nÄ± hangi modda oynatmak istediÄŸinizi seÃ§in."
+play_10 : "<b>BaÅŸlÄ±k:</b> {0}\n<b>SÃ¼re:</b> {1} dakika"
+play_11 : "<u><b>{0} Spotify OynatÄ±cÄ±</b></u>\n\n<b>Talep Eden:</b> {1}"
+play_12 : "<u><b>{0} Apple OynatÄ±cÄ±</b></u>\n\n<b>Talep Eden:</b> {1}"
+play_13 : "Â» CanlÄ± yayÄ±n tespit edildi.\n\nBu canlÄ± yayÄ±nÄ± gerÃ§ekten oynatmak istiyor musunuz?"
+play_14 : "ParÃ§a bilgileri alÄ±namadÄ±.\n\nBaÅŸka bir parÃ§a Ã§almayÄ± deneyin."
+play_15 : "Â» Sorgu iÅŸlenemedi.\n\nYalnÄ±zca Spotify parÃ§alarÄ±, albÃ¼mleri, sanatÃ§Ä±larÄ± ve Ã§alma listelerini Ã§alabilirim."
+play_16 : "Aktif sesli sohbet yok.\n\nZorla oynatma kullanmak iÃ§in, aktif bir sesli sohbet olmalÄ±dÄ±r."
+play_17 : "LÃ¼tfen video sohbetini aÃ§Ä±n, URL'leri akÄ±ÅŸ yapamÄ±yorum."
+play_18 : "<b>KullanÄ±m:</b> /play [ÅŸarkÄ± adÄ±/YouTube URL'si/ses/video dosyasÄ±na yanÄ±t ver]"
+play_19 : "SÄ±raya AlÄ±nan Ã‡alma Listesi:"
+play_20 : "SÄ±raya AlÄ±nan Pozisyon-"
+play_21 : "{0} parÃ§a sÄ±raya eklendi.\n\n<b>Kontrol Et:</b> <a href={1}>Buraya TÄ±klayÄ±n</a>"
+play_22 : "SorgularÄ± grubunuzda hangi modda oynatmak istediÄŸinizi seÃ§in: {0}"
+olay_23 : "**â² MÃ¼zik AkÄ±ÅŸÄ± |**\n\n**â€£ AÅŸaÄŸÄ±daki bazÄ± kontrol butonlarÄ±yla mÃ¼ziÄŸi kontrol edebilirsiniz.**"
+
+#Playlist Buttons
+PL_B_1 : "à¹ Ã‡alma Listesini Oynat à¹"
+PL_B_2 : "à¹ Ã‡alma Listenize Ekle à¹"
+PL_B_3 : "à¹ Daha Fazla à¹"
+PL_B_4 : "à¹ Oynatma Modu à¹"
+PL_B_5 : "à¹ TÃœM Ã‡ALMA LÄ°STELERÄ°NÄ° SÄ°L à¹"
+PL_B_6 : "à¹ Ã‡ALMA LÄ°STESÄ°NÄ° SÄ°L à¹"
+PL_B_7 : "â—EVET, EMÄ°NÄ°M."
+PL_B_8 : "à¹ EN Ä°YÄ° 10 ÅARKIYI Ã‡AL à¹"
+PL_B_9 : "à¹ GLOBAL EN Ä°YÄ° 10 ÅARKIYI Ã‡AL à¹"
+PL_B_10 : "à¹ GRUP EN Ä°YÄ° 10 ÅARKIYI Ã‡AL à¹"
+PL_B_11 : "à¹ KÄ°ÅÄ°SEL EN Ä°YÄ° 10 ÅARKIYI Ã‡AL à¹"
+
+#Playlist
+playlist_1 : "**KULLANIM:** /play [mÃ¼zik adÄ± veya YouTube linki ya da ses dosyasÄ±na yanÄ±t verin]\n\nBot'un sunucu Ã§alma listesini Ã§almak istiyorsanÄ±z! /play yazÄ±n ve Ã‡alma Listesini Ã‡al dÃ¼ÄŸmesine basÄ±n.."
+playlist_2 : "**Ã‡alma listeniz alÄ±nÄ±yor, lÃ¼tfen bekleyin...**"
+playlist_3 : "**â» Bot'un sunucusunda Ã§alma listeniz yok.**\n\n**â¥ Ã‡alma listenize ÅŸarkÄ± eklemek iÃ§in, sadece yazÄ±n Â» /addplaylist [ÅŸarkÄ± adÄ± / ÅŸarkÄ± linki / YouTube Ã§alma listesi linki]**\n\n**â¥ Ã–rnek Â»** `/addplaylist Baarish`."
+playlist_4 : "â» Ã‡alma listesi getirildi:\n\nâ¥"
+playlist_5 : "    SÃ¼re- {0} Dakika"
+playlist_6 : "Ã‡alma listelerini silmek iÃ§in bana Ã¶zelden ulaÅŸÄ±n."
+playlist_7 : "**â» Ã‡alma listesindeki ÅŸarkÄ±lar: {0}**\n\n**Ã‡alma listenizde belirli bir ÅŸarkÄ±yÄ± silmek iÃ§in dÃ¼ÄŸmelere basÄ±n.**\n\n**TÃ¼m Ã§alma listesini silmek iÃ§in: TÃ¼m Ã‡alma Listesini Sil dÃ¼ÄŸmesine basÄ±n.**"
+playlist_8 : "**â» Bu ÅŸarkÄ± zaten Ã§alma listenize eklenmiÅŸ.**\n\n**â¥ Daha fazla ÅŸarkÄ± eklemek iÃ§in baÅŸka bir ÅŸarkÄ± adÄ± deneyin.**\n\n**â¥ Ã‡alma listenizi kontrol edin Â» /playlists**\n\n**â¥ Ã‡alma listesini sil Â» /delplaylist**"
+playlist_9 : "ÃœzgÃ¼nÃ¼z! Bir Ã§alma listesinde yalnÄ±zca {0} ÅŸarkÄ± olabilir."
+playlist_10 : "Ã‡alma Listesi Ekleme\n\n{0}\nÃ‡alma listenize eklendi."
+playlist_11 : "**â» ÅarkÄ±nÄ±z baÅŸarÄ±yla Ã§alma listenizden silindi.**"
+playlist_12 : "ÅarkÄ±nÄ±zÄ± silme baÅŸarÄ±sÄ±z oldu."
+playlist_13 : "**â» Ã‡alma listenizdeki tÃ¼m ÅŸarkÄ±lar silindi**"
+playlist_14 : "**Ã‡alma listenizdeki tÃ¼m ÅŸarkÄ±larÄ± silmek istediÄŸinizden emin misiniz?**\n\nÃ‡alma listenizi kaybedeceksiniz ve bu iÅŸlem daha sonra geri alÄ±namaz."
+playlist_15 : "**TÃ¼m Ã§alma listesini kontrol etmek iÃ§in buraya tÄ±klayÄ±n Â» [Ã‡alma Listesini GÃ¶r]({0})**"
+playlist_16 : "**SÄ±raya AlÄ±nan Ã‡alma Listesi:**"
+playlist_17 : "**SÄ±radaki Pozisyon-**"
+playlist_18 : "â» [TÃ¼m sÄ±raya alÄ±nan Ã§alma listesini kontrol et]({0})\n\nâ¥ Son sÄ±raya alÄ±nan pozisyon : **{1}**"
+
+#TopPlay
+tracks_1 : "**{0} En Ä°yi 10 Ã‡alma Listesi Ä°ÅŸleniyor**\nBu birkaÃ§ dakika (yaklaÅŸÄ±k 3-4 dakika) sÃ¼rebilir. LÃ¼tfen bekleyin...\n\n**ğŸ‘¤Talep Eden:** {1}\n\nEn iyi 10 ÅŸarkÄ±yÄ± kontrol et /gstats"
+tracks_2 : "**Hata**\n\nBot'un sunucularÄ±nda **{0} En Ä°yi 10 Ã‡alma Listesi** yok. LÃ¼tfen baÅŸka bir Ã§alma listesi deneyin"
+
+str_1 : "LÃ¼tfen M3U8 veya indeks baÄŸlantÄ±larÄ± saÄŸlayÄ±n."
+str_2 : "â» GeÃ§erli yayÄ±n doÄŸrulandÄ±.\n\nÄ°ÅŸleniyor..."
+str_3 : "YouTube canlÄ± yayÄ±nÄ± akÄ±ÅŸÄ± baÅŸarÄ±sÄ±z oldu, canlÄ± format bulunamadÄ±."
+
+ping_1 : "{0} ping atÄ±yor..."
+ping_2 : "{1}\n\nğŸ“ Ping : {0}ms..\n\nâ» Sistem Ä°statistikleri :\n\nâ†¬ Ã‡alÄ±ÅŸma SÃ¼resi : {2}\nâ†¬ RAM : {3}\nâ†¬ CPU : {4}\nâ†¬ Disk : {5}\nâ†¬ Py-TgCalls : {6}ms\n\nğŸ¥€TarafÄ±ndan Â» JARVIS â™¡ï¸"
+
+queue_1 : "Â» Kuyruk alÄ±nÄ±yor...\n\nLÃ¼tfen bekleyin..."
+queue_2 : "Â» Kuyruk boÅŸ."
+queue_3 : "<u>Â» Kuyruktaki ÅŸarkÄ±larÄ±n listesini kontrol etmek iÃ§in buraya tÄ±klayÄ±n :</u> <a href={0}>BURAYA</a>"
+queue_4 : "â² KuyruÄŸa #{0} Eklendi\n\nâ€£ BaÅŸlÄ±k :</b> {1}\n<b>â€£ SÃ¼re :</b> {2} dakika\n<b>â€£ Talep Eden :</b> {3}"
+queue_5 : "Ã‡alma listesinde yalnÄ±zca bir kuyrukta ÅŸarkÄ± var.\n\nListeyi kontrol etmek iÃ§in daha fazla ÅŸarkÄ± ekleyin."
+queue_6 : "<b>ğŸ•š SÃ¼re :</b> Bilinmeyen sÃ¼re akÄ±ÅŸÄ±\n\nTÃ¼m kuyruk listesini almak iÃ§in aÅŸaÄŸÄ±daki dÃ¼ÄŸmeye tÄ±klayÄ±n."
+queue_7 : "\nTÃ¼m kuyruk listesini almak iÃ§in aÅŸaÄŸÄ±daki dÃ¼ÄŸmeye tÄ±klayÄ±n."
+queue_8 : "<b>{0} Ã‡alar</b>\n\nğŸ„ <b>YayÄ±nlÄ±yor :</b> {1}\n\nğŸ”— <b>YayÄ±n TÃ¼rÃ¼ :</b> {2}\nğŸ¥€ <b>Talep Eden :</b> {3}\n{4}"
+
+stream_1 : "â² YayÄ±n BaÅŸladÄ± |\n\n<b>â€£ BaÅŸlÄ±k :</b> <a href={0}>{1}</a>\n<b>â€£ SÃ¼re :</b> {2} dakika\n<b>â€£ Talep Eden :</b> {3}"
+stream_2 : "â² YayÄ±n BaÅŸladÄ± |\n\n<b>â€£ YayÄ±n TÃ¼rÃ¼ :</b> CanlÄ± yayÄ±n [URL]\n<b>â€£ Talep Eden :</b> {0}"
+
+CLOSE_BUTTON  : "âœ§ KAPAT âœ§"
+CLOSEMENU_BUTTON  : "âœ§ KAPAT âœ§"
+BACK_BUTTON : "âœ§ GERÄ° âœ§"
+
+
+
+S_B_1 : "Ë¹BENÄ° KAÃ‡IR BEBEKË¼"
+S_B_2 : "ğŸŒ·KANALğŸŒ·"
+S_B_3 : "Ë¹BENÄ° KAÃ‡IR BEBEKË¼"
+S_B_4 : "Êœá´‡ÊŸá´˜ & KOMUTLAR"
+S_B_5 : "Ë¹BENÄ° KAÃ‡IR BEBEKË¼"
+S_B_6 : "â„ï¸DESTEKâ„ï¸"
+S_B_7 : "ğŸ’—RAPORğŸ’—"
+S_B_8 : "YOUTUBE"
+S_B_9 : "â„ï¸DESTEKâ„ï¸"
+S_B_10 : "ğŸ‡¯ğ—®ğ—¿ğ˜ƒğ—¶ğ˜€â™¡ï¸"
+S_B_11 : "âœ§ EKLE âœ§"
+S_B_12 : "âœ¨ DESTEK âœ¨"
+S_B_13 : "ğŸ¥€ GELÄ°ÅTÄ°RÄ°CÄ° ğŸ¥€"
+
+H_B_1 : "á´¥ï¸ï¸ï¸ YÃ¶netici á´¥ï¸ï¸ï¸"
+H_B_2 : "á´¥ï¸ï¸ï¸ Kimlik DoÄŸrulama á´¥ï¸ï¸ï¸"
+H_B_3 : "á´¥ï¸ï¸ï¸ Genel YayÄ±n á´¥ï¸ï¸ï¸"
+H_B_4 : "á´¥ï¸ï¸ï¸ Kara Liste Sohbet á´¥ï¸ï¸ï¸"
+H_B_5 : "á´¥ï¸ï¸ï¸ Kara Liste KullanÄ±cÄ± á´¥ï¸ï¸ï¸"
+H_B_6 : "á´¥ï¸ï¸ï¸ Oynat á´¥ï¸ï¸ï¸"
+H_B_7 : "á´¥ï¸ï¸ï¸ Genel Yasak á´¥ï¸ï¸ï¸"
+H_B_8 : "á´¥ï¸ï¸ï¸ DÃ¶ngÃ¼ á´¥ï¸ï¸ï¸"
+H_B_9 : "á´¥ï¸ï¸ï¸ GÃ¼nlÃ¼k á´¥ï¸ï¸ï¸"
+H_B_10 : "á´¥ï¸ï¸ï¸ Ping á´¥ï¸ï¸ï¸"
+H_B_11 : "á´¥ï¸ï¸ï¸ Oynat á´¥ï¸ï¸ï¸"
+H_B_12 : "á´¥ï¸ï¸ï¸ KarÄ±ÅŸtÄ±r á´¥ï¸ï¸ï¸"
+H_B_13 : "á´¥ï¸ï¸ï¸ Ara á´¥ï¸ï¸ï¸"
+H_B_14 : "á´¥ï¸ï¸ï¸ ÅarkÄ±"
+H_B_15 : "á´¥ï¸ï¸ï¸ HÄ±z á´¥ï¸ï¸ï¸"
+H_B_16 : "ğŸ®ï¸ï¸ï¸ï¸ï¸ï¸ï¸ GPT ğŸ®ï¸ï¸ï¸ï¸ï¸ï¸ï¸"
+H_B_17 : "ğŸ®ï¸ï¸ï¸ï¸ï¸ï¸ï¸ Ã‡Ä±kartma ğŸ®ï¸ï¸ï¸ï¸ï¸ï¸ï¸"
+H_B_18 : "ğŸ®ï¸ï¸ï¸ï¸ï¸ï¸ï¸ Herkesi Etiketle ğŸ®ï¸ï¸ï¸ï¸ï¸ï¸ï¸"
+H_B_19 : "ğŸ®ï¸ï¸ï¸ï¸ï¸ï¸ï¸ Bilgi ğŸ®ï¸ï¸ï¸ï¸ï¸ï¸ï¸"
+H_B_20 : "ğŸ®ï¸ï¸ï¸ï¸ï¸ï¸ï¸ YÃ¶netici ğŸ®ï¸ï¸ï¸ï¸ï¸ï¸ï¸"
+H_B_21 : "ğŸ®ï¸ï¸ï¸ï¸ï¸ï¸ï¸ Ekstra ğŸ®ï¸ï¸ï¸ï¸ï¸ï¸ï¸"
+H_B_22 : "ğŸ®ï¸ï¸ï¸ï¸ï¸ï¸ï¸ GÃ¶rÃ¼ntÃ¼ ğŸ®ï¸ï¸ï¸ï¸ï¸ï¸ï¸"
+H_B_23 : "ğŸ®ï¸ï¸ï¸ï¸ï¸ï¸ï¸ Hareket ğŸ®ï¸ï¸ï¸ï¸ï¸ï¸ï¸"
+H_B_24 : "ğŸ®ï¸ï¸ï¸ï¸ï¸ï¸ï¸ Arama ğŸ®ï¸ï¸ï¸ï¸ï¸ï¸ï¸"
+H_B_25 : "ğŸ®ï¸ï¸ï¸ï¸ï¸ï¸ï¸ CC Bilgisi ğŸ®ï¸ï¸ï¸ï¸ï¸ï¸ï¸"
+H_B_26 : "ğŸ®ï¸ï¸ï¸ï¸ï¸ï¸ï¸ Metin DÃ¼zenleme ğŸ®ï¸ï¸ï¸ï¸ï¸ï¸ï¸"
+H_B_27 : "ğŸ®ï¸ï¸ï¸ï¸ï¸ï¸ï¸ EÄŸlence ğŸ®ï¸ï¸ï¸ï¸ï¸ï¸ï¸"
+H_B_28 : "ğŸ®ï¸ï¸ï¸ï¸ï¸ï¸ï¸ Repo Bilgisi ğŸ®ï¸ï¸ï¸ï¸ï¸ï¸ï¸"
+H_B_29 : "ğŸ®ï¸ï¸ï¸ï¸ï¸ï¸ï¸ Notlar ğŸ®ï¸ï¸ï¸ï¸ï¸ï¸ï¸"
+H_B_30 : "ğŸ®ï¸ï¸ï¸ï¸ï¸ï¸ï¸ Oyunlar ğŸ®ï¸ï¸ï¸ï¸ï¸ï¸ï¸"
+
+P_B_1 : "Ses"
+P_B_2 : "Video"
+P_B_3 : "CanlÄ± YayÄ±n"
+P_B_4 : "Normal"
+
+ST_B_1 : "Kimlik DoÄŸrulama KullanÄ±cÄ±larÄ±"
+ST_B_2 : "Oynatma Modu"
+ST_B_3 : "Dil"
+ST_B_4 : "Oylama Modu"
+ST_B_5 : "AÃ§Ä±k"
+ST_B_6 : "KapalÄ±"
+ST_B_7 : "Kimlik DoÄŸrulama KullanÄ±cÄ±larÄ± âœ"
+ST_B_8 : "YÃ¶neticiler"
+ST_B_9 : "Herkes"
+ST_B_10 : "Arama Modu âœ"
+ST_B_11 : "DoÄŸrudan"
+ST_B_12 : "SatÄ±r Ä°Ã§i"
+ST_B_13 : "YÃ¶netici KomutlarÄ± âœ"
+ST_B_14 : "Oynatma TÃ¼rÃ¼ âœ"
+
+SA_B_1 : "Genel Ä°statistikler"
+SA_B_2 : "Genel"
+SA_B_3 : "Genel"
+
+QU_B_1 : "SÄ±ra"
+QU_B_2 : " {0} â€”â€”â€”â€”â€”â€”â€”â€”â€”â€” {1}"
+
+sudo_1 : "Â» {0} zaten sudo kullanÄ±cÄ±lar listesinde."
+sudo_2 : "Â» {0}, sudo kullanÄ±cÄ±lar listesine eklendi."
+sudo_3 : "Â» {0}, sudo kullanÄ±cÄ±lar listesinde deÄŸil."
+sudo_4 : "Â» {0}, sudo kullanÄ±cÄ±lar listesinden Ã§Ä±karÄ±ldÄ±."
+sudo_5 : "<u><b>ğŸ¥€ Sahibi :</b></u>\n"
+sudo_6 : "\n<u><b>âœ¨ Sudo KullanÄ±cÄ±lar :</b></u>\n"
+sudo_7 : "Â» Sudo kullanÄ±cÄ± bulunamadÄ±."
+sudo_8 : "BaÅŸarÄ±sÄ±z."
+
+block_1 : "Â» {0} zaten bot tarafÄ±ndan engellendi."
+block_2 : "Â» {0}, engellenen kullanÄ±cÄ±lar listesine eklendi."
+block_3 : "Â» {0}, engellenen kullanÄ±cÄ±lar listesinde deÄŸil."
+block_4 : "Â» {0}, engellenen kullanÄ±cÄ±lar listesinden Ã§Ä±karÄ±ldÄ±."
+block_5 : "Â» Engellenen kullanÄ±cÄ± bulunamadÄ±."
+block_6 : "Â» Engellenen kullanÄ±cÄ±lar listesi alÄ±nÄ±yor..."
+block_7 : "<b>ğŸ˜« Engellenen KullanÄ±cÄ±lar :</b>\n\n"
+
+black_1 : "<b>Ã–rnek :</b>\n\n/blacklistchat [Sohbet ID]"
+black_2 : "Â» Bu sohbet zaten kara listede."
+black_3 : "Â» Kara listeye eklendi."
+black_4 : "<b>Ã–rnek :</b>\n\n/whitelistchat [Sohbet ID]"
+black_5 : "Â» Bu sohbet kara listede deÄŸil."
+black_6 : "Â» Kara listeden Ã§Ä±karÄ±ldÄ±."
+black_7 : "Â» Kara listedeki sohbetler :\n\n"
+black_8 : "Â» {0} Ã¼zerinde kara listede sohbet yok."
+black_9 : "Â» Bir ÅŸeyler yanlÄ±ÅŸ gitti."
+
+maint_1 : "<b>Ã–rnek :</b>\n/maintenance [aÃ§ | kapat]"
+maint_2 : "Â» {0} bakÄ±m modu aÃ§Ä±ldÄ±."
+maint_3 : "Â» {0} bakÄ±m modu kapatÄ±ldÄ±."
+maint_4 : "Â» BakÄ±m modu zaten aÃ§Ä±k."
+maint_5 : "Â» BakÄ±m modu zaten kapalÄ±."
+
+log_1 : "<b>Ã–rnek :</b>\n/logger [aÃ§ | kapat]"
+log_2 : "GÃ¼nlÃ¼k kaydÄ± aÃ§Ä±ldÄ±."
+log_3 : "GÃ¼nlÃ¼k kaydÄ± kapatÄ±ldÄ±."
+
+broad_1 : "Â» YayÄ±n baÅŸlatÄ±ldÄ±..."
+broad_2 : "<b>Ã–rnek :</b>\n\n/broadcast [mesaj veya bir mesaja yanÄ±t]"
+broad_3 : "Â» {0} sohbetlere {1} bot tarafÄ±ndan sabitlenmiÅŸ mesaj yayÄ±nlandÄ±."
+broad_4 : "Â» {0} kullanÄ±cÄ±lara mesaj yayÄ±nlandÄ±."
+broad_5 : "Â» YardÄ±mcÄ± yayÄ±n baÅŸlatÄ±lÄ±yor..."
+broad_6 : "â» YardÄ±mcÄ± yayÄ±n :\n\n"
+broad_7 : "â†¬ YardÄ±mcÄ± {0}, {1} sohbetlerde yayÄ±nlandÄ±."
+broad_8 : "Â» YayÄ±nlamak iÃ§in metin saÄŸlayÄ±n."
+
+server_1 : "Â» GÃ¼nlÃ¼kler alÄ±namadÄ±."
+server_2 : "LÃ¼tfen Heroku API anahtarÄ±nÄ±zÄ±n ve uygulama adÄ±nÄ±zÄ±n doÄŸru yapÄ±landÄ±rÄ±ldÄ±ÄŸÄ±ndan emin olun."
+server_3 : "Mevcut gÃ¼ncellemeler kontrol ediliyor..."
+server_4 : "Git komut hatasÄ±."
+server_5 : "GeÃ§ersiz git deposu."
+server_6 : "Â» Bot gÃ¼ncel."
+server_7 : "Â» Bot baÅŸarÄ±yla gÃ¼ncellendi! Åimdi botun yeniden baÅŸlamasÄ± ve deÄŸiÅŸiklikleri uygulamasÄ± iÃ§in birkaÃ§ dakika bekleyin!"
+server_8 : "{0} yeniden baÅŸlatÄ±lÄ±yor...\n\n15-20 saniye sonra yeniden oynatmaya baÅŸlayabilirsiniz."
+server_9 : "Bir ÅŸeyler yanlÄ±ÅŸ gitti, lÃ¼tfen gÃ¼nlÃ¼kleri kontrol edin."
+server_10 : "#gÃ¼ncelleyici'de bir istisna oluÅŸtu : <code>{0}</code>"
+server_11 : "Â» HÄ±z testi yapÄ±lÄ±yor..."
+server_12 : "<b>â‡† Ä°ndirme hÄ±zÄ± testi yapÄ±lÄ±yor...</b>"
+server_13 : "<b>â‡† YÃ¼kleme hÄ±zÄ± testi yapÄ±lÄ±yor...</b>"
+server_14 : "<b>â†» HÄ±z testi sonuÃ§larÄ± paylaÅŸÄ±lÄ±yor...</b>"
+server_15 : "âœ¯ <b>hÄ±z testi sonuÃ§larÄ±</b> âœ¯\n\n<u><b>mÃ¼ÅŸteri :</b></u>\n<b>Â» isp :</b> {0}\n<b>Â» Ã¼lke :</b> {1}\n\n<u><b>sunucu :</b></u>\n<b>Â» isim :</b> {2}\n<b>Â» Ã¼lke :</b> {3}, {4}\n<b>Â» sponsor :</b> {5}\n<b>Â» gecikme :</b> {6} ms\n<b>Â» ping :</b> {7}"
+
+gban_1 : "Â» Neden kendini gban yapmak istedin bebek?"
+gban_2 : "Â» Neden kendimi gban yapmalÄ±yÄ±m?"
+gban_3 : "Â» Sudo kullanÄ±cÄ±larÄ±mÄ± gban yapamazsÄ±n."
+gban_4 : "Â» {0} zaten bot tarafÄ±ndan global olarak yasaklandÄ±."
+gban_5 : "Â» {0} Ã¼zerinde global ban baÅŸlatÄ±lÄ±yor.\n\n<b>Beklenen sÃ¼re:</b> {1}"
+gban_6 : "<b><u>{0} Ã¼zerinde yeni global ban:</u></b>\n\n<b>Kaynak:</b> {1} [<code>{2}</code>]\n<b>KullanÄ±cÄ±:</b> {3}\n<b>KullanÄ±cÄ± ID:</b> {4}\n\n<b>Banlayan:</b> {5}\n<b>KonuÅŸmalar:</b> </code>{6}</code>"
+gban_7 : "Â» {0} bot tarafÄ±ndan gban yapÄ±lmadÄ±."
+gban_8 : "Â» {0} Ã¼zerindeki global ban kaldÄ±rÄ±lÄ±yor.\n\n<b>Beklenen sÃ¼re:</b> {1}"
+gban_9 : "Â» {0} Ã¼zerindeki global ban kaldÄ±rÄ±ldÄ±.\n\n{1} konuÅŸmada yasak kaldÄ±rÄ±ldÄ±."
+gban_10 : "Â» Bot tarafÄ±ndan global olarak yasaklanmÄ±ÅŸ kimse yok."
+gban_11 : "Â» Gban yapÄ±lmÄ±ÅŸ kullanÄ±cÄ±lar listesi getiriliyor..."
+gban_12 : "ğŸ™‚ <b>Global olarak yasaklanmÄ±ÅŸ kullanÄ±cÄ±lar:</b>\n\n"
+
+# ÅarkÄ±
+SG_B_1 : "â€¢ Buraya TÄ±kla â€¢"
+SG_B_2 : "ğŸ§ Ses ğŸ§"
+SG_B_3 : "ğŸ¥ Video ğŸ¥"
+
+# ÅarkÄ±
+song_1 : "MÃ¼ziÄŸi veya videoyu YouTube'dan sadece Ã¶zel sohbette indirebilirsiniz. LÃ¼tfen beni Ã¶zel sohbette baÅŸlatÄ±n."
+song_2 : "**KullanÄ±m:**\n\n/song [mÃ¼zik adÄ±] veya [YouTube linki]"
+song_3 : "CanlÄ± baÄŸlantÄ± tespit edildi. CanlÄ± YouTube videolarÄ±nÄ± indiremiyorum."
+song_4 : "ğŸ“Œ**BaÅŸlÄ±k**:- {0}\n\nÄ°ndirmek istediÄŸiniz tÃ¼rÃ¼ seÃ§in."
+song_5 : "GeÃ§erli bir YouTube baÄŸlantÄ±sÄ± deÄŸil."
+song_6 : "Formatlar alÄ±nÄ±yor...\n\nLÃ¼tfen bekleyin..."
+song_7 : "Video iÃ§in mevcut formatlarÄ± alamadÄ±m. LÃ¼tfen baÅŸka bir parÃ§a deneyin."
+song_8 : "Ä°ndirme baÅŸladÄ±\n\nLÃ¼tfen birkaÃ§ saniye bekleyin..."
+song_9 : "YT-DL'den ÅŸarkÄ± indirme baÅŸarÄ±sÄ±z oldu\n\n**Neden:** {0}"
+song_10 : "Telegram sunucularÄ±na yÃ¼kleme baÅŸarÄ±sÄ±z oldu."
+song_11 : "YÃ¼kleme baÅŸladÄ± bebek\n\nLÃ¼tfen bekleyin..."
 
-Komutların başına <b>C</b> ekleyerek kanallar için kullanabilirsiniz.
-
-/pause : Mevcut oynatılan yayını duraklatır.
-
-/resume : Duraklatılan yayını devam ettirir.
-
-/skip : Mevcut oynatılan yayını atlar ve sıradaki parçayı oynatmaya başlar.
-
-/end veya /stop : Sırayı temizler ve mevcut oynatılan yayını sonlandırır.
-
-/player : Etkileşimli bir oynatıcı paneli alır.
-
-/queue : Sıradaki parçaları gösterir.
-
-✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
-
-HELP_2 = """
-<b><u>YETKİLİ KULLANICILAR:</b></u>
-
-Yetkili kullanıcılar, sohbette yönetici haklarına sahip olmadan botta yönetici haklarını kullanabilirler.
-
-/auth [kullanıcı adı/kullanıcı ID] : Bir kullanıcıyı botun yetkili listesine ekler.
-/unauth [kullanıcı adı/kullanıcı ID] : Yetkili kullanıcıyı yetkili listesinden çıkarır.
-/authusers : Grubun yetkili kullanıcılarının listesini gösterir.
-
-✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
-
-HELP_3 = """
-<u><b>YAYIN ÖZELLİĞİ</b></u> [Sadece Sudo kullanıcıları için]:
-
-/broadcast [mesaj veya mesaja cevap] : Botun hizmet verdiği sohbetlerde bir mesajı yayınlar.
-
-<u>Yayın Modları:</u>
-<b>-pin</b> : Yayınlanan mesajları hizmet verilen sohbetlerde sabitler.
-<b>-pinloud</b> : Yayınlanan mesajı hizmet verilen sohbetlerde sabitler ve üyelere bildirim gönderir.
-<b>-user</b> : Mesajı botu başlatan kullanıcılara yayınlar.
-<b>-assistant</b> : Mesajı botun yardımcı hesabından yayınlar.
-<b>-nobot</b> : Botun mesajı yayınlamasını engeller.
-
-<b>Örnek:</b> <code>/broadcast -user -assistant -pin test yayını</code>
-
-✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
-
-HELP_4 = """<u><b>SOHBET KARALİSTESİ ÖZELLİĞİ:</b></u> [Sadece Sudo kullanıcıları için]
-
-Botumuzu kullanmak için kötü sohbetleri kısıtlayın.
-
-/blacklistchat [sohbet ID] : Bir sohbeti botu kullanmaktan kara listeye alır.
-/whitelistchat [sohbet ID] : Kara listeden sohbeti beyaz listeye alır.
-/blacklistedchat : Kara listeye alınan sohbetlerin listesini gösterir.
-
-☆✧✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
-
-HELP_5 = """
-<u><b>KULLANICI ENGELLEME:</b></u> [Sadece Sudo kullanıcıları için]
-
-Kara listeye alınan kullanıcıyı görmezden gelmeye başlar, böylece bot komutlarını kullanamaz.
-
-/block [kullanıcı adı veya kullanıcıya cevap] : Kullanıcıyı botumuzdan engeller.
-/unblock [kullanıcı adı veya kullanıcıya cevap] : Engellenen kullanıcıyı engellemesini kaldırır.
-/blockedusers : Engellenen kullanıcıların listesini gösterir.
-
-✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
-
-HELP_6 = """
-<u><b>KANAL OYNATMA KOMUTLARI:</b></u>
-
-Kanallarda ses/video akışı yapabilirsiniz.
-
-/cplay : Kanalın video sohbetinde istenen ses parçasını oynatmaya başlar.
-/cvplay : Kanalın video sohbetinde istenen video parçasını oynatmaya başlar.
-/cplayforce veya /cvplayforce : Devam eden yayını durdurur ve istenen parçayı oynatmaya başlar.
-
-/channelplay [sohbet kullanıcı adı veya ID] veya [devre dışı bırak] : Bir gruba kanal bağlar ve grup komutlarıyla parça yayını başlatır.
-/bass ➠ Ses dosyasına bas eklemek için bir ses dosyasına cevap verin...
-/dj ➠ Ses dosyasına DJ efekti eklemek için bir ses dosyasına cevap verin...
-
-✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
-
-HELP_7 = """
-<u><b>GENEL YASAKLAMA ÖZELLİĞİ</b></u> [Sadece Sudo kullanıcıları için]:
-
-/gban [kullanıcı adı veya kullanıcıya cevap] : Kullanıcıyı tüm hizmet verilen sohbetlerde genel olarak yasaklar ve botu kullanmasını engeller.
-/ungban [kullanıcı adı veya kullanıcıya cevap] : Genel olarak yasaklanan kullanıcının yasaklamasını kaldırır.
-/gbannedusers : Genel olarak yasaklanan kullanıcıların listesini gösterir.
-
-✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
-
-HELP_8 = """
-<b><u>LOOP STREAM:</b></u>
-
-<b>Devam eden yayını döngüde oynatır</b>
-
-/loop [etkinleştir/devre dışı bırak] : Devam eden yayın için döngüyü etkinleştirir/devre dışı bırakır
-/loop [1, 2, 3, ...] : Belirtilen değer için döngüyü etkinleştirir.
-
-✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
-
-HELP_9 = """
-<u><b>BAKIM MODU</b></u> [Sadece Sudo kullanıcıları için]:
-
-/logs : Botun günlüklerini alır.
-
-/logger [etkinleştir/devre dışı bırak] : Botun etkinlikleri günlüğe kaydetmeye başlamasını sağlar.
-
-/maintenance [etkinleştir/devre dışı bırak] : Botun bakım modunu etkinleştirir veya devre dışı bırakır.
-
-✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
-
-HELP_10 = """
-<b><u>Ping & Stats:</b></u>
-
-/start : Müzik botunu başlatır.
-/help : Komutların açıklamalarıyla birlikte yardım menüsünü alır.
-
-/toe : Botun ping ve sistem istatistiklerini gösterir.
-
-/stats : Botun genel istatistiklerini gösterir.
-
-✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
-
-HELP_11 = """
-<u><b>OYUN KOMUTLARI:</b></u>
-
-<b>v :</b> Video oynatma anlamına gelir.
-<b>force :</b> Zorla oynatma anlamına gelir.
-
-/play veya /vplay : İstenen parçayı video sohbette oynatmaya başlar.
-
-/playforce veya /vplayforce : Devam eden yayını durdurur ve istenen parçayı oynatmaya başlar.
-
-✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
-
-HELP_12 = """
-<b><u>ŞARKI KARMA:</b></u>
-
-/shuffle : Sıradaki parçaları karıştırır.
-/queue : Karışık sıradaki parçaları gösterir.
-
-✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
-
-HELP_13 = """
-<b><u>AKIŞTA İLERLEME:</b></u>
-
-/seek [saniye cinsinden süre] : Yayını belirtilen süreye getirir.
-/seekback [saniye cinsinden süre] : Yayını belirtilen süreye geri alır.
-
-✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
-
-HELP_14 = """
-<b><u>İNDİRME BÖLÜMÜ</b></u>
-
-/song [şarkı adı/YT URL] : YouTube'dan herhangi bir parçayı MP3 veya MP4 formatında indirir.
-/video veya /yt  ➠ Bağlantı veya video adını komuttan sonra girerek videoyu indir.
-/insta ➠ Instagram reeli indir
-Tabii, çeviriye devam ediyorum:
-/movie ➠ O filmin bilgilerini almak için kullanılır.
-/remove ➠ [video veya ses] Bir video dosyasına yanıt olarak, ses veya video dosyasını kaldırmak için kullanılır.
-
-✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
-
-HELP_15 = """
-<b><u>HIZ KOMUTLARI:</b></u>
-
-Devam eden yayının oynatma hızını kontrol edebilirsiniz. [Yalnızca yöneticiler]
-
-/speed veya /playback : Grup içinde ses oynatma hızını ayarlamak için kullanılır.
-/cspeed veya /cplayback : Kanal içinde ses oynatma hızını ayarlamak için kullanılır.
-
-✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
-
-HELP_16 = """
-<b><u>ChatGPT:</b></u>
-
-Jarvis - Bu komutla Jarvis'e erişebilirsiniz.
-Assis - Yapay zeka sesli yanıt verir.
- /gpt - GPT işlevselliğine erişmek için kullanılır.
- /bard - Bard özelliğini çağırır.
- /llama - Llama modunu etkinleştirir.
- /gemini - Gemini modunu keşfeder.
- /mistral - Mistral kodunu etkinleştirir.
- /tts - Metni sese dönüştürmek için kullanılır.
- /bingsearch - Bing platformunda arama yapmak için kullanılır.
- /logo - Komuttan sonra metin girerek logo oluşturur.
- /animelogo - Komuttan sonra metin girerek anime logosu oluşturur.
-
-✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
-
-HELP_17 = """
-<b><u>STICKERS:</b></u>
-
-/mmf ➠ Resmi veya sticker'ı meme yapmak için kullanılır.
-/tiny ➠ Küçültmek istediğiniz stickera yanıt verin.
-/kang ➠ Resimleri sticker olarak almak için kullanılır.
-/packkang ➠ Diğer bir paketten sticker seti oluşturur.
-/stickerid ➠ Sticker'ın kimliğini alır.
-/st ➠ Sticker bulmak için sticker kimliğini komuttan sonra girin.
-/meme ➠ Meme oluşturmak için kullanılır.
-
-✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
-
-HELP_18 = """
-<b><u>Tag-All:</b></u>
-
- /utag veya /uall ➠ Sınırsız etiketleme için kullanılır....🫠
- /stoputag veya /offuall ➠ Sınırsız etiketlemeyi durdurmak için kullanılır.
- /mention veya /all ➠ Komuttan sonra metin girin veya metne yanıt vererek herkesi etiketleyin.
- /cancel veya /alloff ➠ Etiketlemeyi iptal etmek için kullanılır.
- /tagall ➠ Rastgele komik etiketlemeler için kullanılır 😁.
- /tagoff veya /tagstop ➠ Komik etiketlemeleri durdurmak için kullanılır.
- /gmtag ➠ Sabah dilekleri için etiketleme🥰.
- /gmstop ➠ Sabah dileklerini durdurmak için kullanılır.
- /gntag ➠ Gece dilekleri için etiketleme 😴.
- /gnstop ➠ Gece dileklerini durdurmak için kullanılır.
- /hitag ➠ Kullanıcıları Hintçe alıntılarla etiketlemek için kullanılır.
- /histop ➠ Hintçe alıntıları durdurmak için kullanılır.
- /entag ➠ İngilizce etiketlemek için kullanılır...
- /entop ➠ İngilizce etiketlemeyi durdurmak için kullanılır.
- /bntag ➠ Bengalce etiketlemek için kullanılır...
- /bnstop ➠ Bengalce etiketlemeyi durdurmak için kullanılır.
- /lifetag ➠ İngilizce alıntılarla kullanıcıları etiketlemek için kullanılır.
- /lifestop ➠ İngilizce alıntıları durdurmak için kullanılır.
- /shayari ➠ Tüm kullanıcıları Shayari ile etiketlemek için kullanılır 😜.
- /shayarioff ➠ Shayari etiketlemeyi durdurmak için kullanılır.
-
-✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
-
-HELP_19 = """
-<b><u>BİLGİ:</b></u>
-
-/id : Mevcut grup kimliğini alır. Bir mesaja yanıt verilirse, o kullanıcının kimliğini alır.
-/info : Bir kullanıcı hakkında bilgi alır.
-/github <kullanıcı adı> : Bir GitHub kullanıcısı hakkında bilgi alır.
-/sg ➠ Kimlik ve kullanıcı adına yanıt vererek o kişinin geçmişini almak için kullanılır.
-/groupdata & /groupinfo ➠ Grup bilgilerini almak için kullanılır.
-/whois ➠ Kullanıcı adı veya yanıt vererek o kişi hakkında detayları öğrenmek için kullanılır.
-/phone ➠ Komuttan sonra telefon numaranızı girerek detayları almak için kullanılır.
-/Whatsapp {telefon numarası} ➠ WhatsApp için doğrudan bağlantı oluşturmak için kullanılır.
-
-✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
-
-HELP_20 = """
-<b><u>GRUP:</b></u>
-Bu, grup yönetimi komutlarının listesidir:
-
-⦿ /pin ➠ Grubun içinde bir mesajı sabitler.
-⦿ /pinned ➠ Grubun içinde sabitlenmiş mesajı gösterir.
-⦿ /unpin ➠ Mevcut sabitlenmiş mesajı sabitlemesini kaldırır.
-⦿ /staff ➠ Personel üyelerinin listesini gösterir.
-⦿ /bots ➠ Grubun içinde botların listesini gösterir.
-⦿ /settitle ➠ Grubun başlığını ayarlar.
-⦿ /setdiscription ➠ Grubun açıklamasını ayarlar.
-⦿ /wel ➠ Karşılama mesajını açar veya kapatır.
-⦿ /filter ➠ Grubun içinde filtre ayarlamak için kullanılır.
-⦿ /stopfilter ➠ Filtre adını komuttan sonra girerek o filtreyi durdurmak için kullanılır.
-⦿ /setphoto ➠ Grubun fotoğrafını ayarlar.
-⦿ /removephoto ➠ Grubun fotoğrafını kaldırır.
-⦿ /zombies ➠ Grubun içindeki silinmiş üyeleri kaldırır.
-⦿ /imposter aç/kapat ➠ Grubunuz için izleyiciyi açar veya kapatır, kullanıcı adını veya adını değiştiren kullanıcılar hakkında bilgilendirir.
-⦿ /lang ➠ Bot dilini değiştirir.
-
-✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
-
-HELP_21 = """
-<b><u>EKSTRA:</b></u>
-
-⦿ /math ➠ Matematiksel problemleri ve denklemleri çözer.
-⦿ /blackpink ➠ Blackpink tarzında bir logo oluşturur.
-⦿ /carbon ➠ Bir kod snippet'inden karbon kodu görüntüsü oluşturur.
-⦿ /speedtest ➠ İnternet hızını ölçer.
-⦿ /reverse ➠ Verilen metni tersine çevirir.
-⦿ /webss ➠ Bir web sitesinin ekran görüntüsünü alır.
-⦿ /webdl ➠ Komuttan sonra web sitesinin bağlantısını girerek o sitenin kaynak kodunu alır.
-⦿ /paste ➠ Bir metin snippet'ini buluta yükler ve bir bağlantı verir.
-⦿ /tgm ➠ (5MB altında) bir fotoğrafı buluta yükler ve bir bağlantı verir.
-⦿ /tr ➠ Metni çevirir.
-⦿ /google ➠ Google'da bilgi arar.
-⦿ /stack ➠ Stackoverflow'da programlama ile ilgili bilgi arar.
-⦿ /short ➠ Kısaltmak istediğiniz bağlantıyı komuttan sonra girin.
-⦿ /pdf ➠ JPEG dosyasına yanıt vererek resmi PDF'ye dönüştürür.
-
-✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
-
-HELP_22 = """
-<b><u>RESİM:</b></u>
-Bunlar mevcut resim komutlarıdır:
-
-⦿ /draw ➠ Verilen bir konuya dayalı bir çizim oluşturur.
-⦿ /image ➠ Verilen bir anahtar kelimeye dayalı bir resim arar.
-⦿ /upscale ➠ Bir resme yanıt vererek onu büyütür ve kalitesini artırır.
-⦿ /rmbg ➠ Bir resmin arka planını kaldırmak için kullanılır.
-
-✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
-
-HELP_23 = """
-<b
-
-><u>EYLEM:</b></u>
-» Yasaklar ve Sessizler için kullanılabilir komutlar:
-
- ❍ /kickme: Komutu veren kullanıcıyı gruptan çıkarır.
-
-Yalnızca yöneticiler:
- ❍ /ban <kullanıcı adı>: Bir kullanıcıyı yasaklar. (kullanıcı adıyla veya yanıtla)
- ❍ /sban <kullanıcı adı>: Bir kullanıcıyı sessizce yasaklar. Komutu, yanıtlanan mesajı siler ve yanıt vermez. (kullanıcı adıyla veya yanıtla)
- ❍ /tban <kullanıcı adı> x(m/h/g): Bir kullanıcıyı x süreyle yasaklar. (kullanıcı adıyla veya yanıtla). m = dakika, h = saat, g = gün.
- ❍ /unban <kullanıcı adı>: Bir kullanıcıyı yasaklamaktan çıkarır. (kullanıcı adıyla veya yanıtla)
- ❍ /kick <kullanıcı adı>: Bir kullanıcıyı gruptan çıkarır. (kullanıcı adıyla veya yanıtla)
- ❍ /mute <kullanıcı adı>: Bir kullanıcıyı sessize alır. Yanıt olarak da kullanılabilir, yanıtlanan kullanıcıyı sessize alır.
- ❍ /tmute <kullanıcı adı> x(m/h/g): Bir kullanıcıyı x süreyle sessize alır. (kullanıcı adıyla veya yanıtla). m = dakika, h = saat, g = gün.
- ❍ /unmute <kullanıcı adı>: Bir kullanıcıyı sessizlikten çıkarır. Yanıt olarak da kullanılabilir, yanıtlanan kullanıcıyı sessizlikten çıkarır.
-
-✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
-
-HELP_24 = """
-<b><u>ARAMA:</b></u>
-Mevcut komutlar:
-• /google <sorgu> : Verilen sorguyu Google'da arar.
-• /anime <sorgu> : Verilen sorguyu myanimelist'te arar.
-• /stack <sorgu> : Verilen sorguyu stackoverflow'da arar.
-• /image (/imgs) <sorgu> : Sorgunuza ilişkin resimleri alır.
-• /mongochk ➠ Mongo'nun durumunu kontrol eder [bağlantıyı komuttan sonra girin].
-• /ip ➠ IP adresini komuttan sonra girerek bilgi alır.
-• /domain ➠ Alan adı bilgisini almak için komuttan sonra alan adını girin.
-• /weather ➠ Konum bilgisini komuttan sonra girerek o konumun hava durumunu alır.
-• /Time ➠ Zaman diliminizin saatini almak için kullanılır.
-• /calendar ➠ Yılı girerek takvim bilgilerini alır.
-• /day ➠ {yıl/ay/gün} formatında tarihi girerek o günün hangi güne denk geldiğini öğrenmek için kullanılır.
-• /get_states ➠ Ülke adını komuttan sonra girerek o ülkenin eyalet bilgilerini alır.
-
-Örnek:
-/google pyrogram: İlk 5 sonucu döndürür.
-
-✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
-
-HELP_25 = """
-<b><u>CC:</b></u>
-CC ile ilgili komutlar:
- /gen ➠ Komuttan sonra BIN girerek geçerli CC oluşturur.
- /genbin ➠ BIN oluşturur.
- /bin ➠ Komuttan sonra BIN girerek BIN'in durumunu kontrol eder.
- /fake ➠ Komuttan sonra herhangi bir rastgele ülke adını girerek sahte bilgi oluşturur.
-
-✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
-
-HELP_26 = """
-<b><u>METİN DÜZENLEME:</b></u>
-Metin düzenleme veya tasarım komutları:
- /font veya /fonts ➠ Komuttan sonra metin girerek font efektleri oluşturur.
- /figlet ➠ Komuttan sonra metin girerek figlet oluşturur.
- /hastag ➠ Komuttan sonra metin girerek o metnin hashtagini oluşturur.
- /code ➠ Komuttan sonra metin girerek o metni kodlar.
- /genpw ➠ Güçlü bir şifre oluşturur.
- /write ➠ Komuttan sonra metin girerek not defterine yazar.
- /qr ➠ Komuttan sonra metin girerek o metnin QR kodunu oluşturur.
-
-✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
-
-HELP_27 = """
-<b><u>MASTI♡︎:</b></u>
-Eğlen veya hiç...
- /couples ➠ Grubunuzda çiftler oluşturur.
- /love ➠ İki kişinin adını girerek aşk istatistiklerini kontrol eder {ilk} {ikinci} [eğlence amaçlı alın 😁].
- /day ➠ {yıl/ay/gün} formatında tarihi girerek o günün hangi güne denk geldiğini öğrenmek için kullanılır.
- /cute ➠ Sevimlilik oranınızı kontrol eder 🥰.
- /hjoke ➠ Rastgele komik şakalar alır 😁.
- /kiss ➠ Birine öpmek için kullanılır.
- /hug ➠ Birine sarılmak için kullanılır.
- /slap ➠ Birine tokat atmak için kullanılır.
- /sleep ➠ Uyku komutu 🫠.
- /run ➠ Koşma komutu 😅.
- /wish ➠ Komuttan sonra dileğinizi girerek kullanılır.
- /bored ➠ Sadece eğlence için 😁.
- /gay ➠ Eşcinsel yüzdesini kontrol eder, şaka amaçlı 😅.
- /hot ➠ Sıcaklık seviyenizi kontrol eder.
- /sexy ➠ Seksi seviyenizi kontrol eder 🤣.
- /lesbian ➠ Lezbiyen yüzdesini kontrol eder.
- /cutie ➠ Sevimlilik seviyenizi kontrol eder.
- /cock ➠ Penis boyutunuzu kontrol eder.
- /horny ➠ Ne kadar azgın olduğunuzu kontrol eder.
- /boob ➠ Meme boyutunuzu kontrol eder 😝.
-
-✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
-
-HELP_28 = """
-<b><u>REPO İLGİLİ:</b></u>
-Repo ile ilgili mevcut komutlar:
- /allrepo ➠ Komuttan sonra GitHub kullanıcı adını girerek o hesabın tüm repolarını alır.
- /pypi ➠ Komuttan sonra proje adını girerek o projenin istatistiklerini alır [Proje = GitHub Reposu].
- /downloadrepo ➠ Komuttan sonra repo bağlantısını girerek o repoyu indirir.
-
-✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
-
-HELP_29 = """
-<b><u>NOTLAR:</b></u>
-Notlarla ilgili:
- /save ➠ Komuttan sonra not adını girerek notu kaydeder.
- /get ➠ Komuttan sonra almak istediğiniz not adını girin.
- /privatenotes ➠ Özel notlar 😁😁.
- /clear ➠ Notları temizlemek için kullanılır.
- /clearall ➠ Tüm notları temizlemek için kullanılır.
-
-✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
-
-HELP_30 = """
-<b><u>OYUNLAR:</b></u>
-Emojilerle Oyun Oynayın:
-/dice - Zar 🎲
-/dart - Dart 🎯
-/basket - Basketbol 🏀
-/ball - Bowling Topu 🎳
-/football - Futbol ⚽
-/jackpot - Slot Makinesi 🎰
-
-✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
