@@ -39,7 +39,7 @@ XCB = [
 def dbb():
     global db
     db = {}
-    LOGGER(__name__).info(f"ᴅᴀᴛᴀʙᴀsᴇ ʟᴏᴀᴅᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ💗")
+    LOGGER(__name__).info(f"veritabanı başarıyla yüklendi💗")
 
 
 async def sudo():
@@ -58,7 +58,7 @@ async def sudo():
     if sudoers:
         for user_id in sudoers:
             SUDOERS.add(user_id)
-    LOGGER(__name__).info(f"sᴜᴅᴏ ᴜsᴇʀs ᴅᴏɴᴇ..")
+    LOGGER(__name__).info(f"Sudo kullanıcıları yapıldı.")
 
 
 def heroku():
@@ -71,4 +71,4 @@ def heroku():
                 LOGGER(__name__).info(f"ʜᴇʀᴏᴋᴜ ᴀᴘᴘ ᴄᴏɴғɪɢᴜʀᴇᴅ..")
             except BaseException:
                 LOGGER(__name__).warning(
-                    f"ʏᴏᴜ sʜᴏᴜʟᴅ ʜᴀᴠᴇ ɴᴏᴛ ғɪʟʟᴇᴅ ʜᴇʀᴏᴋᴜ ᴀᴘᴘ ɴᴀᴍᴇ ᴏʀ ᴀᴘɪ ᴋᴇʏ ᴄᴏʀʀᴇᴄᴛʟʏ ᴘʟᴇᴀsᴇ ᴄʜᴇᴄᴋ ɪᴛ...")
+                    f"Görünüşe göre Heroku uygulama adı veya API anahtarını doğru şekilde doldurmadınız. Lütfen kontrol ediniz...")
