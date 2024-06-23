@@ -224,6 +224,7 @@ queue_8 : "<b>{0} Oynatıcı</b>\n\n🎄 <b>Yayınlanıyor:</b> {1}\n\n🔗 <b>Y
 stream_1 : "➲ <b>Yayın Başlatıldı |</b>\n\n<b>‣ Başlık:</b> <a href={0}>{1}</a>\n<b>‣ Süre:</b> {2} dakika\n<b>‣ Talep Eden:</b> {3}"
 stream_2 : "➲ <b>Yayın Başlatıldı |</b>\n\n<b>‣ Yayın Türü:</b> Canlı yayın [URL]\n<b>‣ Talep Eden:</b> {0}"
 
+
 CLOSE_BUTTON : "✧ Kapat ✧"
 CLOSEMENU_BUTTON : "✧ Kapat ✧"
 BACK_BUTTON : "✧ Geri ✧"
