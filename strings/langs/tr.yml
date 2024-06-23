@@ -114,9 +114,6 @@ setting_4 : "» Yetkili kullanıcı bulunamadı."
 setting_5 : "» Grup: Komutun verildiği grupta müzik çalar.\n\n» Kanal: Müziği istediğiniz kanalda çalar. Kanal kimliğini /channelplay ile ayarlayın."
 setting_6 : "» Herkes: Bu grupta bulunan herkes burada müzik çalabilir.\n\n» Yalnızca Yönetici: Yalnızca yöneticiler bu grupta müzik çalabilir."
 setting_7 : "» Lütfen /channelplay ile kanal kimliğini tanımlayın."
-
-
-
 setting_8 : "Bu mod etkinleştirildiğinde, admin haklarına sahip olmayan kişiler belirli bir oy sayısından sonra admin komutlarını kullanabilir."
 setting_9 : "Admin komutlarını kullanmak için gereken mevcut oylar: {0}"
 setting_10 : "Oylama modu devre dışı bırakıldı."
