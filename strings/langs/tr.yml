@@ -200,6 +200,7 @@ playlist_16 : "**Sıraya alınan oynatma listesi:**"
 playlist_17 : "**Sıraya alınan konum-**"
 playlist_18 : "➻ [Tüm sıraya alınan oynatma listesini kontrol edin]({0})\n\n➥ Son sıraya alınan konum: **{1}**"
 
+
 #Top Oynatma
 tracks_1 : "**{0} Top 10 Oynatma Listesi İşleniyor**\nBu birkaç dakika sürebilir (yaklaşık 3-4 dakika).. Lütfen bekleyin...\n\n**👤Talep Eden:** {1}\n\nTop 10 şarkıları kontrol etmek için /gstats yazın."
 tracks_2 : "**Hata**\n\nBot'un sunucularında **{0} Top 10 Oynatma Listesi** yok. Lütfen başka bir oynatma listesi deneyin."
