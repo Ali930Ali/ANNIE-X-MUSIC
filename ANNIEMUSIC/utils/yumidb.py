@@ -54,9 +54,9 @@ async def user_has_permission(chat_title: str, chat_id: int, user_id: int, permi
 
     if not have_permission:
         if bot:
-            txt = f"I Don't Have The Following Right:\n**[{permission}]**\nIn **{chat_title}**."
+            txt = f"Böyle bir hakkım yok:\n**[{permission}]**\nIn **{chat_title}**."
         else:
-            txt = f"You Don't Have The Following Right:\n{permission}\nIn {chat_title}. So You Cant Perform This Action"
+            txt = f"Aşağıdaki hakkınız yok:\n{permission}\nIn {chat_title}. Bu işlemi gerçekleştiremezsiniz"
         return have_permission, txt
     else:
         return have_permission, None
@@ -81,7 +81,7 @@ def bot_can_ban(func):
         BOT = await app.get_chat_member(message.chat.id,BOT_USERNAME)
                  
         if not BOT.privileges.can_restrict_members:                        
-            await message.reply_text(f"I Don't Have Rights To Restrict The User In **{message.chat.title}**.")
+            await message.reply_text(f"Kullanıcıyı kısıtlama yetkim yok **{message.chat.title}**.")
             return 
         return await func(app,message,*args,**kwargs)
     return can_restrict
@@ -92,7 +92,7 @@ def bot_can_change_info(func):
         BOT = await app.get_chat_member(message.chat.id,BOT_USERNAME)
 
         if not BOT.privileges.can_change_info:                         
-            await message.reply_text(f"I Don't Have Rights To Change Info In **{message.chat.title}**.")
+            await message.reply_text(f"Tasarımda bilgi değiştirme yetkim yok **{message.chat.title}**.")
             return 
         return await func(app,message,*args,**kwargs)
     return can_change_info
@@ -104,7 +104,7 @@ def bot_can_promote(func):
         BOT = await app.get_chat_member(message.chat.id,BOT_USERNAME)
 
         if not BOT.privileges.can_promote_members:                         
-            await message.reply_text(f"I Don't Have Rights To Promote Users In **{message.chat.title}**.")
+            await message.reply_text(f"Tasarımda bilgi değiştirme yetkim yok **{message.chat.title}**.")
             return 
         return await func(app,message,*args,**kwargs)
     return can_promote
@@ -116,7 +116,7 @@ def bot_can_pin(func):
         BOT = await app.get_chat_member(message.chat.id,BOT_USERNAME)
 
         if not BOT.privileges.can_pin_messages:                         
-            await message.reply_text(f"I Don't Have Rights To Pin Messages In **{message.chat.title}**.")
+            await message.reply_text(f"Mesajları sabitleme yetkim yok **{message.chat.title}**.")
             return 
         return await func(app,message,*args,**kwargs)
     return can_pin
@@ -127,7 +127,7 @@ def bot_can_del(func):
         BOT = await app.get_chat_member(message.chat.id,BOT_USERNAME)
 
         if not BOT.privileges.can_delete_messages:                         
-            await message.reply_text(f"I Don't Have Rights To Delete Messages In **{message.chat.title}**.")
+            await message.reply_text(f"Mesajları silme yetkim yok **{message.chat.title}**.")
             return 
         return await func(app,message,*args,**kwargs)
     return can_delete
@@ -137,12 +137,12 @@ def user_admin(mystic):
     async def wrapper(app : Client, message : Message,*args,**kwargs):
         chat_type = message.chat.type
         if chat_type == ChatType.PRIVATE:
-            return await message.reply("Use This Command In Groups Only")
+            return await message.reply("Sadece gruplarda bu komutu kullanın")
         if message.sender_chat:
             if message.sender_chat.id == message.chat.id:
-                return await message.reply("You Are Anonymous Admin Please Use User ID")
+                return await message.reply("Anonim bir yöneticisiniz. Lütfen kullanıcı kimliğini kullanın")
             else:
-                return await message.reply_text("You Are Not Admin")
+                return await message.reply_text("Siz yönetici değilsiniz")
                 
         else:
             user_id = message.from_user.id    
@@ -150,7 +150,7 @@ def user_admin(mystic):
             user = await app.get_chat_member(chat_id,user_id) 
         
             if (user.status not in COMMANDERS) and user_id not in SUDORES:
-                return await message.reply_text("You Are Not Admin")
+                return await message.reply_text("Siz yönetici değilsiniz")
                                                                             
         return await mystic(app,message,*args,**kwargs)
 
@@ -165,7 +165,7 @@ def user_can_ban(mystic):
         
         if (user.privileges and not user.privileges.can_restrict_members) and user_id not in SUDORES: 
 
-            return await message.reply_text("You Dont Have Right To Restrict Users.") 
+            return await message.reply_text("Kullanıcıları kısıtlama yetkiniz yok.") 
                                                     
         return await mystic(app,message,*args,**kwargs)
     return wrapper
@@ -178,7 +178,7 @@ def user_can_del(mystic):
         user = await app.get_chat_member(chat_id,user_id)
         
         if (user.status in COMMANDERS and not user.privileges.can_delete_messages) and user_id not in SUDORES:                     
-            return await message.reply_text("You Dont Have Right To Delete Messages") 
+            return await message.reply_text("Mesajları silme yetkiniz yok") 
                                                     
         return await mystic(app,message,*args,**kwargs)
     return wrapper
@@ -192,7 +192,7 @@ def user_can_change_info(mystic):
         user = await app.get_chat_member(chat_id,user_id)
         
         if (user.status in COMMANDERS and not user.privileges.can_change_info) and user_id not in SUDORES:                     
-            return await message.reply_text("You Dont Have Right To Change Info Of This Group.") 
+            return await message.reply_text("Bu grubun bilgilerini değiştirme hakkınız yok.") 
                                                     
         return await mystic(app,message,*args,**kwargs)
     return wrapper
@@ -205,7 +205,7 @@ def user_can_promote(mystic):
         user = await app.get_chat_member(chat_id,user_id)
         
         if (user.status in COMMANDERS and not user.privileges.can_promote_members) and user_id not in SUDORES:                     
-            return await message.reply_text("You Dont Have Right To Promote Users Of This Group.") 
+            return await message.reply_text("Bu grup içinde kullanıcıları terfi ettirme yetkiniz yok.") 
                                                     
         return await mystic(app,message,*args,**kwargs)
     return wrapper
