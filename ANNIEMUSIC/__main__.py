@@ -21,7 +21,7 @@ async def init():
         and not config.STRING4
         and not config.STRING5
     ):
-        LOGGER(__name__).error("ᴀssɪsᴛᴀɴᴛ sᴇssɪᴏɴ ɴᴏᴛ ғɪʟʟᴇᴅ, ᴘʟᴇᴀsᴇ ғɪʟʟ ᴀ ᴘʏʀᴏɢʀᴀᴍ sᴇssɪᴏɴ...")
+        LOGGER(__name__).error("Asistan oturumu doldurulmadı, lütfen bir Pyrogram oturumu doldurun...")
         exit()
     await sudo()
     try:
@@ -36,15 +36,13 @@ async def init():
     await app.start()
     for all_module in ALL_MODULES:
         importlib.import_module("ANNIEMUSIC.plugins" + all_module)
-    LOGGER("ANNIEMUSIC.plugins").info("ᴀɴɴɪᴇ's ᴍᴏᴅᴜʟᴇs ʟᴏᴀᴅᴇᴅ...")
+    LOGGER("ANNIEMUSIC.plugins").info("Esilanın modülleri yüklendi...")
     await userbot.start()
     await JARVIS.start()
     try:
         await JARVIS.stream_call("https://te.legra.ph/file/29f784eb49d230ab62e9e.mp4")
     except NoActiveGroupCall:
-        LOGGER("ANNIEMUSIC").error(
-            "ᴘʟᴇᴀsᴇ ᴛᴜʀɴ ᴏɴ ᴛʜᴇ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ᴏғ ʏᴏᴜʀ ʟᴏɢ ɢʀᴏᴜᴘ\ᴄʜᴀɴɴᴇʟ.\n\nᴀɴɴɪᴇ ʙᴏᴛ sᴛᴏᴘᴘᴇᴅ..."
-        )
+        LOGGER("ANNIEMUSIC").error("Lütfen günlük grup/kanalınızın sesli sohbetini açın.Esila bot durdu...")
         exit()
     except:
         pass
@@ -55,7 +53,7 @@ async def init():
     await idle()
     await app.stop()
     await userbot.stop()
-    LOGGER("ANNIEMUSIC").info("sᴛᴏᴘɪɴɢ ᴀɴɴɪᴇ ᴍᴜsɪᴄ ʙᴏᴛ ...")
+    LOGGER("ANNIEMUSIC").info("Esila müzik botu durduruluyor ...")
 
 
 if __name__ == "__main__":
