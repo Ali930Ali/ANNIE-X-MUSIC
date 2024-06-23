@@ -13,9 +13,9 @@ BOT_TOKEN = getenv("BOT_TOKEN")
 
 # Specify where to get the following credentials
 OWNER_USERNAME = getenv("OWNER_USERNAME", "JARVIS_V2")
-BOT_USERNAME = getenv("BOT_USERNAME", "Annie_Music_Robot")
-BOT_NAME = getenv("BOT_NAME", "˹𝐀ɴɴɪᴇ ✘ 𝙼ᴜsɪᴄ˼ ♪")
-ASSUSERNAME = getenv("ASSUSERNAME", "musicXannie")
+BOT_USERNAME = getenv("BOT_USERNAME", "EsilaChatBot")
+BOT_NAME = getenv("BOT_NAME", "˹𝐄𝐬𝐢𝐥𝐚 𝐬𝐨𝐡𝐛𝐞𝐭˼ ♪")
+ASSUSERNAME = getenv("ASSUSERNAME", "esilamuzikasistan")
 EVALOP = list(map(int, getenv("EVALOP", "6797202080").split()))
 MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 LOGGER_ID = int(getenv("LOGGER_ID", -1002014167331))
@@ -28,13 +28,13 @@ OWNER_ID = int(getenv("OWNER_ID", 7044783841))
 # Heroku deployment settings - Refer to Heroku documentation on how to obtain these
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
-UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/doraemon890/ANNIE-X-MUSIC")
+UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/Ali930Ali/ANNIE-X-MUSIC")
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "Master")
 GIT_TOKEN = getenv("GIT_TOKEN", None)
 
 # Support and contact information - Provide your own support channels
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/JARVIS_V_SUPPORT")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/Dora_Hub")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/esilabotbilgilendirme")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/sorundestekk")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
@@ -82,7 +82,7 @@ autoclean = []
 confirmer = {}
 
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://telegra.ph/file/fdbffdb39d20374823466.jpg"
+    "START_IMG_URL", "https://telegra.ph/5458421847123053465mp4-06-23"
 )
 PING_VID_URL = getenv(
     "PING_VID_URL", "https://telegra.ph/file/4be43ed2aa6872337e9a8.mp4"
@@ -107,11 +107,11 @@ DURATION_LIMIT = int(time_to_seconds(f"{DURATION_LIMIT_MIN}:00"))
 if SUPPORT_CHANNEL:
     if not re.match("(?:http|https)://", SUPPORT_CHANNEL):
         raise SystemExit(
-            "[ERROR] - Your SUPPORT_CHANNEL url is wrong. Please ensure that it starts with https://"
+            "[ERROR] - SUPPORT_CHANNEL URL'niz yanlış. Lütfen şununla başladığından emin olun: https://"
         )
 
 if SUPPORT_CHAT:
     if not re.match("(?:http|https)://", SUPPORT_CHAT):
         raise SystemExit(
-            "[ERROR] - Your SUPPORT_CHAT url is wrong. Please ensure that it starts with https://"
+            "[ERROR] - SUPPORT_CHAT URL'niz yanlış. Lütfen şununla başladığından emin olun: https://"
 )
