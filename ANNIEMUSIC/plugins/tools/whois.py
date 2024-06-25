@@ -21,11 +21,11 @@ def ReplyCheck(message: Message):
 
 infotext = (
     "[{full_name}](tg://user?id={user_id})\n\n"
-    " ➻ ᴜsᴇʀ ɪᴅ: `{user_id}`\n"
-    " ➻ ғɪʀsᴛ ɴᴀᴍᴇ: `{first_name}`\n"
-    " ➻ ʟᴀsᴛ ɴᴀᴍᴇ: `{last_name}`\n"
-    " ➻ ᴜsᴇʀɴᴀᴍᴇ: `@{username}`\n"
-    " ➻ ʟᴀsᴛ sᴇᴇɴ: `{last_online}`"
+    " ➻ Kullanıcı ID: `{user_id}`\n"
+    " ➻ İsim: `{first_name}`\n"
+    " ➻ Soyisim: `{last_name}`\n"
+    " ➻ Kullanıcı Adı: `@{username}`\n"
+    " ➻ Son Görülme: `{last_online}`"
 )
 
 
@@ -33,15 +33,15 @@ def LastOnline(user: User):
     if user.is_bot:
         return ""
     elif user.status == "recently":
-        return "ʀᴇᴄᴇɴᴛʟʏ"
+        return "Son zamanlarda"
     elif user.status == "within_week":
-        return "ᴡɪᴛʜɪɴ ᴛʜᴇ ʟᴀsᴛ ᴡᴇᴇᴋ"
+        return "Son bir hafta içinde"
     elif user.status == "within_month":
-        return "ᴡɪᴛʜɪɴ ᴛʜᴇ ʟᴀsᴛ ᴍᴏɴᴛʜ"
+        return "Son bir ay içinde"
     elif user.status == "long_time_ago":
-        return "ᴀ ʟᴏɴɢ ᴛɪᴍᴇ ᴀɢᴏ :("
+        return "Uzun zaman önce :("
     elif user.status == "online":
-        return "ᴄᴜʀʀᴇɴᴛʟʏ ᴏɴʟɪɴᴇ"
+        return "Şu anda çevrimiçi"
     elif user.status == "offline":
         return datetime.fromtimestamp(user.status.date).strftime(
             "%a, %d %b %Y, %H:%M:%S"
