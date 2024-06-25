@@ -62,7 +62,7 @@ async def eor(msg: Message, **kwargs):
 @app.on_message(filters.command(["webss", "ss", "webshot"]))
 async def take_ss(_, message: Message):
     if len(message.command) < 2:
-        return await eor(message, text="**ɢɪᴠᴇ ᴀ ᴜʀʟ ᴛᴏ ғᴇᴛᴄʜ sᴄʀᴇᴇɴsʜᴏᴛ.**")
+        return await eor(message, text="**Ekran görüntüsü almak için bir URL verin.**")
 
     if len(message.command) == 2:
         url = message.text.split(None, 1)[1]
@@ -76,16 +76,16 @@ async def take_ss(_, message: Message):
             "true",
         ]
     else:
-        return await eor(message, text="**ɪɴᴠᴀʟɪᴅ ᴄᴏᴍᴍᴀɴᴅ.**")
+        return await eor(message, text="**Geçersiz komut.**")
 
-    m = await eor(message, text="**ᴄᴀᴘᴛᴜʀɪɴɢ sᴄʀᴇᴇɴsʜᴏᴛ...**")
+    m = await eor(message, text="**Ekran görüntüsü yakalama...**")
 
     try:
         photo = await take_screenshot(url, full)
         if not photo:
-            return await m.edit("**ғᴀɪʟᴇᴅ ᴛᴏ ᴛᴀᴋᴇ sᴄʀᴇᴇɴsʜᴏᴛ.**")
+            return await m.edit("**Ekran görüntüsü alınamadı.**")
 
-        m = await m.edit("**ᴜᴘʟᴏᴀᴅɪɴɢ...**")
+        m = await m.edit("**Yükleme...**")
 
         if not full:
             await message.reply_photo(photo, reply_markup=button)
