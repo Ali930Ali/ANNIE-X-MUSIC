@@ -6,7 +6,7 @@ from ANNIEMUSIC import app
 @app.on_message(filters.command("waifu"))
 async def waifu_command_handler(_, message):
     try:
-        tags = ['maid']  # You can customize the tags as needed
+        tags = ['maid']  # Etiketleri isteğe göre özelleştirebilirsiniz
         waifu_data = get_waifu_data(tags)
 
         if waifu_data and 'images' in waifu_data:
@@ -14,11 +14,11 @@ async def waifu_command_handler(_, message):
             image_url = first_image['url']
             await message.reply_photo(image_url)
         else:
-            await message.reply_text("No waifu found with the specified tags.")
+            await message.reply_text("Belirtilen etiketlerle ilgili waifu bulunamadı.")
 
     except Exception as e:
         print(f"An error occurred: {e}")
-        await message.reply_text(f"An error occurred: {e}")
+        await message.reply_text(f"Bir hata oluştu: {e}")
 
 # Helper function to get waifu data
 def get_waifu_data(tags):
