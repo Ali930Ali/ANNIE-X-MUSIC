@@ -42,7 +42,7 @@ def LastOnline(user: User):
         return "Uzun zaman önce :("
     elif user.status == "online":
         return "Şu anda çevrimiçi"
-    elif user.status == "offline":
+    elif user.status == "Çevrimdışı":
         return datetime.fromtimestamp(user.status.date).strftime(
             "%a, %d %b %Y, %H:%M:%S"
         )
