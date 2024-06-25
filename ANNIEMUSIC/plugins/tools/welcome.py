@@ -27,13 +27,13 @@ class WelDatabase:
         self.data = {}
 
     async def find_one(self, chat_id):
-        return self.data.get(chat_id, {"state": "on"})  # Default state is on
+        return self.data.get(chat_id, {"state": "on"})  # Varsayılan durum açık
 
     async def add_wlcm(self, chat_id):
-        self.data[chat_id] = {"state": "on"}  # Set state to "on"
+        self.data[chat_id] = {"state": "on"}  # "Durumu ayarla" "on"
 
     async def rm_wlcm(self, chat_id):
-        self.data[chat_id] = {"state": "off"}  # Set state to "off"
+        self.data[chat_id] = {"state": "off"}  # "Durumu ayarla" "off"
 
 wlcm = WelDatabase()
 
@@ -57,7 +57,7 @@ def circle(pfp, size=(500, 500)):
     return pfp
 
 def welcomepic(pic, user, chatname, id, uname):
-    background = Image.open("ANNIEMUSIC/assets/annie/AnnieNwel.png")
+    background = Image.open("https://telegra.ph/file/d4ad9d539f6297cc5f7a2.jpg")
     pfp = Image.open(pic).convert("RGBA")
     pfp = circle(pfp)
     pfp = pfp.resize((835, 839))
@@ -74,7 +74,7 @@ def welcomepic(pic, user, chatname, id, uname):
 
 @app.on_message(filters.command("wel") & ~filters.private)
 async def auto_state(_, message):
-    usage = "**Usage:**\n⦿/wel [on|off]\n➤ANNIE SPECIAL WELCOME.........."
+    usage = "**Kullanım:**\n⦿/wel [on|off]\n➤ ANNIE ÖZEL HOŞ GELDİN MESAJI.........."
     if len(message.command) == 1:
         return await message.reply_text(usage)
     chat_id = message.chat.id
@@ -87,20 +87,20 @@ async def auto_state(_, message):
         state = message.text.split(None, 1)[1].strip().lower()
         if state == "off":
             if A.get("state") == "off":
-                await message.reply_text("**ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ᴀʟʀᴇᴀᴅʏ ᴅɪsᴀʙʟᴇᴅ !**")
+                await message.reply_text("**Hoş Geldiniz Bildirimi Zaten Devre Dışı Bırakıldı !**")
             else:
                 await wlcm.rm_wlcm(chat_id)
-                await message.reply_text(f"**ᴅɪsᴀʙʟᴇᴅ ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ɪɴ** {message.chat.title}")
+                await message.reply_text(f"**Devre Dışı Bırakılmış Hoş Geldiniz Bildirimi Etkin** {message.chat.title}")
         elif state == "on":
             if A.get("state") == "on":
-                await message.reply_text("**ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ᴀʟʀᴇᴀᴅʏ ᴇɴᴀʙʟᴇᴅ!**")
+                await message.reply_text("**Hoş Geldiniz Bildirimi Zaten Etkin!**")
             else:
                 await wlcm.add_wlcm(chat_id)
-                await message.reply_text(f"**ᴇɴᴀʙʟᴇᴅ ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ɪɴ** {message.chat.title}")
+                await message.reply_text(f"**Etkinleştirilmiş Hoş Geldiniz Bildirimi İçinde** {message.chat.title}")
         else:
             await message.reply_text(usage)
     else:
-        await message.reply("**sᴏʀʀʏ ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴇɴᴀʙʟᴇ ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ!**")
+        await message.reply("**Üzgünüm, yalnızca yöneticiler Hoş Geldiniz Bildirimini etkinleştirebilir!**")
 
 @app.on_chat_member_updated(filters.group, group=-3)
 async def greet_new_member(_, member: ChatMemberUpdated):
@@ -130,23 +130,23 @@ async def greet_new_member(_, member: ChatMemberUpdated):
             welcomeimg = welcomepic(
                 pic, user.first_name, member.chat.title, user.id, user.username
             )
-            button_text = "๏ ᴠɪᴇᴡ ɴᴇᴡ ᴍᴇᴍʙᴇʀ ๏"
-            add_button_text = "๏ ᴋɪᴅɴᴀᴘ ᴍᴇ ๏"
+            button_text = "๏ Yeni üye görünümü ๏"
+            add_button_text = "๏ Beni kaçır ๏"
             deep_link = f"tg://openmessage?user_id={user.id}"
             add_link = f"https://t.me/{app.username}?startgroup=true"
             temp.MELCOW[f"welcome-{member.chat.id}"] = await app.send_photo(
                 member.chat.id,
                 photo=welcomeimg,
                 caption=f"""
-**❅────✦ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ✦────❅
+**❅────🧸Hoş geldiniz🧸────❅
 {member.chat.title}
 ▰▰▰▰▰▰▰▰▰▰▰▰▰
-➻ Nᴀᴍᴇ ✧ {user.mention}
+➻ isim ✧ {user.mention}
 ➻ Iᴅ ✧ {user.id}
-➻ Usᴇʀɴᴀᴍᴇ ✧ @{user.username}
-➻ Tᴏᴛᴀʟ Mᴇᴍʙᴇʀs ✧ {count}
+➻ Kullanıcı adı ✧ @{user.username}
+➻ Toplam Üyeler ✧ {count}
 ▰▰▰▰▰▰▰▰▰▰▰▰▰**
-**❅─────✧❅✦❅✧─────❅**
+**❅─────✧❅🧸❅✧─────❅**
 """,
              reply_markup=InlineKeyboardMarkup([
                     [InlineKeyboardButton(button_text, url=deep_link)],
