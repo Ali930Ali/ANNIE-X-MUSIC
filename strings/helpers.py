@@ -69,8 +69,8 @@ HELP_6 = """
 
 Kanallarda ses/video akışı yapabilirsiniz.
 
-/cplay : Kanalın video sohbetinde istenen ses parçasını oynatmaya başlar.
-/cvplay : Kanalın video sohbetinde istenen video parçasını oynatmaya başlar.
+/oynat : Kanalın video sohbetinde istenen ses parçasını oynatmaya başlar.
+/cvoynat : Kanalın video sohbetinde istenen video parçasını oynatmaya başlar.
 /cplayforce veya /cvplayforce : Devam eden yayını durdurur ve istenen parçayı oynatmaya başlar.
 
 /channelplay [sohbet kullanıcı adı veya ID] veya [devre dışı bırak] : Bir gruba kanal bağlar ve grup komutlarıyla parça yayını başlatır.
@@ -127,7 +127,7 @@ HELP_11 = """
 <b>v :</b> Video oynatma anlamına gelir.
 <b>force :</b> Zorla oynatma anlamına gelir.
 
-/play veya /vplay : İstenen parçayı video sohbette oynatmaya başlar.
+/oynat veya /voynat : İstenen parçayı video sohbette oynatmaya başlar.
 
 /playforce veya /vplayforce : Devam eden yayını durdurur ve istenen parçayı oynatmaya başlar.
 
