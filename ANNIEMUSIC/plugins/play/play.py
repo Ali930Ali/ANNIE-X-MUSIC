@@ -34,7 +34,7 @@ from config import BANNED_USERS, lyrical, AYU
 
 
 @app.on_message(
-   filters.command(["play", "vplay", "cplay", "cvplay", "playforce", "vplayforce", "cplayforce", "cvplayforce"] ,prefixes=["/", "!"])
+   filters.command(["oynat", "voynat", "coynat", "cvoynat", "playforce", "vplayforce", "cplayforce", "cvplayforce"] ,prefixes=["/", "!"])
             
     & filters.group
     & ~BANNED_USERS
@@ -183,21 +183,21 @@ async def play_commnd(
                     details["duration_min"],
                 )
             elif "youtube.com/@" in url:
-            # Check if the URL is a YouTube channel link or user link
+            # URL'nin bir YouTube kanalı bağlantısı mı yoksa kullanıcı bağlantısı mı olduğunu kontrol edin
                 try:
                     video_urls = fetch_channel_videos(url)
                     for video_url in video_urls:
-                        # Add each video URL to the queue for playback
+                        # oynatma kuyruğuna eklemek
                         details, track_id = await YouTube.track(video_url)
                         streamtype = "playlist"
                         img = details["thumb"]
                         cap = _["play_10"].format(details["title"], details["duration_min"])
                         await queue_video_for_playback(video_url, details, track_id, streamtype, img, cap)
 
-                    await mystic.edit_text("All videos from the channel have been added to the queue.")
+                    await mystic.edit_text("Kanalın tüm videoları kuyruğa eklendi.")
                 except Exception as e:
-                    print(e)  # Handle or log the error appropriately
-                    await mystic.edit_text(_["play_3"])  # Error message for the user
+                    print(e)  # Hatayı uygun şekilde işleyin veya kaydedin
+                    await mystic.edit_text(_["play_3"])  # Kullanıcı için hata mesajı
             else:
                 try:
                     details, track_id = await YouTube.track(url)
@@ -213,7 +213,7 @@ async def play_commnd(
             spotify = True
             if not config.SPOTIFY_CLIENT_ID and not config.SPOTIFY_CLIENT_SECRET:
                 return await mystic.edit_text(
-                    "» sᴘᴏᴛɪғʏ ɪs ɴᴏᴛ sᴜᴘᴘᴏʀᴛᴇᴅ ʏᴇᴛ.\n\nᴘʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ ʟᴀᴛᴇʀ."
+                    "» Spotify henüz desteklenmiyor.\n\nLütfen daha sonra tekrar deneyin."
                 )
             if "track" in url:
                 try:
@@ -439,7 +439,7 @@ async def play_commnd(
                     ),
                     reply_markup=InlineKeyboardMarkup(buttons),
                 )
-                return await play_logs(message, streamtype=f"Searched on Youtube")
+                return await play_logs(message, streamtype=f"Youtube'da arama yapıldı")
             else:
                 buttons = track_markup(
                     _,
@@ -454,7 +454,7 @@ async def play_commnd(
                     caption=cap,
                     reply_markup=InlineKeyboardMarkup(buttons),
                 )
-                return await play_logs(message, streamtype=f"URL Searched Inline")
+                return await play_logs(message, streamtype=f"URL doğrudan arandı")
 
 
 @app.on_callback_query(filters.regex("MusicStream") & ~BANNED_USERS)
@@ -530,7 +530,7 @@ async def play_music(client, CallbackQuery, _):
 async def Anonymous_check(client, CallbackQuery):
     try:
         await CallbackQuery.answer(
-            "» ʀᴇᴠᴇʀᴛ ʙᴀᴄᴋ ᴛᴏ ᴜsᴇʀ ᴀᴄᴄᴏᴜɴᴛ :\n\nᴏᴘᴇɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ sᴇᴛᴛɪɴɢs.\n-> ᴀᴅᴍɪɴɪsᴛʀᴀᴛᴏʀs\n-> ᴄʟɪᴄᴋ ᴏɴ ʏᴏᴜʀ ɴᴀᴍᴇ\n-> ᴜɴᴄʜᴇᴄᴋ ᴀɴᴏɴʏᴍᴏᴜs ᴀᴅᴍɪɴ ᴘᴇʀᴍɪssɪᴏɴs.",
+            "» kullanıcı hesabına geri dön :\n\nGrup ayarlarınızı açın.\n-> yöneticiler\n-> Adınıza tıklayın\n-> Anonim yönetici izinlerini kaldırın.",
             show_alert=True,
         )
     except:
