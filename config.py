@@ -7,12 +7,12 @@ from pyrogram import filters
 load_dotenv()
 
 # Telegram API credentials - Get these from the Telegram API website
-API_ID = int(getenv("API_ID"))
-API_HASH = getenv("API_HASH")
-BOT_TOKEN = getenv("BOT_TOKEN")
+API_ID = int(getenv("24685579"))
+API_HASH = getenv("0c59512c1c2437c5f305cba1d47c07c5")
+BOT_TOKEN = getenv("7476130132:AAFt9OMZbMP9vOQ10qcp6SxNKS5aQd7fbD4")
 
 # Specify where to get the following credentials
-OWNER_USERNAME = getenv("OWNER_USERNAME", "JARVIS_V2")
+OWNER_USERNAME = getenv("OWNER_USERNAME", "debubluman")
 BOT_USERNAME = getenv("BOT_USERNAME", "EsilaChatBot")
 BOT_NAME = getenv("BOT_NAME", "˹𝐄𝐬𝐢𝐥𝐚 𝐬𝐨𝐡𝐛𝐞𝐭˼ ♪")
 ASSUSERNAME = getenv("ASSUSERNAME", "esilamuzikasistan")
@@ -23,7 +23,7 @@ DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 17000))
 # External APIs - Get these from their respective providers
 GPT_API = getenv("GPT_API")
 DEEP_API = getenv("DEEP_API")
-OWNER_ID = int(getenv("OWNER_ID", 7044783841))
+OWNER_ID = int(getenv("OWNER_ID", debubluman))
 
 # Heroku deployment settings - Refer to Heroku documentation on how to obtain these
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
@@ -82,7 +82,7 @@ autoclean = []
 confirmer = {}
 
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://telegra.ph/5458421847123053465mp4-06-23"
+    "START_IMG_URL", "https://te.legra.ph/file/29f784eb49d230ab62e9e.mp4"
 )
 PING_VID_URL = getenv(
     "PING_VID_URL", "https://telegra.ph/file/4be43ed2aa6872337e9a8.mp4"
