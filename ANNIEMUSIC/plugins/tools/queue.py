@@ -36,7 +36,7 @@ def get_duration(playing):
 
 
 @app.on_message(
-    filters.command(["queue", "cqueue", "player", "cplayer", "playing", "cplaying"])
+    filters.command(["kuyruk", "ckuyruk", "player", "cplayer", "playing", "cplaying"])
     & filters.group
     & ~BANNED_USERS
 )
