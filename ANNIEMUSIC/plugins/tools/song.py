@@ -28,7 +28,7 @@ from ANNIEMUSIC.utils.formatters import convert_bytes
 from ANNIEMUSIC.utils.inline.song import song_markup
 
 # Command
-SONG_COMMAND = ["song"]
+SONG_COMMAND = ["indir"]
 
 
 @app.on_message(
@@ -168,7 +168,7 @@ async def song_helper_cb(client, CallbackQuery, _):
                 fom = x["format_id"]
                 keyboard.row(
                     InlineKeyboardButton(
-                        text=f"{form} Quality Audio = {sz}",
+                        text=f"{form} Kaliteli Ses = {sz}",
                         callback_data=f"song_download {stype}|{fom}|{vidid}",
                     ),
                 )
@@ -224,7 +224,7 @@ async def song_helper_cb(client, CallbackQuery, _):
         )
 
 
-# Downloading Songs Here
+# Şarkıları Buradan İndiriyorum
 
 
 @app.on_callback_query(
@@ -233,7 +233,7 @@ async def song_helper_cb(client, CallbackQuery, _):
 @languageCB
 async def song_download_cb(client, CallbackQuery, _):
     try:
-        await CallbackQuery.answer("Downloading")
+        await CallbackQuery.answer("İndiriliyor")
     except:
         pass
     callback_data = CallbackQuery.data.strip()
@@ -318,10 +318,10 @@ async def download_instareels(c: app, m: Message):
     try:
         reel_ = m.command[1]
     except IndexError:
-        await m.reply_text("Give me an link to download it...")
+        await m.reply_text("İndirmem için bana bir bağlantı ver...")
         return
     if not reel_.startswith("https://www.instagram.com/reel/"):
-        await m.reply_text("In order to obtain the requested reel, a valid link is necessary. Kindly provide me with the required link.")
+        await m.reply_text("İstenilen makarayı elde etmek için geçerli bir bağlantı gereklidir. Lütfen bana gerekli bağlantıyı sağlayın.")
         return
     OwO = reel_.split(".",1)
     Reel_ = ".dd".join(OwO)
@@ -337,7 +337,7 @@ async def download_instareels(c: app, m: Message):
                 await m.reply_document(Reel_)
                 return
             except Exception:
-                await m.reply_text("I am unable to reach to this reel.")
+                await m.reply_text("Bu makaraya ulaşamıyorum.")
 
 
 
@@ -356,8 +356,8 @@ async def instagram_reel(client, message):
                 video_url = media_urls[0]['url']
                 await message.reply_video(f"{video_url}")
             else:
-                await message.reply("No video found in the response. may be accountbis private.")
+                await message.reply("Yanıtta video bulunamadı. hesapbis özel olabilir.")
         else:
             await message.reply("Request was not successful.")
     else:
-        await message.reply("Please provide a valid Instagram URL using the /reels command.")
+        await message.reply("Lütfen şu adresi kullanarak geçerli bir Instagram URL'si sağlayın: /reels komut.")
