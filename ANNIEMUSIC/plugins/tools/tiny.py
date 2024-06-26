@@ -9,9 +9,9 @@ from ANNIEMUSIC import app
 async def tiny_sticker(client, message):
     reply = message.reply_to_message
     if not (reply and reply.sticker):
-        await message.reply("Please reply to a sticker")
+        await message.reply("Lütfen bir çıkartmaya yanıt verin")
         return
-    kontol = await message.reply("Processing please wait")
+    kontol = await message.reply("İşleniyor .. Lütfen bekleyin")
     await kontol.edit_text("🐾")
     ik = await app.download_media(reply)
     im1 = Image.open("ANNIEMUSIC/assets/rajnish.png")
