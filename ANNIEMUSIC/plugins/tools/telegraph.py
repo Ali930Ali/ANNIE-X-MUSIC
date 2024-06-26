@@ -14,7 +14,7 @@ def ul(_, message):
         for x in fk:
             url = "https://telegra.ph" + x
 
-        i.edit(f'Yᴏᴜʀ ʟɪɴᴋ sᴜᴄᴄᴇssғᴜʟ Gᴇɴ {url}')
+        i.edit(f'Bağlantınız başarılı Gᴇɴ {url}')
 
 ########____________________________________________________________######
 
@@ -28,4 +28,4 @@ def ul(_, message):
         for x in fk:
             url = "https://graph.org" + x
 
-        i.edit(f'Yᴏᴜʀ ʟɪɴᴋ sᴜᴄᴄᴇssғᴜʟ Gᴇɴ {url}')
+        i.edit(f'Bağlantınız başarılı oldu {url}')
