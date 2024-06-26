@@ -15,7 +15,7 @@ async def chat_gpt(bot, message):
 
         if len(message.command) < 2:
             await message.reply_text(
-                "**Hello Sir, I am Jarvis. How can I help you today?**"
+                "**Merhaba efendim, ben Esila. Bugün sana nasıl yardımcı olabilirim?**"
             )
         else:
             a = message.text.split(' ', 1)[1]
@@ -32,7 +32,7 @@ async def chat_gpt(bot, message):
                         parse_mode=ParseMode.MARKDOWN
                     )
                 else:
-                    await message.reply_text("No 'results' key found in the response.")
+                    await message.reply_text("Yanıtta 'sonuçlar' anahtarı bulunamadı.")
             except KeyError:
                 # Handle any other KeyError that might occur
                 await message.reply_text("Error accessing the response.")
