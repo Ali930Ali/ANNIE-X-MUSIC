@@ -25,16 +25,16 @@ COMMANDS = [
     ]
 
 class STRINGS:
-    REPLY_TO_MEDIA = "ℹ️ Please reply to a message that contains one of the supported media types, such as a photo, sticker, or image file."
-    UNSUPPORTED_MEDIA_TYPE = "⚠️ <b>Unsupported media type!</b>\nℹ️ Please reply with a supported media type: image, sticker, or image file."
+    REPLY_TO_MEDIA = "ℹ️ Lütfen fotoğraf, çıkartma veya resim dosyası gibi desteklenen medya türlerinden birini içeren bir mesajı yanıtlayın."
+    UNSUPPORTED_MEDIA_TYPE = "⚠️ <b>Desteklenmeyen medya türü!</b>\nℹ️ Lütfen desteklenen bir medya türüyle yanıt verin: resim, çıkartma veya resim dosyası."
     
-    REQUESTING_API_SERVER = "📡 Requesting to <b>API Server</b>... 📶"
+    REQUESTING_API_SERVER = "📡 <b>API Sunucusuna istekte bulunuluyor</b>... 📶"
     
     DOWNLOADING_MEDIA = "⏳ Downloading media..."
-    UPLOADING_TO_API_SERVER = "📡 Uploading media to <b>API Server</b>... 📶"
-    PARSING_RESULT = "💻 Parsing result..."
+    UPLOADING_TO_API_SERVER = "📡 Medya <b>API Sunucusuna yükleniyor</b>... 📶"
+    PARSING_RESULT = "💻 Sonuç ayrıştırılıyor..."
     
-    EXCEPTION_OCCURRED = "❌ <b>Exception occurred!</b>\n\n<b>Exception:</b> {}"
+    EXCEPTION_OCCURRED = "❌ <b>İstisna oldu!</b>\n\n<b>Exception:</b> {}"
     
     RESULT = """
 🔤 <b>Query:</b> {query}
@@ -42,7 +42,7 @@ class STRINGS:
 
 ⌛️ <b>Time Taken:</b> <code>{time_taken}</code> ms.
     """
-    OPEN_SEARCH_PAGE = "↗️ Open Search Page"
+    OPEN_SEARCH_PAGE = "↗️ Arama Sayfasını Aç"
 
 @app.on_message(filters.command(COMMANDS))
 async def on_google_lens_search(client: Client, message: Message) -> None:
