@@ -58,18 +58,18 @@ async def isPreviewUp(preview: str) -> bool:
 @app.on_message(filters.command("paste"))
 async def paste_func(_, message):
     if not message.reply_to_message:
-        return await message.reply_text("**ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴡɪᴛʜ /paste**")
+        return await message.reply_text("**Bir mesaja yanıtla /paste**")
 
-    m = await message.reply_text("**ᴘᴀsᴛɪɴɢ ᴘʟs ᴡᴀɪᴛ 10 sᴇᴄ....**")
+    m = await message.reply_text("**Lütfen bekleyin, yapıştırma lütfen 10 saniye....**")
 
     if message.reply_to_message.text:
         content = str(message.reply_to_message.text)
     elif message.reply_to_message.document:
         document = message.reply_to_message.document
         if document.file_size > 1048576:
-            return await m.edit("**ʏᴏᴜ ᴄᴀɴ ᴏɴʟʏ ᴘᴀsᴛᴇ ғɪʟᴇs sᴍᴀʟʟᴇʀ ᴛʜᴀɴ 1ᴍʙ.**")
+            return await m.edit("**Sadece 1MB'den küçük dosyaları yapıştırabilirsiniz.**")
         if not pattern.search(document.mime_type):
-            return await m.edit("**ᴏɴʟʏ ᴛᴇxᴛ ғɪʟᴇs ᴄᴀɴ ʙᴇ ᴘᴀsᴛᴇᴅ.**")
+            return await m.edit("**Sadece metin dosyaları yapıştırılabilir.**")
 
         doc = await message.reply_to_message.download()
         async with aiofiles.open(doc, mode="r") as f:
@@ -87,19 +87,19 @@ async def paste_func(_, message):
             carbon = await make_carbon(content_chunk)
 
             await m.delete()
-            text = await message.reply("**✍️ᴘᴀsᴛᴇᴅ ᴏɴ ᴄᴀʀʙᴏɴ ᴘᴀɢᴇ !**")
+            text = await message.reply("**✍️Karbon sayfasına yapıştırıldı !**")
             await asyncio.sleep(0.4)
-            await text.edit("**ᴜᴘʟᴏᴀᴅɪɴɢ ᴜɴᴅᴇʀ 5 sᴇᴄ.**")
+            await text.edit("**5 saniye altında yükleme yapıyor.**")
             await asyncio.sleep(0.4)
-            await text.edit("**ᴜᴘʟᴏᴀᴅɪɴɢ ᴜɴᴅᴇʀ 5 sᴇᴄ....**")
-            caption = f"🥀ᴛʜɪs ɪs  {page_number} ᴘᴀɢᴇ - {current_line + 1} to {end_line} ʟɪɴᴇs..\n sᴇɴᴅɪɴɢ ᴍᴏʀᴇ ʟɪɴᴇs ɪғ ʜᴀᴠᴇ ᴏɴ ɴᴇxᴛ ᴘᴀɢᴇ ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ..."
+            await text.edit("**5 saniyenin altında yükleme yapılıyor....**")
+            caption = f"🥀Bu olacaktır  {page_number} sayfa - {current_line + 1} to {end_line} satırlar..\nEğer bir sonraki sayfada daha fazla satır varsa lütfen bekleyin..."
             await message.reply_photo(carbon, caption=caption)
             await text.delete()
             carbon.close()
 
             current_line = end_line
             page_number += 1
-            await sleep(1)  # Optional: Add a sleep to avoid rate limiting or being blocked
+            await sleep(1)  # Rate limiti veya engellenmeyi önlemek için bir bekleme ekleyin
 
     else:
-        await m.edit("**Unsupported file type. Only text files can be pasted.**")
+        await m.edit("**Desteklenmeyen dosya türü. Sadece metin dosyaları yapıştırılabilir.**")
