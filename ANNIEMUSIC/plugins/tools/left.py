@@ -79,10 +79,10 @@ async def member_has_left(client: app, member: ChatMemberUpdated):
         else member.from_user
     )
 
-    # Check if the user has a profile photo
+    # Kullanıcının profil fotoğrafı olup olmadığını kontrol edin
     if user.photo and user.photo.big_file_id:
         try:
-            # Add the photo path, caption, and button details
+            # Fotoğraf yolunu, başlığı ve düğme ayrıntılarını ekleyin
             photo = await app.download_media(user.photo.big_file_id)
 
             welcome_photo = await get_userinfo_img(
@@ -92,13 +92,13 @@ async def member_has_left(client: app, member: ChatMemberUpdated):
                 profile_path=photo,
             )
         
-            caption = f"**#New_Member_Left**\n\n**๏** {user.mention} **ʜᴀs ʟᴇғᴛ ᴛʜɪs ɢʀᴏᴜᴘ**\n**๏ sᴇᴇ ʏᴏᴜ sᴏᴏɴ ᴀɢᴀɪɴ..!**"
+            caption = f"**#New_Member_Left**\n\n**๏** {user.mention} **Bu gruptan ayrıldı**\n**๏ Seni yakında tekrar görürüm..!**"
             button_text = "๏ ᴠɪᴇᴡ ᴜsᴇʀ ๏"
 
-            # Generate a deep link to open the user's profile
+            # Kullanıcının profilini açmak için derin bağlantı oluştur
             deep_link = f"tg://openmessage?user_id={user.id}"
 
-            # Send the message with the photo, caption, and button
+            # Fotoğraf, altyazı ve düğme ile mesajı gönder
             message = await client.send_photo(
                 chat_id=member.chat.id,
                 photo=welcome_photo,
@@ -108,18 +108,18 @@ async def member_has_left(client: app, member: ChatMemberUpdated):
                 ])
             )
 
-            # Schedule a task to delete the message after 30 seconds
+            # Mesajı 30 saniye sonra silmek için bir görev planlayın
             async def delete_message():
                 await asyncio.sleep(20)
                 await message.delete()
 
-            # Run the task
+            # Görevi çalıştır
             asyncio.create_task(delete_message())
             
         except RPCError as e:
             print(e)
             return
     else:
-        # Handle the case where the user has no profile photo
+        # Kullanıcının profil fotoğrafının olmadığı durumu ele alın
         print(f"User {user.id} has no profile photo.")
         
