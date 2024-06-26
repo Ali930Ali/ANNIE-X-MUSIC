@@ -28,7 +28,7 @@ async def getid(client, message):
             text += f"**[ᴜsᴇʀ ɪᴅ:](tg://user?id={user_id})** `{user_id}`\n"
 
         except Exception:
-            return await message.reply_text("ᴛʜɪs ᴜsᴇʀ ᴅᴏᴇsɴ'ᴛ ᴇxɪsᴛ.", quote=True)
+            return await message.reply_text("Bu kullanıcı mevcut değil.", quote=True)
 
     text += f"**[ᴄʜᴀᴛ ɪᴅ:](https://t.me/{chat.username})** `{chat.id}`\n\n"
 
@@ -45,7 +45,7 @@ async def getid(client, message):
         print(reply.forward_from_chat)
 
     if reply and reply.sender_chat:
-        text += f"ɪᴅ ᴏғ ᴛʜᴇ ʀᴇᴘʟɪᴇᴅ ᴄʜᴀᴛ/ᴄʜᴀɴɴᴇʟ, ɪs `{reply.sender_chat.id}`"
+        text += f"Yanıtlanan mesajın kimliği (ID'si) sohbet/kanal, ɪs `{reply.sender_chat.id}`"
         print(reply.sender_chat)
 
     await message.reply_text(
