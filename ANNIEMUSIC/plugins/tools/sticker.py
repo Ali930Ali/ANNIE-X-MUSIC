@@ -21,22 +21,22 @@ def generate_sticker(client, message):
         except Exception as e:
             message.reply_text(f"Error: {e}")
     else:
-        message.reply_text("Please provide a sticker ID after /st command.")
+        message.reply_text("Lütfen /st komutundan sonra bir sticker kimliği sağlayın.")
 
 
 #---------
 
 @app.on_message(filters.command("packkang"))
 async def _packkang(app :app,message):  
-    txt = await message.reply_text("**ᴘʀᴏᴄᴇssɪɴɢ....**")
+    txt = await message.reply_text("**İşleniyor....**")
     if not message.reply_to_message:
-        await txt.edit('ʀᴇᴘʟʏ ᴛᴏ ᴍᴇssᴀɢᴇ')
+        await txt.edit('Mesaja yanıt ver')
         return
     if not message.reply_to_message.sticker:
-        await txt.edit('ʀᴇᴘʟʏ ᴛᴏ sᴛɪᴄᴋᴇʀ')
+        await txt.edit('Sticker'a yanıt ver')
         return
     if message.reply_to_message.sticker.is_animated or  message.reply_to_message.sticker.is_video:
-        return await txt.edit("ʀᴇᴘʟʏ ᴛᴏ ᴀ ɴᴏɴ-ᴀɴɪᴍᴀᴛᴇᴅ sᴛɪᴄᴋᴇʀ")
+        return await txt.edit("Animasyon olmayan bir çıkartmaya yanıt ver")
     if len(message.command) < 2:
         pack_name =  f'{message.from_user.first_name}_sticker_pack_by_@{BOT_USERNAME}'
     else :
@@ -75,7 +75,7 @@ async def _packkang(app :app,message):
                 stickers=sticks,
             )
         )
-        await txt.edit(f"**ʜᴇʀᴇ ɪs ʏᴏᴜʀ ᴋᴀɴɢᴇᴅ ʟɪɴᴋ**!\n**ᴛᴏᴛᴀʟ sᴛɪᴄᴋᴇʀ **: {len(sticks)}",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("ᴘᴀᴄᴋ ʟɪɴᴋ",url=f"http://t.me/addstickers/{short_name}")]]))
+        await txt.edit(f"**İşte kanguru bağlantınız**!\n**Toplam çıkartma **: {len(sticks)}",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Paket bağlantısı",url=f"http://t.me/addstickers/{short_name}")]]))
     except Exception as e:
         await message.reply(str(e))
 
@@ -84,14 +84,14 @@ async def _packkang(app :app,message):
 @app.on_message(filters.command(["stickerid","stid"]))
 async def sticker_id(app: app, msg):
     if not msg.reply_to_message:
-        await msg.reply_text("Reply to a sticker")        
+        await msg.reply_text("Sticker'a cevap vermek")        
     elif not msg.reply_to_message.sticker:
         await msg.reply_text("Reply to a sticker")        
     st_in = msg.reply_to_message.sticker
     await msg.reply_text(f"""
 ⊹ <u>**sᴛɪᴄᴋᴇʀ ɪɴғᴏ**</u> ⊹
-**⊚ sᴛɪᴄᴋᴇʀ ɪᴅ **: `{st_in.file_id}`\n
-**⊚ sᴛɪᴄᴋᴇʀ ᴜɴɪǫᴜᴇ ɪᴅ **: `{st_in.file_unique_id}`
+**⊚ Çıkartma kimliği **: `{st_in.file_id}`\n
+**⊚ Çıkartma benzersiz kimliği **: `{st_in.file_unique_id}`
 """)
 
 
