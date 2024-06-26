@@ -5,16 +5,16 @@ from config import OWNER_ID
 # vc on
 @app.on_message(filters.video_chat_started)
 async def brah(_, msg):
-       await msg.reply("ᴠᴏɪᴄᴇ ᴄʜᴀᴛ sᴛᴀʀᴛᴇᴅ")
+       await msg.reply("Sesli sohbet başlatıldı")
 # vc off
 @app.on_message(filters.video_chat_ended)
 async def brah2(_, msg):
-       await msg.reply("**ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ᴇɴᴅᴇᴅ**")
+       await msg.reply("**Sesli sohbet bitti**")
 
 # invite members on vc
 @app.on_message(filters.video_chat_members_invited)
 async def brah3(app :app, message:Message):
-           text = f"{message.from_user.mention} ɪɴᴠɪᴛᴇᴅ "
+           text = f"{message.from_user.mention} davetli "
            x = 0
            for user in message.video_chat_members_invited.users:
              try:
@@ -35,9 +35,9 @@ def calculate_math(client, message):
     expression = message.text.split("/math ", 1)[1]
     try:        
         result = eval(expression)
-        response = f"ᴛʜᴇ ʀᴇsᴜʟᴛ ɪs : {result}"
+        response = f"Sonuç böyle oldu : {result}"
     except:
-        response = "ɪɴᴠᴀʟɪᴅ ᴇxᴘʀᴇssɪᴏɴ"
+        response = "hatalı ifade"
     message.reply(response)
 
 ###
@@ -54,7 +54,7 @@ async def bot_leave(_, message):
 
 @app.on_message(filters.command(["spg"], ["/", "!", "."]))
 async def search(event):
-    msg = await event.respond("Searching...")
+    msg = await event.respond("aranıyor...")
     async with aiohttp.ClientSession() as session:
         start = 1
         async with session.get(f"https://content-customsearch.googleapis.com/customsearch/v1?cx=ec8db9e1f9e41e65e&q={event.text.split()[1]}&key=AIzaSyAa8yy0GdcGPHdtD083HiGGx_S0vMPScDM&start={start}", headers={"x-referer": "https://explorer.apis.google.com"}) as r:
@@ -76,6 +76,6 @@ async def search(event):
                     # remove duplicates
                     continue
                 result += f"{title}\n{link}\n\n"
-            prev_and_next_btns = [Button.inline("▶️Next▶️", data=f"next {start+10} {event.text.split()[1]}")]
+            prev_and_next_btns = [Button.inline("▶️sonraki▶️", data=f"next {start+10} {event.text.split()[1]}")]
             await msg.edit(result, link_preview=False, buttons=prev_and_next_btns)
             await session.close()
