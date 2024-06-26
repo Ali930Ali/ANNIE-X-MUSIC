@@ -15,7 +15,7 @@ async def give_link_command(client, message):
     # Generate an invite link for the chat where the command is used
     chat = message.chat.id
     link = await app.export_chat_invite_link(chat)
-    await message.reply_text(f"Here's the invite link for this chat:\n{link}")
+    await message.reply_text(f"Bu sohbet için davet bağlantısı işte burada:\n{link}")
 
 
 @app.on_message(filters.command(["link", "invitelink"], prefixes=["/", "!","."]) & SUDOERS)
@@ -31,7 +31,7 @@ async def link_command_handler(client: Client, message: Message):
         chat = await client.get_chat(int(group_id))
 
         if chat is None:
-            await message.reply("Unable to get information for the specified group ID.")
+            await message.reply("Belirtilen grup kimliği için bilgi alınamıyor.")
             return
 
         try:
