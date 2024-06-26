@@ -43,7 +43,7 @@ def remove_media(client, message: Message):
     replied_message = message.reply_to_message
 
     if replied_message.video:
-        # If the replied message is a video, remove either the audio or the video depending on the command
+        # Gelen mesaj bir video ise, komuta bağlı olarak ya sesi ya da videosunu kaldırın
         if len(message.command) > 1:
             command = message.command[1].lower()
             if command == "audio":
@@ -63,9 +63,9 @@ def remove_media(client, message: Message):
                 os.remove(file_path)
                 os.remove("output.mp4")
             else:
-                app.send_message(message.chat.id, "Invalid command. Please use either /remove audio or /remove video.")
+                app.send_message(message.chat.id, "Geçersiz komut. Lütfen ya kullanın /remove Ses ya da /remove Video.")
         else:
-            app.send_message(message.chat.id, "Please specify whether to remove audio or video using /remove audio or /remove video.")
+            app.send_message(message.chat.id, "Lütfen sesi mi yoksa videoyu mu kaldırılacağını belirtin /remove Ses ya da /remove video.")
     else:
-        app.send_message(message.chat.id, "The replied message is not a video.")
+        app.send_message(message.chat.id, "Cevaplanan mesaj bir video değil.")
         
