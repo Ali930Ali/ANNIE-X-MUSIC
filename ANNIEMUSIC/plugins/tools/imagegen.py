@@ -12,17 +12,17 @@ async def imagine_(b, message: Message):
     else:
 
         text =message.text.split(None, 1)[1]
-    Jarvis=await message.reply_text( "`Please wait...\n\nGenerating image .....`")
+    Jarvis=await message.reply_text( "`lütfem bekleyin...\n\nGörüntü oluşturuluyor .....`")
     try:
         await b.send_chat_action(message.chat.id, ChatAction.UPLOAD_PHOTO)
         x=api.ai_image(text)
         with open("mukesh.jpg", 'wb') as f:
             f.write(x)
         caption = f"""
-    💘sᴜᴄᴇssғᴜʟʟʏ ɢᴇɴᴇʀᴀᴛᴇᴅ : {text}
+    💘Başarıyla üretildi : {text}
 
-    ✨ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ : @Annie_Music_Robot
-    🥀ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ : {message.from_user.mention}
+    ✨oluşturan : @EsilaChatBot
+    🥀talep eden : {message.from_user.mention}
     """
         await Jarvis.delete()
         await message.reply_photo("mukesh.jpg",caption=caption,quote=True)
@@ -32,5 +32,5 @@ async def imagine_(b, message: Message):
 
 __mod_name__ = "Aɪ ɪᴍᴀɢᴇ"
 __help__ = """
- ➻ /imagine : ɢᴇɴᴇʀᴀᴛᴇ Aɪ ɪᴍᴀɢᴇ ғʀᴏᴍ ᴛᴇxᴛ
+ ➻ /imagine : Metinden yapay zeka görüntüsü oluştur
  """
