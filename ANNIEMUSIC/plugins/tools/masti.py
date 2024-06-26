@@ -4,7 +4,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from ANNIEMUSIC import app
 from config import SUPPORT_CHAT
 
-BUTTON = [[InlineKeyboardButton("ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/JARVIS_V_SUPPORT")]]
+BUTTON = [[InlineKeyboardButton("ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/sorundetekk")]]
 HOT = "https://graph.org/file/745ba3ff07c1270958588.mp4"
 HORNY = "https://graph.org/file/eaa834a1cbfad29bd1fe4.mp4"
 SEMXY = "https://graph.org/file/58da22eb737af2f8963e6.mp4"
@@ -27,7 +27,7 @@ async def cutie(_, message):
 
     mention = f"[{user_name}](tg://user?id={str(user_id)})"
     mm = random.randint(1, 100)
-    CUTE = f"🍑 {mention} {mm}% ᴄᴜᴛᴇ ʙᴀʙʏ🥀"
+    CUTE = f"🍑 {mention} {mm}% sevimli bebek🥀"
 
     await app.send_document(
         chat_id=message.chat.id,
@@ -39,7 +39,7 @@ async def cutie(_, message):
     
 ###### horny
 
-@app.on_message(filters.command("horny"))
+@app.on_message(filters.command("z"))
 async def horny(_, message):
     if not message.reply_to_message:
         user_id = message.from_user.id
@@ -62,7 +62,7 @@ async def horny(_, message):
 
 ###### HOT 
 
-@app.on_message(filters.command("hot"))
+@app.on_message(filters.command("b"))
 async def hot(_, message):
     if not message.reply_to_message:
         user_id = message.from_user.id
@@ -85,7 +85,7 @@ async def hot(_, message):
 
 ########## SEXY 
 
-@app.on_message(filters.command("sexy"))
+@app.on_message(filters.command("m"))
 async def sexy(_, message):
     if not message.reply_to_message:
         user_id = message.from_user.id
@@ -127,7 +127,7 @@ async def gay(_, message):
 )
 
 ########### LESBIAN
-@app.on_message(filters.command("lesbian"))
+@app.on_message(filters.command("l"))
 async def lesbian(_, message):
     if not message.reply_to_message:
         user_id = message.from_user.id
@@ -138,7 +138,7 @@ async def lesbian(_, message):
 
     mention = f"[{user_name}](tg://user?id={str(user_id)})"
     mm = random.randint(1, 100)
-    LEZBIAN = f" 💜 {mention} ɪꜱ {mm}% ʟᴇꜱʙɪᴀɴ!"
+    LEZBIAN = f" 💜 {mention} ɪꜱ {mm}% ʟᴇꜱ!"
     await app.send_document (
         chat_id=message.chat.id,
         document=LESBIAN,
@@ -149,7 +149,7 @@ async def lesbian(_, message):
 
 ########### BOOBS
 
-@app.on_message(filters.command("boob"))
+@app.on_message(filters.command("bbz"))
 async def boob(_, message):
     if not message.reply_to_message:
         user_id = message.from_user.id
