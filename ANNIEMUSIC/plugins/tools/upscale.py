@@ -24,12 +24,12 @@ async def upscale_image(client, message):
     replied_message = message.reply_to_message
     
     if not config.DEEP_API:
-        return await message.reply_text("I can't upscale without a DEEP API key!")
+        return await message.reply_text("Deep API anahtarı olmadan ölçeklendiremem!")
     
     if not replied_message or not replied_message.photo:
-        return await message.reply_text("Please reply to an image.")
+        return await message.reply_text("Lütfen bir resme cevap verin.")
     
-    aux_message = await message.reply_text("Upscaling, please wait...")
+    aux_message = await message.reply_text("Ölçeklendirme yapılıyor, lütfen bekleyin...")
     image_path = await replied_message.download()
     
     response = requests.post(
@@ -40,11 +40,11 @@ async def upscale_image(client, message):
     
     image_url = response.get("output_url")
     if not image_url:
-        return await aux_message.edit("Failed to upscale image, please try again.")
+        return await aux_message.edit("Resmi ölçeklendirmekte başarısız oldum, lütfen tekrar deneyin.")
     
     downloaded_image = await load_image(image_path, image_url)
     if not downloaded_image:
-        return await aux_message.edit("Failed to download upscaled image, please try again.")
+        return await aux_message.edit("Ölçeklendirilmiş resmi indirmekte başarısız oldum, lütfen tekrar deneyin.")
     
     await aux_message.delete()
     await message.reply_photo(photo=downloaded_image)
@@ -56,16 +56,16 @@ async def draw_image(client, message):
     replied_message = message.reply_to_message
     
     if not config.DEEP_API:
-        return await message.reply_text("I can't generate images without a DEEP API key!")
+        return await message.reply_text("Deep API anahtarı olmadan görüntü oluşturamam!")
     
     if replied_message and replied_message.text:
         query = replied_message.text
     elif len(message.text.split()) > 1:
         query = message.text.split(None, 1)[1]
     else:
-        return await message.reply_text("Please provide text or reply to a text message.")
+        return await message.reply_text("lütfen metin sağlayın veya kısa mesaja yanıt verin.")
     
-    aux_message = await message.reply_text("Generating image, please wait...")
+    aux_message = await message.reply_text("Resim oluşturuluyor, lütfen bekleyin...")
     image_path = f"cache/{user_id}_{chat_id}_{message.id}.png"
     
     response = requests.post(
@@ -76,11 +76,11 @@ async def draw_image(client, message):
     
     image_url = response.get("output_url")
     if not image_url:
-        return await aux_message.edit("Failed to generate image, please try again.")
+        return await aux_message.edit("Resim oluşturulamadı, lütfen tekrar deneyin.")
     
     downloaded_image = await load_image(image_path, image_url)
     if not downloaded_image:
-        return await aux_message.edit("Failed to download generated image, please try again.")
+        return await aux_message.edit("Oluşturulan görsel indirilemedi, lütfen deneyin.")
     
     await aux_message.delete()
     await message.reply_photo(photo=downloaded_image, caption=query)
