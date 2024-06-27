@@ -24,7 +24,7 @@ async def chat_gpt(app, message):
 
         if len(message.command) < 2:
             # Reply with default message if no query provided
-            await message.reply_text("**Hello sir, I am Jarvis. How can I help you today?**")
+            await message.reply_text("**Merhaba efendim, ben Esıla. Bugün sana nasıl yardımcı olabilirim?**")
         else:
             query = message.text.split(' ', 1)[1]
             MODEL = "gpt-3.5-turbo"
@@ -34,7 +34,7 @@ async def chat_gpt(app, message):
             response_text = resp['choices'][0]["message"]["content"]
             await message.reply_text(response_text)
     except Exception as e:
-        await message.reply_text(f"**Error**: {e}")
+        await message.reply_text(f"**Hata**: {e}")
 
 # Command for GPT chat with user's name
 @app.on_message(filters.command(["arvis"], prefixes=["j", "J"]))
@@ -43,7 +43,7 @@ async def chat_arvis(app, message):
         await app.send_chat_action(message.chat.id, ChatAction.TYPING)
         name = message.from_user.first_name
         if len(message.command) < 2:
-            await message.reply_text(f"**Hello {name}, I am Jarvis. How can I help you today?**")
+            await message.reply_text(f"**Selam {name}, Ben Esıla. Bugün sana nasıl yardımcı olabilirim?**")
         else:
             query = message.text.split(' ', 1)[1]
             MODEL = "gpt-3.5-turbo"
@@ -52,9 +52,9 @@ async def chat_arvis(app, message):
             response_text = resp['choices'][0]["message"]["content"]
             await message.reply_text(response_text)
     except Exception as e:
-        await message.reply_text(f"**Error**: {e}")
+        await message.reply_text(f"**Hata**: {e}")
 
-# Command for ANNIE with user's name
+# Esıla için kullanıcı adıyla komut
 @app.on_message(filters.command(["iri"], prefixes=["s", "S"]))
 async def chat_annie(app, message):
     try:
@@ -73,14 +73,14 @@ async def chat_annie(app, message):
             await app.send_voice(chat_id=message.chat.id, voice='output.mp3')
             os.remove('output.mp3')
     except Exception as e:
-        await message.reply_text(f"**Error**: {e}")
+        await message.reply_text(f"**Hata**: {e}")
 
 # Command for Bing search
 @app.on_message(filters.command(["bing"], prefixes=["+", ".", "/", "-", "?", "$", "#", "&"]))
 async def bing_search(app, message):
     try:
         if len(message.command) == 1:
-            await message.reply_text("Please provide a keyword to search.")
+            await message.reply_text("Lütfen aramak için bir anahtar kelime belirtin.")
             return
 
         keyword = " ".join(message.command[1:])
@@ -90,7 +90,7 @@ async def bing_search(app, message):
         if response.status_code == 200:
             results = response.json()
             if not results:
-                await message.reply_text("No results found.")
+                await message.reply_text("Sonuç bulunamadı.")
             else:
                 message_text = ""
                 for result in results[:7]:
@@ -99,6 +99,6 @@ async def bing_search(app, message):
                     message_text += f"{title}\n{link}\n\n"
                 await message.reply_text(message_text.strip())
         else:
-            await message.reply_text("Sorry, something went wrong with the search.")
+            await message.reply_text("Üzgünüz, aramada bir şeyler ters gitti.")
     except Exception as e:
         await message.reply_text(f"An error occurred: {str(e)}")
