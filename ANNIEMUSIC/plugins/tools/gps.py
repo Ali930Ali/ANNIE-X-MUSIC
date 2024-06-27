@@ -27,12 +27,12 @@ async def gps(bot, message):
 
         url = [[IKB("View it", url=f"https://www.google.com/maps/search/{latitude},{longitude}")]]
 
-        url = [[IKB("Open with:🌏ɢᴏᴏɢʟᴇ ᴍᴀᴘs", url=f"https://www.google.com/maps/search/{latitude},{longitude}")]]
+        url = [[IKB("Şununla aç:🌏ɢᴏᴏɢʟᴇ ᴍᴀᴘs", url=f"https://www.google.com/maps/search/{latitude},{longitude}")]]
 
         
         await message.reply_venue(latitude, longitude, f"{city}", f"{state}, {country}", reply_markup=IKM(url))
     except Exception as e:
-        await message.reply_text(f"I can't find that \nDue to {e}")
+        await message.reply_text(f"bunu bulamıyorum \nDolayı {e}")
 
 @app.on_message(filters.command(["distance"]))
 async def distance(bot, message):
@@ -47,4 +47,4 @@ async def distance(bot, message):
 
         await message.reply_text(f"Total distance between {x[0]},{x[1]} and {y[0]},{y[1]} is {dist} miles")
     except Exception as e:
-        await message.reply_text(f"I can't find that \nDue to {e}")
+        await message.reply_text(f"bunu bulamıyorum \nDue to {e}")
