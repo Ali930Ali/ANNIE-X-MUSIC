@@ -1,414 +1,418 @@
-HELP_1 = """<b><u>ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅs :</b></u>
+HELP_1 = """<b><u>YÖNETİCİ KOMUTLARI:</b></u>
 
-ᴊᴜsᴛ ᴀᴅᴅ <b>ᴄ</b> ɪɴ ᴛʜᴇ sᴛᴀʀᴛɪɴɢ ᴏғ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅs ᴛᴏ ᴜsᴇ ᴛʜᴇᴍ ғᴏʀ ᴄʜᴀɴɴᴇʟ.
+Komutların başına <b>C</b> ekleyerek kanallar için kullanabilirsiniz.
 
 
-/pause : ᴩᴀᴜsᴇ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴩʟᴀʏɪɴɢ sᴛʀᴇᴀᴍ.
+/pause : Mevcut oynatılan yayını duraklatır.
 
-/resume : ʀᴇsᴜᴍᴇ ᴛʜᴇ ᴩᴀᴜsᴇᴅ sᴛʀᴇᴀᴍ.
+/resume : Duraklatılan yayını devam ettirir.
 
-/skip : sᴋɪᴩ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴩʟᴀʏɪɴɢ sᴛʀᴇᴀᴍ ᴀɴᴅ sᴛᴀʀᴛ sᴛʀᴇᴀᴍɪɴɢ ᴛʜᴇ ɴᴇxᴛ ᴛʀᴀᴄᴋ ɪɴ ǫᴜᴇᴜᴇ.
+/skip : Mevcut oynatılan yayını atlar ve sıradaki parçayı oynatmaya başlar.
 
-/end ᴏʀ /stop : ᴄʟᴇᴀʀs ᴛʜᴇ ǫᴜᴇᴜᴇ ᴀɴᴅ ᴇɴᴅ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴩʟᴀʏɪɴɢ sᴛʀᴇᴀᴍ.
+/end veya /stop : Sırayı temizler ve mevcut oynatılan yayını sonlandırır.
 
-/player : ɢᴇᴛ ᴀ ɪɴᴛᴇʀᴀᴄᴛɪᴠᴇ ᴩʟᴀʏᴇʀ ᴩᴀɴᴇʟ.
+/player : Etkileşimli bir oynatıcı paneli alır.
 
-/queue : sʜᴏᴡs ᴛʜᴇ ǫᴜᴇᴜᴇᴅ ᴛʀᴀᴄᴋs ʟɪsᴛ.
+/queue : Sıradaki parçaları gösterir.
 
-✧ᴛʜᴇsᴇ ᴍᴏᴅᴜʟᴇs ʙʏ ➪ [🇯𝐀𝐑𝐕𝐈𝐒💗](https://t.me/JARVIS_V2)"""
+✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
 
 HELP_2 = """
-<b><u>ᴀᴜᴛʜ ᴜsᴇʀs :</b></u>
+<b><u>YETKİLİ KULLANICILAR:</b></u>
 
-ᴀᴜᴛʜ ᴜsᴇʀs ᴄᴀɴ ᴜsᴇ ᴀᴅᴍɪɴ ʀɪɢʜᴛs ɪɴ ᴛʜᴇ ʙᴏᴛ ᴡɪᴛʜᴏᴜᴛ ᴀᴅᴍɪɴ ʀɪɢʜᴛs ɪɴ ᴛʜᴇ ᴄʜᴀᴛ.
+Yetkili kullanıcılar, sohbette yönetici haklarına sahip olmadan botta yönetici haklarını kullanabilirler.
 
-/auth [ᴜsᴇʀɴᴀᴍᴇ/ᴜsᴇʀ_ɪᴅ] : ᴀᴅᴅ ᴀ ᴜsᴇʀ ᴛᴏ ᴀᴜᴛʜ ʟɪsᴛ ᴏғ ᴛʜᴇ ʙᴏᴛ.
-/unauth [ᴜsᴇʀɴᴀᴍᴇ/ᴜsᴇʀ_ɪᴅ] : ʀᴇᴍᴏᴠᴇ ᴀ ᴀᴜᴛʜ ᴜsᴇʀs ғʀᴏᴍ ᴛʜᴇ ᴀᴜᴛʜ ᴜsᴇʀs ʟɪsᴛ.
-/authusers : sʜᴏᴡs ᴛʜᴇ ʟɪsᴛ ᴏғ ᴀᴜᴛʜ ᴜsᴇʀs ᴏғ ᴛʜᴇ ɢʀᴏᴜᴩ.
+/auth [kullanıcı adı/kullanıcı ID] : Bir kullanıcıyı botun yetkili listesine ekler.
+/unauth [kullanıcı adı/kullanıcı ID] : Yetkili kullanıcıyı yetkili listesinden çıkarır.
+/authusers : Grubun yetkili kullanıcılarının listesini gösterir.
 
-✧ᴛʜᴇsᴇ ᴍᴏᴅᴜʟᴇs ʙʏ ➪ [🇯𝐀𝐑𝐕𝐈𝐒💗](https://t.me/JARVIS_V2)"""
+✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
 
 HELP_3 = """
-<u><b>ʙʀᴏᴀᴅᴄᴀsᴛ ғᴇᴀᴛᴜʀᴇ</b></u> [ᴏɴʟʏ ғᴏʀ sᴜᴅᴏᴇʀs] :
+<u><b>YAYIN ÖZELLİĞİ</b></u> [Sadece Sudo kullanıcıları için]:
 
-/broadcast [ᴍᴇssᴀɢᴇ ᴏʀ ʀᴇᴩʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ] : ʙʀᴏᴀᴅᴄᴀsᴛ ᴀ ᴍᴇssᴀɢᴇ ᴛᴏ sᴇʀᴠᴇᴅ ᴄʜᴀᴛs ᴏғ ᴛʜᴇ ʙᴏᴛ.
+/broadcast [mesaj veya mesaja cevap] : Botun hizmet verdiği sohbetlerde bir mesajı yayınlar.
 
-<u>ʙʀᴏᴀᴅᴄᴀsᴛɪɴɢ ᴍᴏᴅᴇs :</u>
-<b>-pin</b> : ᴩɪɴs ʏᴏᴜʀ ʙʀᴏᴀᴅᴄᴀsᴛᴇᴅ ᴍᴇssᴀɢᴇs ɪɴ sᴇʀᴠᴇᴅ ᴄʜᴀᴛs.
-<b>-pinloud</b> : ᴩɪɴs ʏᴏᴜʀ ʙʀᴏᴀᴅᴄᴀsᴛᴇᴅ ᴍᴇssᴀɢᴇ ɪɴ sᴇʀᴠᴇᴅ ᴄʜᴀᴛs ᴀɴᴅ sᴇɴᴅ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ᴛᴏ ᴛʜᴇ ᴍᴇᴍʙᴇʀs.
-<b>-user</b> : ʙʀᴏᴀᴅᴄᴀsᴛs ᴛʜᴇ ᴍᴇssᴀɢᴇ ᴛᴏ ᴛʜᴇ ᴜsᴇʀs ᴡʜᴏ ʜᴀᴠᴇ sᴛᴀʀᴛᴇᴅ ʏᴏᴜʀ ʙᴏᴛ.
-<b>-assistant</b> : ʙʀᴏᴀᴅᴄᴀsᴛ ʏᴏᴜʀ ᴍᴇssᴀɢᴇ ғʀᴏᴍ ᴛʜᴇ ᴀssɪᴛᴀɴᴛ ᴀᴄᴄᴏᴜɴᴛ ᴏғ ᴛʜᴇ ʙᴏᴛ.
-<b>-nobot</b> : ғᴏʀᴄᴇs ᴛʜᴇ ʙᴏᴛ ᴛᴏ ɴᴏᴛ ʙʀᴏᴀᴅᴄᴀsᴛ ᴛʜᴇ ᴍᴇssᴀɢᴇ..
+<u>Yayın Modları:</u>
+<b>-pin</b> : Yayınlanan mesajları hizmet verilen sohbetlerde sabitler.
+<b>-pinloud</b> : Yayınlanan mesajı hizmet verilen sohbetlerde sabitler ve üyelere bildirim gönderir.
+<b>-user</b> : Mesajı botu başlatan kullanıcılara yayınlar.
+<b>-assistant</b> : Mesajı botun yardımcı hesabından yayınlar.
+<b>-nobot</b> : Botun mesajı yayınlamasını engeller.
 
-<b>ᴇxᴀᴍᴩʟᴇ:</b> <code>/broadcast -user -assistant -pin ᴛᴇsᴛɪɴɢ ʙʀᴏᴀᴅᴄᴀsᴛ</code>
+<b>Örnek:</b> <code>/broadcast -user -assistant -pin test yayını</code>
 
-✧ᴛʜᴇsᴇ ᴍᴏᴅᴜʟᴇs ʙʏ ➪ [🇯𝐀𝐑𝐕𝐈𝐒💗](https://t.me/JARVIS_V2)"""
+✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
 
-HELP_4 = """<u><b>ᴄʜᴀᴛ ʙʟᴀᴄᴋʟɪsᴛ ғᴇᴀᴛᴜʀᴇ :</b></u> [ᴏɴʟʏ ғᴏʀ sᴜᴅᴏᴇʀs]
+HELP_4 = """<u><b>SOHBET KARALİSTESİ ÖZELLİĞİ:</b></u> [Sadece Sudo kullanıcıları için]
 
-ʀᴇsᴛʀɪᴄᴛ sʜɪᴛ ᴄʜᴀᴛs ᴛᴏ ᴜsᴇ ᴏᴜʀ ᴘʀᴇᴄɪᴏᴜs ʙᴏᴛ.
+Botumuzu kullanmak için kötü sohbetleri kısıtlayın.
 
-/blacklistchat [ᴄʜᴀᴛ ɪᴅ] : ʙʟᴀᴄᴋʟɪsᴛ ᴀ ᴄʜᴀᴛ ғʀᴏᴍ ᴜsɪɴɢ ᴛʜᴇ ʙᴏᴛ.
-/whitelistchat [ᴄʜᴀᴛ ɪᴅ] : ᴡʜɪᴛᴇʟɪsᴛ ᴛʜᴇ ʙʟᴀᴄᴋʟɪsᴛᴇᴅ ᴄʜᴀᴛ.
-/blacklistedchat : sʜᴏᴡs ᴛʜᴇ ʟɪsᴛ ᴏғ ʙʟᴀᴄᴋʟɪsᴛᴇᴅ ᴄʜᴀᴛs.
+/blacklistchat [sohbet ID] : Bir sohbeti botu kullanmaktan kara listeye alır.
+/whitelistchat [sohbet ID] : Kara listeden sohbeti beyaz listeye alır.
+/blacklistedchat : Kara listeye alınan sohbetlerin listesini gösterir.
 
-☆✧✧ᴛʜᴇsᴇ ᴍᴏᴅᴜʟᴇs ʙʏ ➪ [🇯𝐀𝐑𝐕𝐈𝐒💗](https://t.me/JARVIS_V2)"""
+☆✧✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
 
 HELP_5 = """
-<u><b>ʙʟᴏᴄᴋ ᴜsᴇʀs:</b></u> [ᴏɴʟʏ ғᴏʀ sᴜᴅᴏᴇʀs]
+<u><b>KULLANICI ENGELLEME:</b></u> [Sadece Sudo kullanıcıları için]
 
-sᴛᴀʀᴛs ɪɢɴᴏʀɪɴɢ ᴛʜᴇ ʙʟᴀᴄᴋʟɪsᴛᴇᴅ ᴜsᴇʀ, sᴏ ᴛʜᴀᴛ ʜᴇ ᴄᴀɴ'ᴛ ᴜsᴇ ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅs.
+Kara listeye alınan kullanıcıyı görmezden gelmeye başlar, böylece bot komutlarını kullanamaz.
 
-/block [ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ʀᴇᴩʟʏ ᴛᴏ ᴀ ᴜsᴇʀ] : ʙʟᴏᴄᴋ ᴛʜᴇ ᴜsᴇʀ ғʀᴏᴍ ᴏᴜʀ ʙᴏᴛ.
-/unblock [ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ʀᴇᴩʟʏ ᴛᴏ ᴀ ᴜsᴇʀ] : ᴜɴʙʟᴏᴄᴋs ᴛʜᴇ ʙʟᴏᴄᴋᴇᴅ ᴜsᴇʀ.
-/blockedusers : sʜᴏᴡs ᴛʜᴇ ʟɪsᴛ ᴏғ ʙʟᴏᴄᴋᴇᴅ ᴜsᴇʀs.
+/block [kullanıcı adı veya kullanıcıya cevap] : Kullanıcıyı botumuzdan engeller.
+/unblock [kullanıcı adı veya kullanıcıya cevap] : Engellenen kullanıcıyı engellemesini kaldırır.
+/blockedusers : Engellenen kullanıcıların listesini gösterir.
 
-✧ᴛʜᴇsᴇ ᴍᴏᴅᴜʟᴇs ʙʏ ➪ [🇯𝐀𝐑𝐕𝐈𝐒💗](https://t.me/JARVIS_V2)"""
+✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
 
 HELP_6 = """
-<u><b>ᴄʜᴀɴɴᴇʟ ᴩʟᴀʏ ᴄᴏᴍᴍᴀɴᴅs:</b></u>
+<u><b>KANAL OYNATMA KOMUTLARI:
 
-ʏᴏᴜ ᴄᴀɴ sᴛʀᴇᴀᴍ ᴀᴜᴅɪᴏ/ᴠɪᴅᴇᴏ ɪɴ ᴄʜᴀɴɴᴇʟ.
+</b></u>Kanallarda ses/video akışı yapabilirsiniz.
 
-/cplay : sᴛᴀʀᴛs sᴛʀᴇᴀᴍɪɴɢ ᴛʜᴇ ʀᴇǫᴜᴇsᴛᴇᴅ ᴀᴜᴅɪᴏ ᴛʀᴀᴄᴋ ᴏɴ ᴄʜᴀɴɴᴇʟ's ᴠɪᴅᴇᴏᴄʜᴀᴛ.
-/cvplay : sᴛᴀʀᴛs sᴛʀᴇᴀᴍɪɴɢ ᴛʜᴇ ʀᴇǫᴜᴇsᴛᴇᴅ ᴠɪᴅᴇᴏ ᴛʀᴀᴄᴋ ᴏɴ ᴄʜᴀɴɴᴇʟ's ᴠɪᴅᴇᴏᴄʜᴀᴛ.
-/cplayforce or /cvplayforce : sᴛᴏᴩs ᴛʜᴇ ᴏɴɢᴏɪɴɢ sᴛʀᴇᴀᴍ ᴀɴᴅ sᴛᴀʀᴛs sᴛʀᴇᴀᴍɪɴɢ ᴛʜᴇ ʀᴇǫᴜᴇsᴛᴇᴅ ᴛʀᴀᴄᴋ.
+/oynat : Kanalın video sohbetinde istenen ses parçasını oynatmaya başlar.
+/cvoynat : Kanalın video sohbetinde istenen video parçasını oynatmaya başlar.
+/cplayforce veya /cvplayforce : Devam eden yayını durdurur ve istenen parçayı oynatmaya başlar.
 
-/channelplay [ᴄʜᴀᴛ ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ɪᴅ] ᴏʀ [ᴅɪsᴀʙʟᴇ] : ᴄᴏɴɴᴇᴄᴛ ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴀ ɢʀᴏᴜᴩ ᴀɴᴅ sᴛᴀʀᴛs sᴛʀᴇᴀᴍɪɴɢ ᴛʀᴀᴄᴋs ʙʏ ᴛʜᴇ ʜᴇʟᴩ ᴏғ ᴄᴏᴍᴍᴀɴᴅs sᴇɴᴛ ɪɴ ɢʀᴏᴜᴩ.
-/bass ➠ ʀᴇᴘʟʏ ᴛᴏ ᴀɴ ᴀᴜᴅɪᴏ ғɪʟᴇ ᴛʜᴀᴛ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴀᴅᴅ ʙᴀss ɪɴ ᴀᴅᴜɪᴏ...
-/dj ➠ ʀᴇᴘʟʏ ᴛᴏ ᴀɴ ᴀᴜᴅɪᴏ ғɪʟᴇ ᴛʜᴀᴛ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴀᴅᴅ ᴅᴊ ᴇғғᴇᴄᴛ ɪɴ ᴀᴅᴜɪᴏ...
+/channelplay [sohbet kullanıcı adı veya ID] veya [devre dışı bırak] : Bir gruba kanal bağlar ve grup komutlarıyla parça yayını başlatır.
+/bass ➠ Ses dosyasına bas eklemek için bir ses dosyasına cevap verin...
+/dj ➠ Ses dosyasına DJ efekti eklemek için bir ses dosyasına cevap verin...
 
-✧ᴛʜᴇsᴇ ᴍᴏᴅᴜʟᴇs ʙʏ ➪ [🇯𝐀𝐑𝐕𝐈𝐒💗](https://t.me/JARVIS_V2)"""
+✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
 
 HELP_7 = """
-<u><b>ɢʟᴏʙᴀʟ ʙᴀɴ ғᴇᴀᴛᴜʀᴇ</b></u> [ᴏɴʟʏ ғᴏʀ sᴜᴅᴏᴇʀs] :
+<u><b>GENEL YASAKLAMA ÖZELLİĞİ</b></u> [Sadece Sudo kullanıcıları için]:
 
-/gban [ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ʀᴇᴩʟʏ ᴛᴏ ᴀ ᴜsᴇʀ] : ɢʟᴏʙᴀʟʟʏ ʙᴀɴs ᴛʜᴇ ᴄʜᴜᴛɪʏᴀ ғʀᴏᴍ ᴀʟʟ ᴛʜᴇ sᴇʀᴠᴇᴅ ᴄʜᴀᴛs ᴀɴᴅ ʙʟᴀᴄᴋʟɪsᴛ ʜɪᴍ ғʀᴏᴍ ᴜsɪɴɢ ᴛʜᴇ ʙᴏᴛ.
-/ungban [ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ʀᴇᴩʟʏ ᴛᴏ ᴀ ᴜsᴇʀ] : ɢʟᴏʙᴀʟʟʏ ᴜɴʙᴀɴs ᴛʜᴇ ɢʟᴏʙᴀʟʟʏ ʙᴀɴɴᴇᴅ ᴜsᴇʀ.
-/gbannedusers : sʜᴏᴡs ᴛʜᴇ ʟɪsᴛ ᴏғ ɢʟᴏʙᴀʟʟʏ ʙᴀɴɴᴇᴅ ᴜsᴇʀs.
+/gban [kullanıcı adı veya kullanıcıya cevap] : Kullanıcıyı tüm hizmet verilen sohbetlerde genel olarak yasaklar ve botu kullanmasını engeller.
+/ungban [kullanıcı adı veya kullanıcıya cevap] : Genel olarak yasaklanan kullanıcının yasaklamasını kaldırır.
+/gbannedusers : Genel olarak yasaklanan kullanıcıların listesini gösterir.
 
-✧ᴛʜᴇsᴇ ᴍᴏᴅᴜʟᴇs ʙʏ ➪ [🇯𝐀𝐑𝐕𝐈𝐒💗](https://t.me/JARVIS_V2)"""
+✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
 
 HELP_8 = """
-<b><u>ʟᴏᴏᴘ sᴛʀᴇᴀᴍ :</b></u>
+<b><u>LOOP STREAM:</b></u>
 
-<b>sᴛᴀʀᴛs sᴛʀᴇᴀᴍɪɴɢ ᴛʜᴇ ᴏɴɢᴏɪɴɢ sᴛʀᴇᴀᴍ ɪɴ ʟᴏᴏᴘ</b>
+<b>Devam eden yayını döngüde oynatır</b>
 
-/loop [enable/disable] : ᴇɴᴀʙʟᴇs/ᴅɪsᴀʙʟᴇs ʟᴏᴏᴘ ғᴏʀ ᴛʜᴇ ᴏɴɢᴏɪɴɢ sᴛʀᴇᴀᴍ
-/loop [1, 2, 3, ...] : ᴇɴᴀʙʟᴇs ᴛʜᴇ ʟᴏᴏᴘ ғᴏʀ ᴛʜᴇ ɢɪᴠᴇɴ ᴠᴀʟᴜᴇ.
+/loop [etkinleştir/devre dışı bırak] : Devam eden yayın için döngüyü etkinleştirir/devre dışı bırakır
+/loop [1, 2, 3, ...] : Belirtilen değer için döngüyü etkinleştirir.
 
-✧ᴛʜᴇsᴇ ᴍᴏᴅᴜʟᴇs ʙʏ ➪ [🇯𝐀𝐑𝐕𝐈𝐒💗](https://t.me/JARVIS_V2)"""
+✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
 
 HELP_9 = """
-<u><b>ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ ᴍᴏᴅᴇ</b></u> [ᴏɴʟʏ ғᴏʀ sᴜᴅᴏᴇʀs] :
+<u><b>BAKIM MODU</b></u> [Sadece Sudo kullanıcıları için]:
 
-/logs : ɢᴇᴛ ʟᴏɢs ᴏғ ᴛʜᴇ ʙᴏᴛ.
+/logs : Botun günlüklerini alır.
 
-/logger [ᴇɴᴀʙʟᴇ/ᴅɪsᴀʙʟᴇ] : ʙᴏᴛ ᴡɪʟʟ sᴛᴀʀᴛ ʟᴏɢɢɪɴɢ ᴛʜᴇ ᴀᴄᴛɪᴠɪᴛɪᴇs ʜᴀᴩᴩᴇɴ ᴏɴ ʙᴏᴛ.
+/logger [etkinleştir/devre dışı bırak] : Botun etkinlikleri günlüğe kaydetmeye başlamasını sağlar.
 
-/maintenance [ᴇɴᴀʙʟᴇ/ᴅɪsᴀʙʟᴇ] : ᴇɴᴀʙʟᴇ ᴏʀ ᴅɪsᴀʙʟᴇ ᴛʜᴇ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ ᴍᴏᴅᴇ ᴏғ ʏᴏᴜʀ ʙᴏᴛ.
+/maintenance [etkinleştir/devre dışı bırak] : Botun bakım modunu etkinleştirir veya devre dışı bırakır.
 
-✧ᴛʜᴇsᴇ ᴍᴏᴅᴜʟᴇs ʙʏ ➪ [🇯𝐀𝐑𝐕𝐈𝐒💗](https://t.me/JARVIS_V2)"""
+✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
 
 HELP_10 = """
-<b><u>ᴘɪɴɢ & sᴛᴀᴛs :</b></u>
+<b><u>Ping & Stats:</b></u>
 
-/start : sᴛᴀʀᴛs ᴛʜᴇ ᴍᴜsɪᴄ ʙᴏᴛ.
-/help : ɢᴇᴛ ʜᴇʟᴩ ᴍᴇɴᴜ ᴡɪᴛʜ ᴇxᴩʟᴀɴᴀᴛɪᴏɴ ᴏғ ᴄᴏᴍᴍᴀɴᴅs.
+/start : Müzik botunu başlatır.
+/help : Komutların açıklamalarıyla birlikte yardım menüsünü alır.
 
-/toe : sʜᴏᴡs ᴛʜᴇ ᴩɪɴɢ ᴀɴᴅ sʏsᴛᴇᴍ sᴛᴀᴛs ᴏғ ᴛʜᴇ ʙᴏᴛ.
+/toe : Botun ping ve sistem istatistiklerini gösterir.
 
-/stats : sʜᴏᴡs ᴛʜᴇ ᴏᴠᴇʀᴀʟʟ sᴛᴀᴛs ᴏғ ᴛʜᴇ ʙᴏᴛ.
+/stats : Botun genel istatistiklerini gösterir.
 
-✧ᴛʜᴇsᴇ ᴍᴏᴅᴜʟᴇs ʙʏ ➪ [🇯𝐀𝐑𝐕𝐈𝐒💗](https://t.me/JARVIS_V2)"""
+✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
 
 HELP_11 = """
-<u><b>ᴩʟᴀʏ ᴄᴏᴍᴍᴀɴᴅs :</b></u>
+<u><b>OYUN KOMUTLARI:</b></u>
 
-<b>v :</b> sᴛᴀɴᴅs ғᴏʀ ᴠɪᴅᴇᴏ ᴩʟᴀʏ.
-<b>force :</b> sᴛᴀɴᴅs ғᴏʀ ғᴏʀᴄᴇ ᴩʟᴀʏ.
+<b>v :</b> Video oynatma anlamına gelir.
+<b>force :</b> Zorla oynatma anlamına gelir.
 
-/play ᴏʀ /vplay : sᴛᴀʀᴛs sᴛʀᴇᴀᴍɪɴɢ ᴛʜᴇ ʀᴇǫᴜᴇsᴛᴇᴅ ᴛʀᴀᴄᴋ ᴏɴ ᴠɪᴅᴇᴏᴄʜᴀᴛ.
+/oynat veya /voynat : İstenen parçayı video sohbette oynatmaya başlar.
 
-/playforce ᴏʀ /vplayforce : sᴛᴏᴩs ᴛʜᴇ ᴏɴɢᴏɪɴɢ sᴛʀᴇᴀᴍ ᴀɴᴅ sᴛᴀʀᴛs sᴛʀᴇᴀᴍɪɴɢ ᴛʜᴇ ʀᴇǫᴜᴇsᴛᴇᴅ ᴛʀᴀᴄᴋ.
+/playforce veya /vplayforce : Devam eden yayını durdurur ve istenen parçayı oynatmaya başlar.
 
-✧ᴛʜᴇsᴇ ᴍᴏᴅᴜʟᴇs ʙʏ ➪ [🇯𝐀𝐑𝐕𝐈𝐒💗](https://t.me/JARVIS_V2)"""
+✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
 
 HELP_12 = """
-<b><u>sʜᴜғғʟᴇ ᴏ̨ᴜᴇᴜᴇ :</b></u>
+<b><u>ŞARKI KARMA:</b></u>
 
-/shuffle : sʜᴜғғʟᴇ's ᴛʜᴇ ᴏ̨ᴜᴇᴜᴇ.
-/queue : sʜᴏᴡs ᴛʜᴇ sʜᴜғғʟᴇᴅ ᴏ̨ᴜᴇᴜᴇ.
+/shuffle : Sıradaki parçaları karıştırır.
+/queue : Karışık sıradaki parçaları gösterir.
 
-✧ᴛʜᴇsᴇ ᴍᴏᴅᴜʟᴇs ʙʏ ➪ [🇯𝐀𝐑𝐕𝐈𝐒💗](https://t.me/JARVIS_V2)"""
+✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
 
 HELP_13 = """
-<b><u>sᴇᴇᴋ sᴛʀᴇᴀᴍ :</b></u>
+<b><u>AKIŞTA İLERLEME:</b></u>
 
-/seek [ᴅᴜʀᴀᴛɪᴏɴ ɪɴ sᴇᴄᴏɴᴅs] : sᴇᴇᴋ ᴛʜᴇ sᴛʀᴇᴀᴍ ᴛᴏ ᴛʜᴇ ɢɪᴠᴇɴ ᴅᴜʀᴀᴛɪᴏɴ.
-/seekback [ᴅᴜʀᴀᴛɪᴏɴ ɪɴ sᴇᴄᴏɴᴅs] : ʙᴀᴄᴋᴡᴀʀᴅ sᴇᴇᴋ ᴛʜᴇ sᴛʀᴇᴀᴍ ᴛᴏ ᴛʜᴇ ᴛʜᴇ ɢɪᴠᴇɴ ᴅᴜʀᴀᴛɪᴏɴ.
+/seek [saniye cinsinden süre] : Yayını belirtilen süreye getirir.
+/seekback [saniye cinsinden süre] : Yayını belirtilen süreye geri alır.
 
-✧ᴛʜᴇsᴇ ᴍᴏᴅᴜʟᴇs ʙʏ ➪ [🇯𝐀𝐑𝐕𝐈𝐒💗](https://t.me/JARVIS_V2)"""
+✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
 
 HELP_14 = """
-<b><u>ᴅᴏᴡɴʟᴏᴀᴅ sᴇᴄᴛɪᴏɴ</b></u>
+<b><u>İNDİRME BÖLÜMÜ</b></u>
 
-/song [sᴏɴɢ ɴᴀᴍᴇ/ʏᴛ ᴜʀʟ] : ᴅᴏᴡɴʟᴏᴀᴅ ᴀɴʏ ᴛʀᴀᴄᴋ ғʀᴏᴍ ʏᴏᴜᴛᴜʙᴇ ɪɴ ᴍᴘ3 ᴏʀ ᴍᴘ4 ғᴏʀᴍᴀᴛs.
-/video ᴏʀ /yt  ➠ ᴇɴᴛᴇʀ ᴛʜᴇ ʟɪɴᴋ ᴏʀ ɴᴀᴍᴇ ᴏғ ᴠɪᴅᴇᴏ ᴀғᴛᴇʀ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ᴛʜᴇ ᴠɪᴅᴇᴏ.
-/insta ➠ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ᴀɴ ɪɴsᴛᴀɢʀᴀᴍ ʀᴇᴇʟ.
-/movie ➠ ᴛᴏ ɢᴇᴛ ɪɴғᴏ ᴏғ ᴛʜᴀᴛ ᴍᴏᴠɪᴇ.
-/remove ➠ [ᴠɪᴅᴇᴏ ᴏʀ ᴀᴜᴅɪᴏ ] ʀᴇᴘʟʏ ᴛᴏ ᴀɴ ᴠɪᴅᴇᴏ ғɪʟᴇ. ᴛʜᴀᴛ ʏᴏᴜ ᴡᴀɴᴛ ʀᴇᴍᴏᴠᴇ ᴀᴜᴅɪᴏ ᴏʀ ᴠɪᴅᴇᴏ.
+/song [şarkı adı/YT URL] : YouTube'dan herhangi bir parçayı MP3 veya MP4 formatında indirir.
+/video veya /yt  ➠ Bağlantı veya video adını komuttan sonra girerek videoyu indir.
+/insta ➠ Instagram reeli indir
+Tabii, çeviriye devam ediyorum:
+/movie ➠ O filmin bilgilerini almak için kullanılır.
+/remove ➠ [video veya ses] Bir video dosyasına yanıt olarak, ses veya video dosyasını kaldırmak için kullanılır.
 
-✧ᴛʜᴇsᴇ ᴍᴏᴅᴜʟᴇs ʙʏ ➪ [🇯𝐀𝐑𝐕𝐈𝐒💗](https://t.me/JARVIS_V2)"""
+✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
 
 HELP_15 = """
-<b><u>sᴘᴇᴇᴅ ᴄᴏᴍᴍᴀɴᴅs :</b></u>
+<b><u>HIZ KOMUTLARI:</b></u>
 
-ʏᴏᴜ ᴄᴀɴ ᴄᴏɴᴛʀᴏʟ ᴛʜᴇ ᴘʟᴀʏʙᴀᴄᴋ sᴘᴇᴇᴅ ᴏғ ᴛʜᴇ ᴏɴɢᴏɪɴɢ sᴛʀᴇᴀᴍ. [ᴀᴅᴍɪɴs ᴏɴʟʏ]
+Devam eden yayının oynatma hızını kontrol edebilirsiniz. [Yalnızca yöneticiler]
 
-/speed or /playback : ғᴏʀ ᴀᴅᴊᴜsᴛɪɴɢ ᴛʜᴇ ᴀᴜᴅɪᴏ ᴘʟᴀʏʙᴀᴄᴋ sᴘᴇᴇᴅ ɪɴ ɢʀᴏᴜᴘ.
-/cspeed or /cplayback : ғᴏʀ ᴀᴅᴊᴜsᴛɪɴɢ ᴛʜᴇ ᴀᴜᴅɪᴏ ᴘʟᴀʏʙᴀᴄᴋ sᴘᴇᴇᴅ ɪɴ ᴄʜᴀɴɴᴇʟ.
+/speed veya /playback : Grup içinde ses oynatma hızını ayarlamak için kullanılır.
+/cspeed veya /cplayback : Kanal içinde ses oynatma hızını ayarlamak için kullanılır.
 
-✧ᴛʜᴇsᴇ ᴍᴏᴅᴜʟᴇs ʙʏ ➪ [🇯𝐀𝐑𝐕𝐈𝐒💗](https://t.me/JARVIS_V2)"""
+✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
 
 HELP_16 = """
-<b><u>CʜᴀᴛGPT :</b></u>
+<b><u>ChatGPT:</b></u>
 
- Jarvis - ʏᴏᴜ ᴄᴀɴ ᴀᴄᴄᴇss ᴊᴀʀᴠɪs ʙʏ ᴛʜɪs.
- Assis - ᴛʜᴇ ᴀɪ ᴡɪʟʟ ʀᴇsᴘᴏɴsᴇ ɪɴ ᴀᴜᴅɪᴏ ғᴏʀᴍᴀᴛ.
- /gpt - ᴀᴄᴄᴇss ɢᴘᴛ ғᴜɴᴄᴛɪᴏɴᴀʟɪᴛʏ.
- /bard - ɪɴᴏᴠᴋᴇ ᴛʜᴇ ʙᴀʀᴅ ғᴇᴀᴛᴜʀᴇ.
- /llama - Engage with Llama mode
- /gemini - ᴇxᴘʟᴏʀᴇ ɢᴇᴍɪɴɪ ᴍᴏᴅᴇ.
- /mistral - ᴀᴄᴛɪᴠᴀᴛᴇ ᴍɪsᴛʀᴀʟ ᴄᴏᴅᴇ.
- /tts - ᴛᴏ ᴄᴏɴᴠᴇʀᴛ ᴛᴇxᴛ ᴛᴏ sᴘᴇᴇᴄʜ.
- /bingsearch - ᴛᴏ sᴇᴀʀᴄʜ ɪɴ ʙɪɴɢ ᴘʟᴀᴛғᴏʀᴍ.
- /logo - ᴇɴᴛᴇʀ ᴛᴇxᴛ ᴀғᴛᴇʀ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ɢᴇɴʀᴀᴛᴇ ʟᴏɢᴏ.
- /animelogo - ᴇɴᴛᴇʀ ᴛᴇxᴛ ᴀғᴛᴇʀ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ɢᴇɴʀᴀᴛᴇ ᴀɴɪᴍᴇ ʟᴏɢᴏ.
- 
-✧ᴛʜᴇsᴇ ᴍᴏᴅᴜʟᴇs ʙʏ ➪ [🇯𝐀𝐑𝐕𝐈𝐒💗](https://t.me/JARVIS_V2)"""
+Jarvis - Bu komutla Jarvis'e erişebilirsiniz.
+Assis - Yapay zeka sesli yanıt verir.
+ /gpt - GPT işlevselliğine erişmek için kullanılır.
+ /bard - Bard özelliğini çağırır.
+ /llama - Llama modunu etkinleştirir.
+ /gemini - Gemini modunu keşfeder.
+ /mistral - Mistral kodunu etkinleştirir.
+ /tts - Metni sese dönüştürmek için kullanılır.
+ /bingsearch - Bing platformunda arama yapmak için kullanılır.
+ /logo - Komuttan sonra metin girerek logo oluşturur.
+ /animelogo - Komuttan sonra metin girerek anime logosu oluşturur.
+
+✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
 
 HELP_17 = """
-<b><u>sᴛɪᴄᴋᴇʀs :</b></u>
+<b><u>STICKERS:</b></u>
 
-/mmf ➠ ᴛᴏ ᴍᴇᴍɪғʏ ᴛʜᴇ ɪᴍᴀɢᴇ ᴏʀ sᴛɪᴄᴋᴇʀ.
-/tiny ➠ ʀᴇᴘʟʏ ᴛᴏ sᴛɪᴄᴋᴇʀ ᴛʜᴀᴛ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴛɪɴʏ
-/kang ➠ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ɪs ᴜsᴇᴅ ᴛᴏ ᴋᴀɴɢ ɪᴍᴀɢᴇs ɪɴ sᴛɪᴄᴋᴇʀ.
-/packkang ➠ ᴄʀᴇᴀᴛᴇs ᴀ ᴘᴀᴄᴋ ᴏғ sᴛɪᴄᴋᴇʀs ғʀᴏᴍ ᴀ ᴏᴛʜᴇʀ ᴘᴀᴄᴋ.
-/stickerid ➠ ɢᴇᴛs ᴛʜᴇ sᴛɪᴄᴋᴇʀ ɪᴅ ᴏғ ᴀ sᴛɪᴄᴋᴇʀ.
-/st ➠ ᴛᴏ ғɪɴᴅ ᴛʜᴇ sᴛɪᴄᴋᴇʀ ᴘʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ sᴛɪᴄᴋᴇʀ ɪᴅ ᴀғᴛᴇʀ ᴄᴏᴍᴍᴀɴᴅ.
-/meme ➠ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ɢᴇɴʀᴀᴛᴇ ᴍᴇᴍᴇs.
+/mmf ➠ Resmi veya sticker'ı meme yapmak için kullanılır.
+/tiny ➠ Küçültmek istediğiniz stickera yanıt verin.
+/kang ➠ Resimleri sticker olarak almak için kullanılır.
+/packkang ➠ Diğer bir paketten sticker seti oluşturur.
+/stickerid ➠ Sticker'ın kimliğini alır.
+/st ➠ Sticker bulmak için sticker kimliğini komuttan sonra girin.
+/meme ➠ Meme oluşturmak için kullanılır.
 
-✧ᴛʜᴇsᴇ ᴍᴏᴅᴜʟᴇs ʙʏ ➪ [🇯𝐀𝐑𝐕𝐈𝐒💗](https://t.me/JARVIS_V2)"""
+✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
 
 HELP_18 = """
-<b><u>Tᴀɢ-Aʟʟ :</b></u>
+<b><u>Tag-All:</b></u>
 
- /utag or /uall ➠ ғᴏʀ ᴜɴʟɪᴍɪᴛᴇᴅ ᴛᴀɢ....🫠
- /stoputag or /offuall ➠ ᴛᴏ sᴛᴏᴘ ᴜɴʟɪᴍɪᴛᴇᴅ ᴛᴀɢ
- /mention or /all ➠ ᴇɴᴛᴇʀ ᴛʜᴇ ᴛᴇxᴛ ᴀғᴛᴇʀ ᴄᴏᴍᴍᴀɴᴅ ᴏʀ ʀᴇᴘʟʏ ᴛᴏ ᴛᴇxᴛ ᴛᴏ ᴍᴇɴᴛɪᴏɴ ᴀʟʟ.
- /cancel or /alloff  ➠ ᴛᴏ ᴄᴀɴᴄᴇʟ ᴍᴇɴᴛɪᴏɴ.
- /tagall  ➠  ғᴏʀ ʀᴀɴᴅᴏᴍʟʏ ғᴜɴɴʏ ᴛᴀɢs 😁.
- /tagoff or /tagstop   ➠  sᴛᴏᴘ ᴍᴇɴᴛɪᴏɴɪɴɢ ғᴜɴɴʏ ᴛᴀɢs.
- /gmtag ➠ ғᴏʀ ᴍᴏʀɴɪɴɢ ᴡɪsʜᴇs🥰.
- /gmstop  ➠ sᴛᴏᴘ ᴍᴏʀɴɪɴɢ ᴡɪsʜᴇs.
- /gntag  ➠ ғᴏʀ ɴɪɢʜᴛ ᴡɪsʜᴇs 😴.
- /gnstop  ➠ sᴛᴏᴘ ɴɪɢʜᴛ ᴡɪsʜᴇs😴.
- /hitag  ➠  ᴛᴀɢ ᴍᴇᴍʙᴇʀs ɪɴ ʜɪɴᴅɪ ǫᴜᴏᴛᴇs.
- /histop ➠  sᴛᴏᴘ ʜɪɴᴅɪ ǫᴜᴏᴛᴇs.
- /entag ➠ ᴛᴀɢ ɪɴ ᴇɴɢʟɪsʜ...
- /entop ➠ ᴛᴏ sᴛᴏᴘ ᴇɴʟɪsʜ ᴛᴀɢ..
- /bntag ➠ ᴛᴏ ᴛᴀɢ ɪɴ ʙᴇɴɢᴀʟɪ...
- /bnstop ➠ sᴛᴏᴘ ʙᴇɴɢᴀʟɪ ᴛᴀɢ..
- /lifetag  ➠ ᴛᴀɢ ᴍᴇᴍʙᴇʀs ɪɴ ᴇɴɢʟɪsʜ ǫᴜᴏᴛᴇs.
- /lifestop  ➠  sᴛᴏᴘ ᴇɴɢʟɪsʜ ǫᴜᴏᴛᴇs.
- /shayari   ➠ ᴛᴀɢ ᴀʟʟ ᴍᴇᴍʙᴇʀs ᴡɪᴛʜ sʜᴀʏʀɪ😜.
- /shayarioff  ➠ sᴛᴏᴘ ᴍᴇɴᴛɪᴏɴɪɴɢ sʜᴀʏʀɪ.
- 
-✧ᴛʜᴇsᴇ ᴍᴏᴅᴜʟᴇs ʙʏ ➪ [🇯𝐀𝐑𝐕𝐈𝐒💗](https://t.me/JARVIS_V2)"""
+ /utag veya /uall ➠ Sınırsız etiketleme için kullanılır....🫠
+ /stoputag veya /offuall ➠ Sınırsız etiketlemeyi durdurmak için kullanılır.
+ /mention veya /all ➠ Komuttan sonra metin girin veya metne yanıt vererek herkesi etiketleyin.
+ /cancel veya /alloff ➠ Etiketlemeyi iptal etmek için kullanılır.
+ /tagall ➠ Rastgele komik etiketlemeler için kullanılır 😁.
+ /tagoff veya /tagstop ➠ Komik etiketlemeleri durdurmak için kullanılır.
+ /gmtag ➠ Sabah dilekleri için etiketleme🥰.
+ /gmstop ➠ Sabah dileklerini durdurmak için kullanılır.
+ /gntag ➠ Gece dilekleri için etiketleme 😴.
+ /gnstop ➠ Gece dileklerini durdurmak için kullanılır.
+ /hitag ➠ Kullanıcıları Hintçe alıntılarla etiketlemek için kullanılır.
+ /histop ➠ Hintçe alıntıları durdurmak için kullanılır.
+ /entag ➠ İngilizce etiketlemek için kullanılır...
+ /entop ➠ İngilizce etiketlemeyi durdurmak için kullanılır.
+ /bntag ➠ Bengalce etiketlemek için kullanılır...
+ /bnstop ➠ Bengalce etiketlemeyi durdurmak için kullanılır.
+ /lifetag ➠ İngilizce alıntılarla kullanıcıları etiketlemek için kullanılır.
+ /lifestop ➠ İngilizce alıntıları durdurmak için kullanılır.
+ /shayari ➠ Tüm kullanıcıları Shayari ile etiketlemek için kullanılır 😜.
+ /shayarioff ➠ Shayari etiketlemeyi durdurmak için kullanılır.
+
+✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
 
 HELP_19 = """
-<b><u>Iɴꜰᴏ :</b></u>
+<b><u>BİLGİ:</b></u>
 
-/id : ɢᴇᴛ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ɢʀᴏᴜᴘ ɪᴅ. ɪғ ᴜsᴇᴅ ʙʏ ʀᴇᴘʟʏɪɴɢ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ, ɢᴇᴛs ᴛʜᴀᴛ ᴜsᴇʀ's ɪᴅ.
-/info : ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴀ ᴜsᴇʀ.
-/github <ᴜsᴇʀɴᴀᴍᴇ> : ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴀ ɢɪᴛʜᴜʙ ᴜsᴇʀ.
-/sg ➠ ʀᴇᴘʟʏ ᴛᴏ ɪᴅ ᴀᴜʀ ᴜsᴇʀɴᴀᴍᴇ ᴛᴏ ɢᴇᴛ ʜɪsᴛᴏʀʏ ᴏғ ᴛʜᴀᴛ ᴘᴇʀsᴏɴ.
-/groupdata & /groupinfo  ➠ ᴛᴏ ɢᴇᴛ ɢʀᴏᴜᴘ ɪɴғᴏ.
-/whois ➠ ʀᴇᴘʟʏ ᴏʀ ᴛᴀɢ ᴜsᴇʀɴᴀᴍᴇ ᴛᴏ ᴋɴᴏᴡ ᴅᴇᴛᴀɪʟs ᴏғ ᴛʜᴀᴛ ᴘᴇʀsᴏɴ.
-/phone ➠ ᴇɴᴛᴇʀ ʏᴏᴜʀ ᴘʜᴏɴᴇ ɴᴏ. ᴀғᴛᴇʀ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ɢᴇᴛ ᴅᴇᴛᴀɪʟs.
-/Whatsapp {ᴘʜᴏɴᴇ ɴᴜᴍʙᴇʀ}   ➠  ᴛᴏ ɢᴇɴᴇʀᴀᴛᴇ ᴛʜᴇ ᴅɪʀᴇᴄᴛ ʟɪɴᴋ ғᴏʀ ʏᴏᴜʀ ᴡʜᴀᴛsᴀᴘᴘ.
+/id : Mevcut grup kimliğini alır. Bir mesaja yanıt verilirse, o kullanıcının kimliğini alır.
+/info : Bir kullanıcı hakkında bilgi alır.
+/github <kullanıcı adı> : Bir GitHub kullanıcısı hakkında bilgi alır.
+/sg ➠ Kimlik ve kullanıcı adına yanıt vererek o kişinin geçmişini almak için kullanılır.
+/groupdata & /groupinfo ➠ Grup bilgilerini almak için kullanılır.
+/whois ➠ Kullanıcı adı veya yanıt vererek o kişi hakkında detayları öğrenmek için kullanılır.
+/phone ➠ Komuttan sonra telefon numaranızı girerek detayları almak için kullanılır.
+/Whatsapp {telefon numarası} ➠ WhatsApp için doğrudan bağlantı oluşturmak için kullanılır.
 
-✧ᴛʜᴇsᴇ ᴍᴏᴅᴜʟᴇs ʙʏ ➪ [🇯𝐀𝐑𝐕𝐈𝐒💗](https://t.me/JARVIS_V2)"""
+✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
 
 HELP_20 = """
-<b><u>Gʀᴏᴜᴘ :</b></u>
-ᴛʜᴇsᴇ ᴀʀᴇ ᴛʜᴇ ᴀᴠᴀɪʟᴀʙʟᴇ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ᴄᴏᴍᴍᴀɴᴅs:
+<b><u>GRUP:</b></u>
+Bu, grup yönetimi komutlarının listesidir:
 
-⦿ /pin ➠ ᴘɪɴs ᴀ ᴍᴇssᴀɢᴇ ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ.
-⦿ /pinned ➠ ᴅɪsᴘʟᴀʏs ᴛʜᴇ ᴘɪɴɴᴇᴅ ᴍᴇssᴀɢᴇ ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ.
-⦿ /unpin ➠ ᴜɴᴘɪɴs ᴛʜᴇ ᴄᴜʀʀᴇɴᴛʟʏ ᴘɪɴɴᴇᴅ ᴍᴇssᴀɢᴇ.
-⦿ /staff ➠ ᴅɪsᴘʟᴀʏs ᴛʜᴇ ʟɪsᴛ ᴏғ sᴛᴀғғ ᴍᴇᴍʙᴇʀs.
-⦿ /bots ➠ ᴅɪsᴘʟᴀʏs ᴛʜᴇ ʟɪsᴛ ᴏғ ʙᴏᴛs ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ.
-⦿ /settitle ➠ sᴇᴛs ᴛʜᴇ ᴛɪᴛʟᴇ ᴏғ ᴛʜᴇ ɢʀᴏᴜᴘ.
-⦿ /setdiscription ➠ sᴇᴛs ᴛʜᴇ ᴅᴇsᴄʀɪᴘᴛɪᴏɴ ᴏғ ᴛʜᴇ ɢʀᴏᴜᴘ.
-⦿ /wel ➠ ᴏɴ ᴏʀ ᴏғғ ᴛʜᴇ ᴡᴇʟᴄᴏᴍᴇ.
-⦿ /filter ➠ ᴛᴏ sᴇᴛ ғɪʟᴛᴇʀ ɪɴ ɢʀᴏᴜᴘ
-⦿ /stopfilter ➠ ᴇɴᴛᴇʀ ᴛʜᴇ ғɪʟᴛᴇʀ ɴᴀᴍᴇ ᴀғᴛᴇʀ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ sᴛᴏᴘ ᴛʜᴀᴛ ғɪʟᴛᴇʀ
-⦿ /setphoto ➠ sᴇᴛs ᴛʜᴇ ɢʀᴏᴜᴘ ᴘʜᴏᴛᴏ.
-⦿ /removephoto ➠ ʀᴇᴍᴏᴠᴇs ᴛʜᴇ ɢʀᴏᴜᴘ ᴘʜᴏᴛᴏ.
-⦿ /zombies ➠ ʀᴇᴍᴏᴠᴇs ᴀᴄᴄ ᴅᴇʟᴇᴛᴇᴅ ᴍᴇᴍʙᴇʀs ғʀᴏᴍ ᴛʜᴇ ɢʀᴏᴜᴘ.
-⦿ /imposter ᴏɴ/ᴏғғ ➠ ᴛᴜʀɴs ᴏɴ ᴏʀ ᴏғғ ᴛʜᴇ ᴡᴀᴛᴄʜᴇʀ ғᴏʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ, ᴡʜɪᴄʜ ɴᴏᴛɪғɪᴇs ᴀʙᴏᴜᴛ ᴜsᴇʀs ᴡʜᴏ ᴄʜᴀɴɢᴇ ᴛʜᴇɪʀ ɴᴀᴍᴇ ᴏʀ ᴜsᴇʀɴᴀᴍᴇ.
-⦿ /lang ➠ ᴄʜᴀɴɢᴇ ᴛʜᴇ ʙᴏᴛ ʟᴀɴɢᴜᴀɢᴇ.
+⦿ /pin ➠ Grubun içinde bir mesajı sabitler.
+⦿ /pinned ➠ Grubun içinde sabitlenmiş mesajı gösterir.
+⦿ /unpin ➠ Mevcut sabitlenmiş mesajı sabitlemesini kaldırır.
+⦿ /staff ➠ Personel üyelerinin listesini gösterir.
+⦿ /bots ➠ Grubun içinde botların listesini gösterir.
+⦿ /settitle ➠ Grubun başlığını ayarlar.
+⦿ /setdiscription ➠ Grubun açıklamasını ayarlar.
+⦿ /wel ➠ Karşılama mesajını açar veya kapatır.
+⦿ /filter ➠ Grubun içinde filtre ayarlamak için kullanılır.
+⦿ /stopfilter ➠ Filtre adını komuttan sonra girerek o filtreyi durdurmak için kullanılır.
+⦿ /setphoto ➠ Grubun fotoğrafını ayarlar.
+⦿ /removephoto ➠ Grubun fotoğrafını kaldırır.
+⦿ /zombies ➠ Grubun içindeki silinmiş üyeleri kaldırır.
+⦿ /imposter aç/kapat ➠ Grubunuz için izleyiciyi açar veya kapatır, kullanıcı adını veya adını değiştiren kullanıcılar hakkında bilgilendirir.
+⦿ /lang ➠ Bot dilini değiştirir.
 
-✧ᴛʜᴇsᴇ ᴍᴏᴅᴜʟᴇs ʙʏ ➪ [🇯𝐀𝐑𝐕𝐈𝐒💗](https://t.me/JARVIS_V2)"""
+✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
 
 HELP_21 = """
-<b><u>Exᴛʀᴀ :</b></u>
+<b><u>EKSTRA:</b></u>
 
-⦿ /math ➠ sᴏʟᴠᴇs ᴍᴀᴛʜᴇᴍᴀᴛɪᴄᴀʟ ᴘʀᴏʙʟᴇᴍs ᴀɴᴅ ᴇǫᴜᴀᴛɪᴏɴs.
-⦿ /blackpink ➠ ɢᴇɴᴇʀᴀᴛᴇs ᴀ ʙʟᴀᴄᴋᴘɪɴᴋ-sᴛʏʟᴇ ʟᴏɢᴏ.
-⦿ /carbon ➠ ɢᴇɴᴇʀᴀᴛᴇs ᴀ ᴄᴀʀʙᴏɴ ᴄᴏᴅᴇ ɪᴍᴀɢᴇ ғʀᴏᴍ ᴀ ᴄᴏᴅᴇ sɴɪᴘᴘᴇᴛ.
-⦿ /speedtest ➠ ᴍᴇᴀsᴜʀᴇs ᴛʜᴇ ɪɴᴛᴇʀɴᴇᴛ sᴘᴇᴇᴅ.
-⦿ /reverse ➠ ʀᴇᴠᴇʀsᴇs ᴀ ɢɪᴠᴇɴ ᴛᴇxᴛ.
-⦿ /webss ➠ ᴛᴀᴋᴇs ᴀ sᴄʀᴇᴇɴsʜᴏᴛ ᴏғ ᴀ ᴡᴇʙsɪᴛᴇ.
-⦿ /webdl ➠ ᴇɴᴛᴇʀ ᴛʜᴇ ʟɪɴᴋ ᴏғ ᴡᴇʙsɪᴛᴇ ᴀғᴛᴇʀ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ɢᴇᴛ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ᴏғ ᴛʜᴀᴛ ᴡᴇʙ
-⦿ /paste ➠ ᴜᴘʟᴏᴀᴅs ᴀ ᴛᴇxᴛ sɴɪᴘᴘᴇᴛ ᴛᴏ ᴛʜᴇ ᴄʟᴏᴜᴅ ᴀɴᴅ ɢɪᴠᴇs ᴀ ʟɪɴᴋ.
-⦿ /tgm ➠ ᴜᴘʟᴏᴀᴅs ᴀ ᴘʜᴏᴛᴏ (ᴜɴᴅᴇʀ 𝟻ᴍʙ) ᴛᴏ ᴛʜᴇ ᴄʟᴏᴜᴅ ᴀɴᴅ ɢɪᴠᴇs ᴀ ʟɪɴᴋ.
-⦿ /tr ➠ ᴛʀᴀɴsʟᴀᴛᴇs ᴛᴇxᴛ.
-⦿ /google ➠ sᴇᴀʀᴄʜᴇs ғᴏʀ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴏɴ ɢᴏᴏɢʟᴇ.
-⦿ /stack ➠ sᴇᴀʀᴄʜᴇs ғᴏʀ ᴘʀᴏɢʀᴀᴍᴍɪɴɢ-ʀᴇʟᴀᴛᴇᴅ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴏɴ sᴛᴀᴄᴋ ᴏᴠᴇʀғʟᴏᴡ.  
-⦿ /short ➠ ᴇɴᴛᴇʀ ᴛʜᴇ ʟɪɴᴋ ᴛʜᴀᴛ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ sʜᴏʀᴛ ᴀғᴛᴇʀ ᴄᴏᴍᴍᴀɴᴅ.
-⦿ /pdf ➠ ʀᴇᴘʟʏ ᴛᴏ ᴊᴘᴇɢ ғɪʟᴇ ᴛᴏ ᴄᴏɴᴠᴇʀᴛ ɪᴍᴀɢᴇ ᴛᴏ ᴘᴅғ.
+⦿ /math ➠ Matematiksel problemleri ve denklemleri çözer.
+⦿ /blackpink ➠ Blackpink tarzında bir logo oluşturur.
+⦿ /carbon ➠ Bir kod snippet'inden karbon kodu görüntüsü oluşturur.
+⦿ /speedtest ➠ İnternet hızını ölçer.
+⦿ /reverse ➠ Verilen metni tersine çevirir.
+⦿ /webss ➠ Bir web sitesinin ekran görüntüsünü alır.
+⦿ /webdl ➠ Komuttan sonra web sitesinin bağlantısını girerek o sitenin kaynak kodunu alır.
+⦿ /paste ➠ Bir metin snippet'ini buluta yükler ve bir bağlantı verir.
+⦿ /tgm ➠ (5MB altında) bir fotoğrafı buluta yükler ve bir bağlantı verir.
+⦿ /tr ➠ Metni çevirir.
+⦿ /google ➠ Google'da bilgi arar.
+⦿ /stack ➠ Stackoverflow'da programlama ile ilgili bilgi arar.
+⦿ /short ➠ Kısaltmak istediğiniz bağlantıyı komuttan sonra girin.
+⦿ /pdf ➠ JPEG dosyasına yanıt vererek resmi PDF'ye dönüştürür.
 
-✧ᴛʜᴇsᴇ ᴍᴏᴅᴜʟᴇs ʙʏ ➪ [🇯𝐀𝐑𝐕𝐈𝐒💗](https://t.me/JARVIS_V2)"""
+✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
 
 HELP_22 = """
-<b><u>Iᴍᴀɢᴇ :</b></u>
-ᴛʜᴇsᴇ ᴀʀᴇ ᴛʜᴇ ᴀᴠᴀɪʟᴀʙʟᴇ ɪᴍᴀɢᴇ ᴄᴏᴍᴍᴀɴᴅs:
+<b><u>RESİM:</b></u>
+Bunlar mevcut resim komutlarıdır:
 
-⦿ /draw ➠ ɢᴇɴᴇʀᴀᴛᴇs ᴀ ᴅʀᴀᴡɪɴɢ ʙᴀsᴇᴅ ᴏɴ ᴀ ɢɪᴠᴇɴ ᴘᴏʀᴏᴍᴘᴛ.
-⦿ /image ➠ sᴇᴀʀᴄʜᴇs ғᴏʀ ᴀɴ ɪᴍᴀɢᴇ ʙᴀsᴇᴅ ᴏɴ ᴀ ɢɪᴠᴇɴ ᴋᴇʏᴡᴏʀᴅ.
-⦿ /upscale ➠ ʀᴇᴘʟʏ ᴛᴏ ᴀɴ ɪᴍᴀɢᴇ ᴛᴏ ᴜᴘsᴄᴀʟᴇ ɪᴛ ᴀɴᴅ ɪᴍᴘʀᴏᴠᴇ ɪᴛs ǫᴜᴀʟɪᴛʏ.
-⦿ /rmbg ➠ ᴛᴏ ʀᴇᴍᴏᴠᴇ ʙᴀᴄᴋɢʀᴏᴜɴᴅ ғʀᴏᴍ ᴀɴ ɪᴍᴀɢᴇ..
+⦿ /draw ➠ Verilen bir konuya dayalı bir çizim oluşturur.
+⦿ /image ➠ Verilen bir anahtar kelimeye dayalı bir resim arar.
+⦿ /upscale ➠ Bir resme yanıt vererek onu büyütür ve kalitesini artırır.
+⦿ /rmbg ➠ Bir resmin arka planını kaldırmak için kullanılır.
 
-✧ᴛʜᴇsᴇ ᴍᴏᴅᴜʟᴇs ʙʏ ➪ [🇯𝐀𝐑𝐕𝐈𝐒💗](https://t.me/JARVIS_V2)"""
+✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
 
 HELP_23 = """
-<b><u>Aᴄᴛɪᴏɴ :</b></u>
-» ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs ꜰᴏʀ Bᴀɴs & Mᴜᴛᴇ :
+<b
 
- ❍ /kickme: kicks the user who issued the command
+><u>EYLEM:</b></u>
+» Yasaklar ve Sessizler için kullanılabilir komutlar:
 
-Admins only:
- ❍ /ban <userhandle>: bans a user. (via handle, or reply)
- ❍ /sban <userhandle>: Silently ban a user. Deletes command, Replied message and doesn't reply. (via handle, or reply)
- ❍ /tban <userhandle> x(m/h/d): bans a user for x time. (via handle, or reply). m = minutes, h = hours, d = days.
- ❍ /unban <userhandle>: unbans a user. (via handle, or reply)
- ❍ /kick <userhandle>: kicks a user out of the group, (via handle, or reply)
- ❍ /mute <userhandle>: silences a user. Can also be used as a reply, muting the replied to user.
- ❍ /tmute <userhandle> x(m/h/d): mutes a user for x time. (via handle, or reply). m = minutes, h = hours, d = days.
- ❍ /unmute <userhandle>: unmutes a user. Can also be used as a reply, muting the replied to user.
- 
-✧ᴛʜᴇsᴇ ᴍᴏᴅᴜʟᴇs ʙʏ ➪ [🇯𝐀𝐑𝐕𝐈𝐒💗](https://t.me/JARVIS_V2)"""
+ ❍ /kickme: Komutu veren kullanıcıyı gruptan çıkarır.
+
+Yalnızca yöneticiler:
+ ❍ /ban <kullanıcı adı>: Bir kullanıcıyı yasaklar. (kullanıcı adıyla veya yanıtla)
+ ❍ /sban <kullanıcı adı>: Bir kullanıcıyı sessizce yasaklar. Komutu, yanıtlanan mesajı siler ve yanıt vermez. (kullanıcı adıyla veya yanıtla)
+ ❍ /tban <kullanıcı adı> x(m/h/g): Bir kullanıcıyı x süreyle yasaklar. (kullanıcı adıyla veya yanıtla). m = dakika, h = saat, g = gün.
+ ❍ /unban <kullanıcı adı>: Bir kullanıcıyı yasaklamaktan çıkarır. (kullanıcı adıyla veya yanıtla)
+ ❍ /kick <kullanıcı adı>: Bir kullanıcıyı gruptan çıkarır. (kullanıcı adıyla veya yanıtla)
+ ❍ /mute <kullanıcı adı>: Bir kullanıcıyı sessize alır. Yanıt olarak da kullanılabilir, yanıtlanan kullanıcıyı sessize alır.
+ ❍ /tmute <kullanıcı adı> x(m/h/g): Bir kullanıcıyı x süreyle sessize alır. (kullanıcı adıyla veya yanıtla). m = dakika, h = saat, g = gün.
+ ❍ /unmute <kullanıcı adı>: Bir kullanıcıyı sessizlikten çıkarır. Yanıt olarak da kullanılabilir, yanıtlanan kullanıcıyı sessizlikten çıkarır.
+
+✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
 
 HELP_24 = """
-<b><u>Sᴇᴀʀᴄʜ :</b></u>
-Available commands:
-• /google <query> : Search the google for the given query.
-• /anime <query>  : Search myanimelist for the given query.
-• /stack <query>  : Search stackoverflow for the given query.
-• /image (/imgs) <query> : Get the images regarding to your query
-• /mongochk ➠ ᴄʜᴇᴄᴋ ᴛʜᴇ sᴛᴀᴛᴜs ᴏғ ʏᴏᴜ ᴍʀ ᴍᴏɴɢᴏ [ ᵉⁿᵗᵉʳ ᵗʰᵉ ᵐᵒⁿᵍᵒ ˡⁱⁿᵏ ᵃᶠᵗᵉʳ ᶜᵒᵐᵐᵃⁿᵈ ].
-• /ip ➠ ᴇɴᴛᴇʀ ᴛʜᴇ ɪᴘ ᴀᴅᴅʀᴇss ᴀғᴛᴇʀ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ɢᴇᴛ ɪɴғᴏ ᴏғ ᴛʜᴀᴛ ɪᴘ.
-• /domain ➠ ᴇɴᴛᴇʀ ᴛʜᴇ ᴅᴏᴍᴀɪɴ ɴᴀᴍᴇ ᴀғᴛᴇʀ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ғɪɴᴅ ᴛʜᴇ ɪɴғᴏ ᴏғ ᴅᴏᴍᴀɪɴ.
-• /weather ➠ ᴇɴᴛᴇʀ ᴛʜᴇ ʟᴏᴄᴀᴛɪᴏɴ ᴀғᴛᴇʀ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ɢᴇᴛ ᴡᴇᴀᴛʜᴇʀ ᴏғ ᴛʜᴀᴛ ʟᴏᴄᴀᴛɪᴏɴ.
-• /Time ➠ ᴛᴏ ɢᴇᴛ ᴛɪᴍᴇ ᴏғ ʏᴏᴜʀ ᴛɪᴍᴇ ᴢᴏɴᴇ.
-• /calendar ➠ ᴇɴᴛᴇʀ ᴛʜᴇ ʏᴇᴀʀ ᴛʜᴀᴛ ʏᴏᴜ ᴡᴀɴᴛ.
-• /day ➠ ᴇɴᴛᴇʀ ᴛʜᴇ ᴅᴀᴛᴇ {ʏᴇᴀʀ/ᴍᴏɴᴛʜ/ᴅᴀᴛᴇ} ᴀғᴛᴇʀ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ғɪɴᴅ ᴛʜᴇ ᴅᴀʏ ᴏɴ ᴛʜᴀᴛ ᴅᴀᴛᴇ
-• /get_states ➠ ᴇɴᴛᴇʀ ᴛʜᴇ ᴄᴏᴜɴᴛʀʏ ɴᴀᴍᴇ ᴀғᴛᴇʀ ᴄᴏᴍᴍᴀɴᴅ.
-Example:
-/google pyrogram: return top 5 reuslts.
+<b><u>ARAMA:</b></u>
+Mevcut komutlar:
+• /google <sorgu> : Verilen sorguyu Google'da arar.
+• /anime <sorgu> : Verilen sorguyu myanimelist'te arar.
+• /stack <sorgu> : Verilen sorguyu stackoverflow'da arar.
+• /image (/imgs) <sorgu> : Sorgunuza ilişkin resimleri alır.
+• /mongochk ➠ Mongo'nun durumunu kontrol eder [bağlantıyı komuttan sonra girin].
+• /ip ➠ IP adresini komuttan sonra girerek bilgi alır.
+• /domain ➠ Alan adı bilgisini almak için komuttan sonra alan adını girin.
+• /weather ➠ Konum bilgisini komuttan sonra girerek o konumun hava durumunu alır.
+• /Time ➠ Zaman diliminizin saatini almak için kullanılır.
+• /calendar ➠ Yılı girerek takvim bilgilerini alır.
+• /day ➠ {yıl/ay/gün} formatında tarihi girerek o günün hangi güne denk geldiğini öğrenmek için kullanılır.
+• /get_states ➠ Ülke adını komuttan sonra girerek o ülkenin eyalet bilgilerini alır.
 
-✧ᴛʜᴇsᴇ ᴍᴏᴅᴜʟᴇs ʙʏ ➪ [🇯𝐀𝐑𝐕𝐈𝐒💗](https://t.me/JARVIS_V2)"""
+Örnek:
+/google pyrogram: İlk 5 sonucu döndürür.
+
+✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
 
 HELP_25 = """
-<b><u>ᴄᴄ :</b></u>
-ʜᴇʀᴇ ᴀʀᴇ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅs ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ᴄᴄ !
-/gen  ➠ ᴇɴᴛᴇʀ ᴛʜᴇ ʙɪɴ ᴀғᴛᴇʀ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ɢᴇɴʀᴀᴛᴇ ʟɪᴠᴇ ᴄᴄ.
-/genbin ➠ ᴛᴏ ɢᴇɴʀᴀᴛᴇ ʙɪɴ.
-/bin ➠ ᴇɴᴛᴇʀ ᴛʜᴇ ʙɪɴ ᴀғᴛᴇʀ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ᴄʜᴇᴄᴋ ᴛʜᴇ sᴛᴀᴛᴜs ᴏғ ʙɪɴ.
-/fake ➠ ᴇɴᴛᴇʀ ᴛʜᴇ ᴀɴʏ ʀᴀɴᴅᴏᴍ ᴄᴏᴜɴᴛʀʏ ɴᴀᴍᴇ ᴀғᴛᴇʀ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ɢᴇɴʀᴀᴛᴇ ғᴀᴋᴇ ɪɴғᴏ.
+<b><u>CC:</b></u>
+CC ile ilgili komutlar:
+ /gen ➠ Komuttan sonra BIN girerek geçerli CC oluşturur.
+ /genbin ➠ BIN oluşturur.
+ /bin ➠ Komuttan sonra BIN girerek BIN'in durumunu kontrol eder.
+ /fake ➠ Komuttan sonra herhangi bir rastgele ülke adını girerek sahte bilgi oluşturur.
 
-✧ᴛʜᴇsᴇ ᴍᴏᴅᴜʟᴇs ʙʏ ➪ [🇯𝐀𝐑𝐕𝐈𝐒💗](https://t.me/JARVIS_V2)"""
+✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
 
 HELP_26 = """
-<b><u>ᴛᴇxᴛ ᴇᴅɪᴛɪɴɢ :</b></u>
-ᴛʜᴇsᴇ ᴀʀᴇ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅs ғᴏʀ ᴛᴇxᴛ ᴇᴅɪᴛɪɴɢ ᴏʀ ᴅᴇsɪɢɴɪɴɢ : 
-/font Oʀ /fonts ➠  ᴇɴᴛᴇʀ ᴛʜᴇ ᴛᴇxᴛ ᴀғᴛᴇʀ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ɢᴇɴʀᴀᴛᴇ ғᴏɴᴛs ᴇғғᴇᴄᴛ.
-/figlet ➠ ᴇɴᴛᴇʀ ᴛʜᴇ ᴛᴇxᴛ ᴀғᴛᴇʀ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ɢᴇɴʀᴀᴛᴇ ғɪɢʟᴇᴛ....
-/hastag ➠ ᴇɴᴛᴇʀ ᴛʜᴇ ᴛᴇxᴛ ᴀғᴛᴇʀ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ɢᴇɴʀᴀᴛᴇ ʜᴀsᴛᴀɢ ᴏғ ᴛʜᴀᴛ ᴛᴇxᴛ.
-/code ➠ ᴇɴᴛᴇʀ ᴛʜᴇ ᴛᴇxᴛ ᴀғᴛᴇʀ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ᴄᴏᴅᴇ ᴛʜᴀᴛ ᴛᴇxᴛ.
-/genpw ➠ ᴛᴏ ɢᴇɴʀᴀᴛᴇ sᴛʀᴏɴɢ  ᴘᴀssᴡᴏʀᴅ.
-/write ➠ ᴇɴᴛᴇʀ ᴛʜᴇ ᴛᴇxᴛ ᴀғᴛᴇʀ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ᴡʀɪᴛᴇ ɪɴ ɴᴏᴛᴇʙᴏᴏᴋ.
-/qr ➠ ᴇɴᴛᴇʀ ᴛʜᴇ ᴛᴇxᴛ ᴀғᴛᴇʀ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ᴛᴏ ɢᴇᴛ ǫʀ ᴄᴏᴅᴇ ᴏғ ᴛᴇxᴛ.
+<b><u>METİN DÜZENLEME:</b></u>
+Metin düzenleme veya tasarım komutları:
+ /font veya /fonts ➠ Komuttan sonra metin girerek font efektleri oluşturur.
+ /figlet ➠ Komuttan sonra metin girerek figlet oluşturur.
+ /hastag ➠ Komuttan sonra metin girerek o metnin hashtagini oluşturur.
+ /code ➠ Komuttan sonra metin girerek o metni kodlar.
+ /genpw ➠ Güçlü bir şifre oluşturur.
+ /write ➠ Komuttan sonra metin girerek not defterine yazar.
+ /qr ➠ Komuttan sonra metin girerek o metnin QR kodunu oluşturur.
 
-✧ᴛʜᴇsᴇ ᴍᴏᴅᴜʟᴇs ʙʏ ➪ [🇯𝐀𝐑𝐕𝐈𝐒💗](https://t.me/JARVIS_V2)"""
+✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
 
 HELP_27 = """
-<b><u>ᴍᴀsᴛɪ♡︎ :</b></u>
-ᴇɴᴊᴏʏ ᴏʀ ɴᴏᴛʜɪɴɢ...♡︎
-/couples ➠ ɢᴇɴʀᴀᴛᴇs ᴄᴏᴜᴘʟᴇs ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ.
-/love ➠ᴇɴᴛᴇʀ ᴛʜᴇ ɴᴀᴍᴇs ᴏғ ᴛᴡᴏ ᴘᴇʀsᴏɴ {ғɪʀsᴛ} {sᴇᴄᴏɴᴅ} ᴀғᴛᴇʀ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ᴄʜᴇᴄᴋ ʟᴏᴠᴇ sᴛᴀᴛs ʙᴇᴛᴡᴇᴇɴ ᴛʜᴇᴍ 🥰 [ᴛᴀᴋᴇ ɪᴛ ᴀs ғᴜɴ 😁].
-/day ➠ ᴇɴᴛᴇʀ ᴛʜᴇ ᴅᴀᴛᴇ {ʏᴇᴀʀ/ᴍᴏɴᴛʜ/ᴅᴀᴛᴇ} ᴀғᴛᴇʀ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ғɪɴᴅ ᴛʜᴇ ᴅᴀʏ ᴏɴ ᴛʜᴀᴛ ᴅᴀᴛᴇ.
-/cute ➠ ᴛᴏ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴄᴜᴛᴇɴᴇss🥰.
-/hjoke ➠ ɢᴇᴛ ʀᴀɴᴅᴏᴍ ғᴜɴɴʏ ᴊᴏᴋᴇs😁.
-/kiss ➠ ᴛᴏ ᴋɪss sᴏᴍᴇᴏɴᴇ.
-/hug ➠ ᴛᴏ ʜᴜɢ ᴘᴇʀsᴏɴ.
-/slap ➠ ᴛᴏ sʟᴀᴘ sᴏᴍᴇᴏɴᴇ.
-/sleep ➠ ᴛᴏ sʟᴇᴇᴘ🫠.
-/run ➠ ʀᴜɴ😅.
-/wish ➠ ᴇɴᴛᴇʀ ʏᴏᴜʀ ᴡɪsʜ ᴀғᴛᴇʀ ᴄᴏᴍᴍᴀɴᴅ.
-/bored ➠ ᴊᴜsᴛ ғᴏʀ ғᴜɴ😁.
-/gay ➠ ɢᴇᴛ ʏᴏᴜʀ ɢᴀʏ ᴘᴇʀᴄᴇɴᴛᴀɢᴇ  ˡᵒˡ 😅.
-/hot ➠ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ʜᴏᴛɴᴇss.
-/sexy ➠ ᴄʜᴇᴄᴋ ʏᴏᴜʀ sᴇxɪɴᴇss🤣.
-/lesbian ➠ᴄʜᴇᴄᴋ ʏᴏᴜʀ ʟᴇsʙɪᴀɴ ᴘᴇʀᴄᴇɴᴛᴀɢᴇ.
-/cutie ➠ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴄᴜᴛᴇɴᴇss.
-/cock ➠ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴅɪᴄᴋ sɪᴢᴇ.
-/horny ➠ ᴄʜᴇᴄᴋ ʜᴏᴡ ᴍᴜᴄʜ ʏᴏᴜ ʜᴏɴʀʏ.
-/boob ➠ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ʙᴏᴏʙ sɪᴢᴇ😝.
+<b><u>MASTI♡︎:</b></u>
+Eğlen veya hiç...
+ /couples ➠ Grubunuzda çiftler oluşturur.
+ /love ➠ İki kişinin adını girerek aşk istatistiklerini kontrol eder {ilk} {ikinci} [eğlence amaçlı alın 😁].
+ /day ➠ {yıl/ay/gün} formatında tarihi girerek o günün hangi güne denk geldiğini öğrenmek için kullanılır.
+ /cute ➠ Sevimlilik oranınızı kontrol eder 🥰.
+ /hjoke ➠ Rastgele komik şakalar alır 😁.
+ /kiss ➠ Birine öpmek için kullanılır.
+ /hug ➠ Birine sarılmak için kullanılır.
+ /slap ➠ Birine tokat atmak için kullanılır.
+ /sleep ➠ Uyku komutu 🫠.
+ /run ➠ Koşma komutu 😅.
+ /wish ➠ Komuttan sonra dileğinizi girerek kullanılır.
+ /bored ➠ Sadece eğlence için 😁.
+ /gay ➠ Eşcinsel yüzdesini kontrol eder, şaka amaçlı 😅.
+ /hot ➠ Sıcaklık seviyenizi kontrol eder.
+ /sexy ➠ Seksi seviyenizi kontrol eder 🤣.
+ /lesbian ➠ Lezbiyen yüzdesini kontrol eder.
+ /cutie ➠ Sevimlilik seviyenizi kontrol eder.
+ /cock ➠ Penis boyutunuzu kontrol eder.
+ /horny ➠ Ne kadar azgın olduğunuzu kontrol eder.
+ /boob ➠ Meme boyutunuzu kontrol eder 😝.
 
-✧ᴛʜᴇsᴇ ᴍᴏᴅᴜʟᴇs ʙʏ ➪ [🇯𝐀𝐑𝐕𝐈𝐒💗](https://t.me/JARVIS_V2)"""
+✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
 
 HELP_28 = """
-<b><u>ʀᴇᴘᴏ ʀᴇʟᴀᴛᴇᴅ :</b></u>
-ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs ʀᴇɢᴀʀᴅɪɴɢ ʀᴇᴘᴏ
-/allrepo ➠ ᴇɴᴛᴇʀ ᴛʜᴇ ɢɪᴛʜᴜʙ ᴜsᴇʀɴᴀᴍᴇ ᴀғᴛᴇʀ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ɢᴇᴛ ᴀʟʟ ʀᴇᴘᴏ ᴏғ ᴛʜᴀᴛ ᴀᴄᴄᴏᴜɴᴛ.
-/pypi ➠ ᴇɴᴛᴇʀ ᴘʀᴏᴊᴇᴄᴛ ɴᴀᴍᴇ ᴀғᴛᴇʀ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ɢᴇᴛ ᴛʜᴇ sᴛᴀᴛs ᴏғ ᴛʜᴀᴛ ᴘʀᴏᴊᴇᴄᴛ [𝗣𝗿𝗼𝗷𝗲𝗰𝘁 = 𝗚𝗶𝘁𝗵𝘂𝗯 𝗥𝗲𝗽𝗼𝘀𝗶𝘁𝗼𝗿𝗶𝗲𝘀 ].
-/downloadrepo ➠ ᴇɴᴛᴇʀ ᴛʜᴇ ʀᴇᴘᴏ ʟɪɴᴋ ᴀғᴛᴇʀ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ᴛʜᴇ  ʀᴇᴘᴏ.
+<b><u>REPO İLGİLİ:</b></u>
+Repo ile ilgili mevcut komutlar:
+ /allrepo ➠ Komuttan sonra GitHub kullanıcı adını girerek o hesabın tüm repolarını alır.
+ /pypi ➠ Komuttan sonra proje adını girerek o projenin istatistiklerini alır [Proje = GitHub Reposu].
+ /downloadrepo ➠ Komuttan sonra repo bağlantısını girerek o repoyu indirir.
 
-✧ᴛʜᴇsᴇ ᴍᴏᴅᴜʟᴇs ʙʏ ➪ [🇯𝐀𝐑𝐕𝐈𝐒💗](https://t.me/JARVIS_V2)"""
+✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
 
 HELP_29 = """
-<b><u>ɴᴏᴛᴇs :</b></u>
-ʀᴇɢᴀʀᴅɪɴɢ ɴᴏᴛᴇs....
-/save ➠ ᴇɴᴛᴇʀ ɴᴏᴛᴇ ɴᴀᴍᴇ ᴀғᴛᴇʀ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ sᴀᴠᴇ ᴛʜᴇ ɴᴏᴛᴇ.
-/get ➠ ᴇɴᴛᴇʀ ᴛʜᴇ ɴᴏᴛᴇ ɴᴀᴍᴇ ᴛʜᴀᴛ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ɢᴇᴛ.
-/privatenotes  ➠ ᴘʀɪᴠᴀᴛᴇ ɴᴏᴛᴇs 😁😁.
-/clear ➠ ᴛᴏ ᴄʟᴇᴀʀ ᴛʜᴇ ɴᴏᴛᴇs.
-/clearall ➠ ᴛᴏ ᴄʟᴇᴀʀ ᴀʟʟ ɴᴏᴛᴇs.
+<b><u>NOTLAR:</b></u>
+Notlarla ilgili:
+ /save ➠ Komuttan sonra not adını girerek notu kaydeder.
+ /get ➠ Komuttan sonra almak istediğiniz not adını girin.
+ /privatenotes ➠ Özel notlar 😁😁.
+ /clear ➠ Notları temizlemek için kullanılır.
+ /clearall ➠ Tüm notları temizlemek için kullanılır.
 
-✧ᴛʜᴇsᴇ ᴍᴏᴅᴜʟᴇs ʙʏ ➪ [🇯𝐀𝐑𝐕𝐈𝐒💗](https://t.me/JARVIS_V2)"""
+✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
 
 HELP_30 = """
-<b><u>ɢᴀᴍᴇs :</b></u>
- Play Game With Emojis:
-/dice - Dice 🎲
+<b><u>OYUNLAR:</b></u>
+Emojilerle Oyun Oynayın:
+/dice - Zar 🎲
 /dart - Dart 🎯
-/basket - Basket Ball 🏀
-/ball - Bowling Ball 🎳
-/football - Football ⚽
-/jackpot - Spin slot machine 🎰
+/basket - Basketbol 🏀
+/ball - Bowling Topu 🎳
+/football - Futbol ⚽
+/jackpot - Slot Makinesi 🎰
 
-✧ᴛʜᴇsᴇ ᴍᴏᴅᴜʟᴇs ʙʏ ➪ [🇯𝐀𝐑𝐕𝐈𝐒💗](https://t.me/JARVIS_V2)"""
+✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
