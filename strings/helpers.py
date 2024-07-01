@@ -295,9 +295,7 @@ Bunlar mevcut resim komutlarıdır:
 ✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
 
 HELP_23 = """
-<b
-
-><u>EYLEM:</b></u>
+<b><u>EYLEM:</b></u>
 » Yasaklar ve Sessizler için kullanılabilir komutlar:
 
  ❍ /kickme: Komutu veren kullanıcıyı gruptan çıkarır.
@@ -330,8 +328,7 @@ Mevcut komutlar:
 • /day ➠ {yıl/ay/gün} formatında tarihi girerek o günün hangi güne denk geldiğini öğrenmek için kullanılır.
 • /get_states ➠ Ülke adını komuttan sonra girerek o ülkenin eyalet bilgilerini alır.
 
-Örnek:
-/google pyrogram: İlk 5 sonucu döndürür.
+Örnek:/google pyrogram: İlk 5 sonucu döndürür.
 
 ✧Bu modüller ➪ [Esila🦋](https://t.me/EsilaChatBot) tarafından sağlanmaktadır."""
 
